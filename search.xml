@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>MC（fabric）端开服教程</title>
+    <url>/2024/11/28/MC/</url>
+    <content><![CDATA[<h1 id="MC开服教程"><a href="#MC开服教程" class="headerlink" title="MC开服教程"></a>MC开服教程</h1><p>图片若看不清晰请点击放大查看.</p>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>准备一台<code>Linux</code>服务器&#x2F;家里云都行，系统版本任意，这里展示的是<code>Debian12</code>系统，我的世界版本是1.20.1</p>
+<p><strong>配置要求：</strong></p>
+<p>CPU：2个核心</p>
+<p>内存：20-40人2GB，30-60人3GB，60+人8GB</p>
+<h2 id="安装Java"><a href="#安装Java" class="headerlink" title="安装Java"></a>安装Java</h2><p>这里直接使用apt安装即可</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt-get install openjdk-17-jdk -y</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装服务端软件"><a href="#安装服务端软件" class="headerlink" title="安装服务端软件"></a>安装服务端软件</h2><p>有两种服务端的类型下载</p>
+<p>一个是paper服务端，优点是：</p>
+<blockquote>
+<p>基于Spigot优化，提升性能和稳定性，适合高负载的大型服务器或者配置低（不只是cpu或者运行内存低）的服务器，优化了实体，红石（比如1.20+，1.21.3-版本的刷线机无法使用），减少延迟和卡顿等机制，更新很快，紧跟官方版本</p>
+</blockquote>
+<p>另一个就是官方服务端server.jar</p>
+<blockquote>
+<p>完全遵循游戏设计，无额外修改，一般适合小型服务器，大型服务器可能会卡顿</p>
+</blockquote>
+<p><a href="https://mcversions.net/">戳我去Mc官方下载</a></p>
+<p><a href="https://papermc.io/downloads/paper">戳我去paper官网下载</a></p>
+<p><img src="/images/MC/%E8%BF%9B%E5%85%A5%E9%80%89%E6%8B%A9%E7%89%88%E6%9C%AC%E4%B8%8B%E8%BD%BD.png"></p>
+<p>选择对应版本，我这里选的1.20.1</p>
+<p><img src="/images/MC/%E9%80%89%E6%8B%A9%E7%AC%AC%E4%B8%80%E4%B8%AA.png"></p>
+<h2 id="安装MCSManager管理面板"><a href="#安装MCSManager管理面板" class="headerlink" title="安装MCSManager管理面板"></a>安装MCSManager管理面板</h2><p>MCSManager管理非常方便快捷，非常适合Linux小白和<del>没🧠的我</del></p>
+<p>脚本来源于官网<a href="https://docs.mcsmanager.com/zh_cn/">MCSManager</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> su -c <span class="string">&quot;wget -qO- https://script.mcsmanager.com/setup_cn.sh | bash&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>安装成功长这样：</p>
+<p><img src="/images/MC/%E5%AE%89%E8%A3%85mcsmanager.png" alt="安装mcsmanager"></p>
+<p>随后你可以前往<code>http://&lt;YOUR IP&gt;:23333</code>来进入你的管理后台</p>
+<p>访问不了的记得要放开防火墙！你是哪家云就上哪家云的控制台放通端口，对于家里云可以直接关闭防火墙即可</p>
+<p>第一次进入会设置管理员账号，随便设置即可，自己要记得账密</p>
+<p>进去长这样：</p>
+<p><img src="/images/MC/%E8%BF%9B%E5%8E%BB%E9%95%BF%E8%BF%99%E6%A0%B7.png"></p>
+<p>随后点击上边的<code>应用实例/新建实例/Minecraft Java版服务器</code></p>
+<p>选择<code>上传服务端软件</code></p>
+<p><img src="/images/MC/%E4%B8%8A%E4%BC%A0%E6%9C%8D%E5%8A%A1%E7%AB%AF%E8%BD%AF%E4%BB%B6.png"></p>
+<p>进到创建实例窗口，随便填一个实例名称</p>
+<p><img src="/images/MC/%E5%88%9B%E5%BB%BA%E5%AE%9E%E4%BE%8B.png"></p>
+<p>进入命令助手（疑似新版本mcsmanager弃用了该功能，这里给大家提供模板指令）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">java -Xms256M -Xmx1024M -Dfile.encoding=UTF-8 -Duser.language=zh -Duser.country=CN -jar paper.jar nogui</span><br></pre></td></tr></table></figure>
+
+<p>解释下指令：</p>
+<ol>
+<li><p><code>-Xms256M -Xmx1024M</code>的意思分别是：初始内存和最大内存，单位M</p>
+</li>
+<li><p><code>-Dfile.encoding=UTF-8</code>的意思是：防止乱码，调整终端语言为utf-8</p>
+</li>
+<li><p><code>-Duser.language=zh</code>语言英文，中文不好用</p>
+</li>
+<li><p><code>paper.jar</code>：服务端文件名，看你的文件名字，可以进行其他命名</p>
+</li>
+<li><p><code>nogui</code>：没有gui-Ui（图形化）运行的意思，毕竟是终端运行，要加</p>
+</li>
+</ol>
+<p>输入根据服务端jar名填写，比如下载的是<code>paper-1.20.1-196.jar</code></p>
+<p><img src="/images/MC/%E4%BF%9D%E5%AD%98%E5%91%BD%E4%BB%A4.png"></p>
+<p>单击保存命令即可</p>
+<p>静等文件上传完毕后进入控制台即可</p>
+<p><img src="/images/MC/%E8%BF%9B%E5%85%A5%E6%8E%A7%E5%88%B6%E5%8F%B0.png"></p>
+<p>单击<code>开始</code>按钮初始化实例</p>
+<p>之后必定会<code>终止实例</code>，需要你去填写<code>同意协议</code></p>
+<p><img src="/images/MC/%E5%A1%AB%E5%86%99eula.png"></p>
+<p>来到下边的<code>服务端配置文件</code>，点进去</p>
+<p><img src="/images/MC/%E8%BF%9B%E5%85%A5%E6%9C%8D%E5%8A%A1%E7%AB%AF%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.png"></p>
+<p>改是即可，然后保存</p>
+<p><img src="/images/MC/%E6%94%B9%E6%98%AF%E5%8D%B3%E5%8F%AF.png"></p>
+<p>回到控制台，等它构建完世界</p>
+<p><img src="/images/MC/%E5%90%AF%E5%8A%A8%E6%88%90%E5%8A%9F.png"></p>
+<p>出现<code>Done</code>这个字眼代表世界初始化成功了，接下来你可以选择对应版本打开联机</p>
+<p>输入IP：<code>&lt;YOUR IP&gt;:25565</code>进入世界开始游玩吧~（访问不了还是要记得方通对应端口哦！）</p>
+<h2 id="常见问题？"><a href="#常见问题？" class="headerlink" title="常见问题？"></a>常见问题？</h2><h3 id="1-我需要管理员权限怎么办"><a href="#1-我需要管理员权限怎么办" class="headerlink" title="1.我需要管理员权限怎么办"></a>1.我需要管理员权限怎么办</h3><p>输入<code>/op 在线的用户名</code>即可获得超级管理权限（这里输入的&#x2F;op可不是在聊天框哦，可是在控制台的模拟终端输入~）</p>
+<h3 id="2-怎么更改服务器图标"><a href="#2-怎么更改服务器图标" class="headerlink" title="2.怎么更改服务器图标"></a>2.怎么更改服务器图标</h3><p>将一个正方形图片命名为<code>server-icon.png</code>，注意要<code>64*64</code>分辨率的图片</p>
+<p>随后重启服务器就能看到啦</p>
+<p>这里我准备了一张样例图片，要的自取.</p>
+<p>👉<a href="/images/MC/server-icon.png" download="server-icon.png">点我下载文件</a></p>
+<p><img src="/images/MC/server-icon.png"></p>
+<h3 id="3-怎么更改最大在线人数？离线玩家无法进来？游戏难度？"><a href="#3-怎么更改最大在线人数？离线玩家无法进来？游戏难度？" class="headerlink" title="3.怎么更改最大在线人数？离线玩家无法进来？游戏难度？"></a>3.怎么更改最大在线人数？离线玩家无法进来？游戏难度？</h3><p>均能在<code>终端/服务端配置文件/编辑配置文件中找到</code></p>
+<p><img src="/images/MC/%E6%94%B9%E6%9C%8D%E5%8A%A1%E7%AB%AF%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.png"></p>
+]]></content>
+      <tags>
+        <tag>开源</tag>
+        <tag>开服</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>安装fail2ban</title>
+    <url>/2024/12/11/fail2ban/</url>
+    <content><![CDATA[<p>缘起：总是有很多奇奇怪怪的IP进行<code>ssh登录</code></p>
+<p><img src="https://s21.ax1x.com/2024/12/11/pAbiF1A.png"></p>
+<p>所以就有<code>fail2ban</code>这么一个东西可以限制别人的<code>ssh</code>重试次数搬掉<code>IP</code></p>
+<h1 id="安装fail2ban"><a href="#安装fail2ban" class="headerlink" title="安装fail2ban"></a>安装fail2ban</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt-get install fail2ban</span><br></pre></td></tr></table></figure>
+
+<p>若你是<code>Debian12</code>及以上版本则需要手动安装<code>rsyslog</code>，因为<code>Debian12</code>弃用了<code>rsyslog</code>.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt-get install rsyslog</span><br></pre></td></tr></table></figure>
+
+<p>启动服务</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl start fail2ban</span><br></pre></td></tr></table></figure>
+
+<p>设置开机自启动</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> fail2ban</span><br></pre></td></tr></table></figure>
+
+<p>查看状态</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl status fail2ban</span><br></pre></td></tr></table></figure>
+
+<p>之后你就可以去<code>1panel</code>查看配置文件和拉黑的IP黑名单了（1panel拥有图形化，比直接改配置文件方便）</p>
+<p>想要永久搬或者重试次数自行改</p>
+<p><img src="https://s21.ax1x.com/2024/12/11/pAbinAS.png" alt="查看配置"></p>
+]]></content>
+      <tags>
+        <tag>开源</tag>
+        <tag>IT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Miao-Yunzai搭建</title>
+    <url>/2024/11/07/Miao-Yunzai/</url>
+    <content><![CDATA[<h1 id="Miao-Yunzai部署教程"><a href="#Miao-Yunzai部署教程" class="headerlink" title="Miao-Yunzai部署教程"></a>Miao-Yunzai部署教程</h1><p>2025年啦孩子，怎么还在坚持玩崽啊（</p>
+<p>这是一款基于<code>原神QQ机器人</code>但不仅限于原神的机器人部署教程，以下教程说的环境均为<code>linux</code>环境</p>
+<p>想看<code>windows教程</code>了话<a href="https://mexy.love/archives/Yunzai">点击这里吧</a></p>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a><strong>准备工作</strong></h2><p>准备一台<code>Ubuntu2204</code>或者<code>Debian12</code>的<code>服务器/家里云</code><span class="red-text"><strong>（不要使用centos！！别问为什么）</strong></span>，准备一个<code>QQ小号</code>，建议具备扫脸条件，因为你永远不知道鹅厂会整出什么花样.</p>
+<p>确保自己的机子有<span class="red-text"><strong>root</strong></span>用户去执行防止出现<code>权限</code>不够等问题</p>
+<p>那么就开始咯！（注意本教程说的根目录均为<span class="red-text"><strong>Miao-Yunzai</strong></span>目录下！！）</p>
+<h2 id="1-更新系统软件包及所需依赖"><a href="#1-更新系统软件包及所需依赖" class="headerlink" title="1.更新系统软件包及所需依赖"></a><strong>1.更新系统软件包及所需依赖</strong></h2><p>由于<code>Ubuntu/Debian</code>自带<span class="red-text"><strong>Git</strong></span>，只需要<span class="red-text"><strong>更新软件包</strong></span>即可</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 一般的服务器(像腾讯云/阿里云那种)基础软件完整，只需要以下指令即可</span></span><br><span class="line"><span class="built_in">sudo</span> apt update &amp;&amp; apt list --upgradable &amp;&amp; apt upgrade -y &amp;&amp; apt autoremove -y</span><br><span class="line"><span class="comment"># 如果你是本地vmware虚拟机非gui界面，需要使用以下指令安装基础软件包再更新</span></span><br><span class="line"><span class="built_in">sudo</span> apt update &amp;&amp; apt list --upgradable &amp;&amp; apt upgrade -y &amp;&amp; apt</span><br><span class="line">autoremove -y &amp;&amp; apt install git vim <span class="built_in">sudo</span> curl ffmpeg screen unzip zip g+</span><br><span class="line">+ libsqlite3-dev python-is-python3 -y</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-安装linux的node-js"><a href="#2-安装linux的node-js" class="headerlink" title="2.安装linux的node.js"></a><strong>2.安装linux的node.js</strong></h2><p>不会装？简单，<code>两行</code>解决</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> curl -sL https://deb.nodesource.com/setup_20.x | <span class="built_in">sudo</span> -E bash -</span><br><span class="line"><span class="comment"># 执行完后安装</span></span><br><span class="line"><span class="built_in">sudo</span> apt install nodejs -y</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/Miao-Yunzai/%E5%AE%89%E8%A3%85node.png" alt="安装node"></p>
+<p>出现<span class="red-text"><strong>successfully</strong></span>则为获取安装包成功，可执行下一步~</p>
+<p><img src="/images/Miao-Yunzai/%E5%AE%89%E8%A3%85node%E8%BF%87%E7%A8%8B.png" alt="安装node过程"></p>
+<p>检查是否安装成功（可选）</p>
+<p>版本不符合图片是没有关系的，只要你有<code>大于20</code>的<code>node</code>环境即可</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-安装所需软件包"><a href="#3-安装所需软件包" class="headerlink" title="3.安装所需软件包"></a><strong>3.安装所需软件包</strong></h2><h3 id="1-安装ffmpeg转码工具（解决部分插件的转码失败问题）"><a href="#1-安装ffmpeg转码工具（解决部分插件的转码失败问题）" class="headerlink" title="1.安装ffmpeg转码工具（解决部分插件的转码失败问题）"></a>1.安装ffmpeg转码工具（解决部分插件的转码失败问题）</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install ffmpeg -y</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-为系统安装chromium浏览器"><a href="#2-为系统安装chromium浏览器" class="headerlink" title="2.为系统安装chromium浏览器"></a>2.为系统安装chromium浏览器</h3><p>这样装是为了跳过pnpm自动安装浏览器</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install chromium -y</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-安装redis-server（机器人所需要的数据库）"><a href="#3-安装redis-server（机器人所需要的数据库）" class="headerlink" title="3.安装redis-server（机器人所需要的数据库）"></a>3.安装redis-server（机器人所需要的数据库）</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install redis-server -y</span><br></pre></td></tr></table></figure>
+
+<p>当然也可以选择<a href="https://1panel.cn/">1panel</a>安装容器化数据库，备份啥的也方便（记得开启<span class="red-text"><strong>容器外部访问</strong></span>）</p>
+<p><img src="/images/Miao-Yunzai/%E5%AE%B9%E5%99%A8redis.png" alt="容器redis"></p>
+<p>由于默认国外源的原因安装失败记得去配置镜像源</p>
+<p><a href="https://docker.1panel.live/">https://docker.1panel.live</a></p>
+<p><img src="/images/Miao-Yunzai/%E9%85%8D%E7%BD%AE%E5%AE%B9%E5%99%A8.png" alt="配置容器"></p>
+<h3 id="4-安装文泉驿正黑体"><a href="#4-安装文泉驿正黑体" class="headerlink" title="4.安装文泉驿正黑体"></a>4.安装文泉驿正黑体</h3><p>解决<a href="https://gitee.com/SmallK111407/earth-k-plugin">土块插件(earth-k-plugin)</a>及<a href="https://gitee.com/yhArcadia/ap-plugin">绘图插件(ap-plugin)</a>乱码问题</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install ttf-wqy-zenhei -y</span><br><span class="line"><span class="comment"># 当然也可以装文泉驿正微米黑体，二选一即可</span></span><br><span class="line"><span class="built_in">sudo</span> apt install fonts-wqy-microhei -y</span><br><span class="line"><span class="comment"># 刷新字体缓存</span></span><br><span class="line"><span class="built_in">sudo</span> fc-cache -fv</span><br></pre></td></tr></table></figure>
+
+<p>当然如果你有其他好看的字体也可以不用参考这个教程的字体~</p>
+<p><img src="/images/Miao-Yunzai/%E5%AE%89%E8%A3%85%E5%AD%97%E4%BD%93.png" alt="安装字体"></p>
+<p>出现<span class="red-text"><strong>succeeded</strong></span>即安装成功</p>
+<h3 id="5-安装pnpm包管理工具"><a href="#5-安装pnpm包管理工具" class="headerlink" title="5.安装pnpm包管理工具"></a>5.安装pnpm包管理工具</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install pnpm -g</span><br><span class="line"><span class="comment"># 若安装pnpm缓慢推荐指定国内阿里云镜像源安装，海外服务器则不需要换源安装</span></span><br><span class="line">npm --registry=https://registry.npmmirror.com install pnpm -g</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/Miao-Yunzai/%E5%AE%89%E8%A3%85pnpm.png" alt="安装pnpm"></p>
+<h2 id="3-安装喵崽"><a href="#3-安装喵崽" class="headerlink" title="3.安装喵崽"></a>3.安装喵崽</h2><p>根据服务器所在地</p>
+<p>选择<a href="https://gitee.com/">Gitee</a>源（国内）和<a href="https://github.com/">GitHub</a>源（国外）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 使用 Github </span></span><br><span class="line">git <span class="built_in">clone</span> --depth=1 https://github.com/yoimiya-kokomi/Miao-Yunzai.git</span><br><span class="line"><span class="comment"># 进入喵崽目录</span></span><br><span class="line"><span class="built_in">cd</span> Miao-Yunzai </span><br><span class="line">git <span class="built_in">clone</span> --depth=1 https://github.com/yoimiya-kokomi/miao-plugin.git ./plugins/miao-plugin/</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 使用Gitee</span></span><br><span class="line">git <span class="built_in">clone</span> --depth=1 https://gitee.com/yoimiya-kokomi/Miao-Yunzai.git</span><br><span class="line"><span class="comment"># 进入喵目录</span></span><br><span class="line"><span class="built_in">cd</span> Miao-Yunzai </span><br><span class="line">git <span class="built_in">clone</span> --depth=1 https://gitee.com/yoimiya-kokomi/miao-plugin.git ./plugins/miao-plugin/</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>近期提醒：受<code>Gitee</code>影响，<code>Gitee源</code>的<code>miao-plugin</code>无法克隆下来（报403）这边需要换<code>Github</code>源才能使用，如果克隆不下来参考下<a href="https://www.ruyuan.icu/2025/01/13/mirror%20image/">常用镜像站合集</a></p>
+</blockquote>
+<p><img src="/images/Miao-Yunzai/%E5%AE%89%E8%A3%85yunzai.png" alt="安装yunzai"></p>
+<h3 id="随后安装依赖"><a href="#随后安装依赖" class="headerlink" title="随后安装依赖"></a>随后安装依赖</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># pnpm config的意思是，将获取依赖源转为淘宝源，加快依赖安装速度</span></span><br><span class="line">pnpm config <span class="built_in">set</span> registry https://registry.npmmirror.com &amp;&amp; pnpm install -P</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/Miao-Yunzai/%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96.png" alt="安装依赖"></p>
+<p>全程无报错算安装成功</p>
+<h2 id="4-启动"><a href="#4-启动" class="headerlink" title="4.启动"></a>4.启动</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node app</span><br><span class="line"><span class="comment"># 然后根据它的提示进行设置账号</span></span><br></pre></td></tr></table></figure>
+
+<p>后续可通过<code>CTRL+C</code>直接退出终端进程</p>
+<p><img src="/images/Miao-Yunzai/%E5%90%AF%E5%8A%A8.png" alt="启动"></p>
+<p>如果你是使用的<code>1panel</code>安装的<code>redis-server</code>记得去根目录<code>/config/config/redis.yaml</code>填写你的密码</p>
+<p>为什么要这么晚说呢，因为<code>redis.yaml</code>是在你第一次启动后才创建后的文件，你也可以去根目录<code>/config/default_config</code>下的<code>redis.yaml</code>复制一份到根目录<code>/config/config</code>下并进行填写</p>
+<p><img src="/images/Miao-Yunzai/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AF%86%E7%A0%81.png" alt="数据库密码"></p>
+<h2 id="常见问题？-建议看看"><a href="#常见问题？-建议看看" class="headerlink" title="常见问题？(建议看看~)"></a>常见问题？(建议看看~)</h2><p><img src="/images/Miao-Yunzai/%E5%96%9C%E6%8A%A5.gif" alt="喜报"></p>
+<h3 id="1-签名怎么填？报错45无法登录？"><a href="#1-签名怎么填？报错45无法登录？" class="headerlink" title="1.签名怎么填？报错45无法登录？"></a>1.签名怎么填？报错45无法登录？</h3><p>可以选择蹭别人的签名或者<del>自建</del></p>
+<p>自建项目地址（不推荐自建！！）：<del><a href="https://github.com/ProtocolScience/Astral-QSignigngnn">油腻的霸哥与企鹅的爱情故事</a></del></p>
+<p>为了保证作者的<code>人身氨醛</code>由于故意留了些<code>检测</code>，使用该签名将会被腾讯精准检测，具体表现是：首次使用<code>4小时内出现冻结，每15天扫脸解封一次</code></p>
+<p>ICQQ0.6.10目前仅支持最高<code>9.0.17</code>的QQ版本，需要通过脚本添加协议版本（来源于<a href="https://qsign.icu/">qsign.icu</a>）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 请在根目录执行！！</span></span><br><span class="line">bash &lt;(curl -sSLk Gitee.com/haanxuan/QSign/raw/main/X)</span><br></pre></td></tr></table></figure>
+
+<p><strong>以上提供的签名脚本等禁止任何以任何视频平台（如bilibili）以及评论等形式外传！！！</strong></p>
+<h3 id="2-关终端了无法让他在后台运行，怎么让它运行保持在后台？"><a href="#2-关终端了无法让他在后台运行，怎么让它运行保持在后台？" class="headerlink" title="2.关终端了无法让他在后台运行，怎么让它运行保持在后台？"></a>2.关终端了无法让他在后台运行，怎么让它运行保持在后台？</h3><p>对机器人发个<span class="red-text"><strong>#重启</strong></span>即可</p>
+<p>当然你的🐔🐔人封号刚解需要上终端解冻要用<code>node app</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 进入根目录</span></span><br><span class="line"><span class="built_in">cd</span> Miao-Yunzai</span><br><span class="line"><span class="comment"># 后台查看日志</span></span><br><span class="line">npm run <span class="built_in">log</span></span><br><span class="line"><span class="comment"># 后台启动</span></span><br><span class="line">npm run start</span><br><span class="line"><span class="comment"># 后台停止</span></span><br><span class="line">npm run stop</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/Miao-Yunzai/npm%E6%8C%87%E4%BB%A4.png" alt="npm指令"></p>
+<h3 id="3-如何去安装插件？"><a href="#3-如何去安装插件？" class="headerlink" title="3.如何去安装插件？"></a>3.如何去安装插件？</h3><p>去<a href="https://gitee.com/yhArcadia/Yunzai-Bot-plugins-index">索引库</a>寻找插件自行安装或是<del>自己写</del></p>
+<p>一般来说，大插件作者会给安装指令和依赖指令，<code>根目录</code>安装后启动即可</p>
+<p>小插件js需要你手动下载源码到<code>根目录/plugins/example</code>下，记得<code>重启</code>.</p>
+<p>我也提供了一些插件也可以来<a href="/docs/js.html">瞅瞅</a></p>
+<p>国内仓库</p>
+<p><a href="https://gitee.com/yhArcadia/Yunzai-Bot-plugins-index">Yunzai-Bot-plugins-index: Yunzai-Bot相关内容收集库 (gitee.com)</a></p>
+<p>国外仓库</p>
+<p><a href="https://github.com/yhArcadia/Yunzai-Bot-plugins-index">https://github.com/yhArcadia/Yunzai-Bot-plugins-index</a></p>
+<h3 id="4-服务器要转移了，如何备份文件？"><a href="#4-服务器要转移了，如何备份文件？" class="headerlink" title="4.服务器要转移了，如何备份文件？"></a>4.服务器要转移了，如何备份文件？</h3><p>linux使用apt安装redis-server后，会在<code>/var/lib/redis/</code>这个目录下生成一个<code>dump.rdb</code>文件，下载下来即可(1panel用户看前面)，还有就是喵崽的<code>根目录config</code>文件夹，<code>data文件夹</code>，<code>resource文件夹</code>，装了<a href="https://gitee.com/Ctrlcvs/xiaoyao-cvs-plugin">逍遥(xiaoyao-cvs-plugin)</a>的<code>data文件夹</code>，<code>根目录/plugin/example</code>文件夹或者按需备份你的各种<code>大插件的config文件夹</code>.</p>
+<p>Q：那个<code>dump.rdb</code>文件有什么用呢？</p>
+<p>A：喵喵的排行，包括群员列表那些</p>
+<h3 id="5-安装了锅巴（Guoba-Plugin）无法访问？"><a href="#5-安装了锅巴（Guoba-Plugin）无法访问？" class="headerlink" title="5.安装了锅巴（Guoba-Plugin）无法访问？"></a>5.安装了锅巴（Guoba-Plugin）无法访问？</h3><p>检查服务器防火墙<code>放开端口50831（即锅巴默认启动端口）</code>，你是哪家云就上哪家云的<code>管理后台</code>。部分云可能存在50831端口放开也无法访问的情况（比如华为云）</p>
+<p>改锅巴配置文件下的<code>config/application.yaml</code>为<code>80</code>端口</p>
+<p>箭头下一行有一个<code>“是否需要拼接端口号”</code>记得要改<code>false</code>为<code>true</code></p>
+<p><img src="/images/Miao-Yunzai/%E9%94%85%E5%B7%B4%E9%97%AE%E9%A2%98.png" alt="锅巴问题"></p>
+<h3 id="6-图床链接无法访问问题，如「-添加表情」无法添加"><a href="#6-图床链接无法访问问题，如「-添加表情」无法添加" class="headerlink" title="6.图床链接无法访问问题，如「#添加表情」无法添加"></a>6.图床链接无法访问问题，如「#添加表情」无法添加</h3><p>新NT图床链接问题，加上ICQQ<code>已不再更新</code>，需要去改新图链，<code>记得重启！！！</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 别的群友提供</span></span><br><span class="line">curl -# https://img.kookapp.cn/attachments/2024-09/11/66e0f2f7c93f4 -o node_modules/icqq/lib/message/parser.js</span><br><span class="line"><span class="comment"># 备用链接</span></span><br><span class="line">curl -# https://h.winterqkl.cn/ICQQ/parser.js -o node_modules/icqq/lib/message/parser.js</span><br></pre></td></tr></table></figure>
+
+<p>还是有问题？真拿你没办法呢，主页有我的QQ，也可以<a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=-Gn9UsYoNE2WZgFV_N3ywFznDBnj3bYE&authKey=1Ue6TbbbwsG/0mzn/JeAk8cE83Zl8Ejd2tRYuY+92FpkDdDF00/mtzN9u/0YQkaF&noverify=0&group_code=229223800">进群找我</a>我可以免费帮搭</p>
+<p>请带上你的截图，不要用你那破手机给拍照拍下来，windows有截图为什么不用.jpg</p>
+<p><img src="/images/Miao-Yunzai/%E6%88%AA%E5%9B%BE.gif" alt="截图"></p>
+<h3 id="常用插件？"><a href="#常用插件？" class="headerlink" title="常用插件？"></a>常用插件？</h3><p><a href="https://gitee.com/yoimiya-kokomi/miao-plugin">喵喵插件（miao-plugin）</a> 不多说，喵崽不装会报错，且是米家用户最需要的东西</p>
+<p><a href="https://gitee.com/yoimiya-kokomi/miao-plugin">梁氏插件（liangshi-calc）</a> 主要提供喵喵面板伤害计算拓展，比原喵喵插件的伤害计算丰富</p>
+<p><a href="https://gitee.com/Nwflower/atlas">图鉴 (Atlas)</a> 提供 <code>原铁绝</code> 三游戏的图鉴查询功能</p>
+<p><a href="https://gitee.com/guoba-yunzai/guoba-plugin">锅巴插件 (Guoba-Plugin)</a> 提供喵喵帮助自定义修改、各大插件的配置的云崽网页后端管理</p>
+<p><a href="https://gitee.com/yeyang52/yenai-plugin">椰奶插件（yenai-plugin）</a> 提供便携群管功能</p>
+<p><a href="https://gitee.com/SmallK111407/earth-k-plugin">土块插件（earth-k-plugin）</a> 提供各种娱乐功能（表情包制作、点歌、解析b站视频、画图、猜角色等功能）</p>
+<p><a href="https://gitee.com/Ctrlcvs/xiaoyao-cvs-plugin">逍遥插件（xiaoyao-cvs-plugin）</a> 提供了米家扫码登录支持以方便 <code>查询体力/深渊</code></p>
+<script>
+  new Vue({
+    data: function () {
+        this.$notify({
+            title: "提醒！",
+            message: "本页面搭建仅供参考，请勿发布在各大流量平台以及评论留言！😜",
+            position: 'top-left',
+            offset: 50,
+            showClose: true,
+            type: "warning",
+            duration: 5000
+        });
+    }
+})
+</script>]]></content>
+      <categories>
+        <category>机器人</category>
+      </categories>
+      <tags>
+        <tag>开源</tag>
+        <tag>机器人</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>TRSS-Yunzai的搭建</title>
+    <url>/2024/11/03/TRSS-Yunzai/</url>
+    <content><![CDATA[<h1 id="TRSS-Yunzai部署教程"><a href="#TRSS-Yunzai部署教程" class="headerlink" title="TRSS-Yunzai部署教程"></a>TRSS-Yunzai部署教程</h1><p>TRSS-Yunzai是面向多登录协议的机器人，可以做到多平台登录（如QQ、微信、kook等）</p>
+<p>至于基础环境准备那些可以从头看到<a href="/2024/12/09/Miao-Yunzai/">pnpm包管理工具</a>就可以回来了</p>
+<h2 id="1-开始部署"><a href="#1-开始部署" class="headerlink" title="1.开始部署"></a>1.开始部署</h2><p>自行根据网络状况选择合适的克隆地址</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#使用github</span></span><br><span class="line">git <span class="built_in">clone</span> --depth 1 https://github.com/TimeRainStarSky/Yunzai</span><br><span class="line"><span class="comment">#使用gitee</span></span><br><span class="line">git <span class="built_in">clone</span> --depth 1 https://gitee.com/TimeRainStarSky/Yunzai</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-安装依赖"><a href="#2-安装依赖" class="headerlink" title="2.安装依赖"></a>2.安装依赖</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 进到这个目录</span></span><br><span class="line"><span class="built_in">cd</span> Yunzai</span><br><span class="line"><span class="comment"># 安装依赖</span></span><br><span class="line">pnpm install</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-选择适配器"><a href="#3-选择适配器" class="headerlink" title="3. 选择适配器"></a>3. 选择适配器</h2><p>因为配置了<a href="https://blog.csdn.net/sinat_17700695/article/details/91491472">标准输入</a>所有操作都可在<code>终端操作</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 启动，注意前台启动才能有标准输入，后台启动像pnpm run start是没有标准输入的！！</span></span><br><span class="line">node app</span><br></pre></td></tr></table></figure>
+
+<p>选择自己的适配器（这里举例两个）</p>
+<h3 id="1-ICQQ（QQ登录）"><a href="#1-ICQQ（QQ登录）" class="headerlink" title="1.ICQQ（QQ登录）"></a>1.ICQQ（QQ登录）</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#安装ICQQ-Plugin</span></span><br></pre></td></tr></table></figure>
+
+<p>然后它会自己安装依赖重启</p>
+<p><img src="/images/%E5%AE%89%E8%A3%85ICQQ-Plugin.png" alt="安装ICQQ-Plugin"></p>
+<p>填写<code>签名</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#QQ签名https://zyr15r-astralqsign.hf.space/?key=None&amp;ver=9.0.90</span></span><br></pre></td></tr></table></figure>
+
+<p><code>ver</code>这里版本可选，一般qq版本推荐大于<code>9.0.65</code>+，否则会出现版本过低问题</p>
+<p>然后添加账号</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#QQ设置QQ号:密码:登录设备</span></span><br></pre></td></tr></table></figure>
+
+<p>格式样例</p>
+<p>密码登录：QQ号 <code>114514</code> 密码 <code>1919810</code> 登录设备 <code>安卓手机(1)/平板(2)</code></p>
+<p>比如：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#QQ设置114514:1919810:2</span></span><br></pre></td></tr></table></figure>
+
+<p><del>扫码登录：QQ号 <code>114514</code> 登录设备 <code>安卓手表(3)</code></del> 已经不推荐！</p>
+<p><del>会弹出二维码。如果终端扫不了就去<code>根目录/data/icqq/你的qq号</code>下有个<code>qrcode.png</code>去扫</del> 已经不推荐！</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#QQ设置114514::3</span></span><br></pre></td></tr></table></figure>
+
+<p>具体你可以去看文档<a href="https://gitee.com/TimeRainStarSky/Yunzai-ICQQ-Plugin">ICQQ-plugin</a></p>
+<p>然后按照他的提示做出Bot验证就行了</p>
+<h3 id="WeChat"><a href="#WeChat" class="headerlink" title="WeChat"></a>WeChat</h3><p>不是很推荐！因为使用的是网页版登录，不稳定随时掉！</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#安装WeChat-Plugin</span></span><br></pre></td></tr></table></figure>
+
+<p>确保自己的微信小号要实名</p>
+<p>微信 → 我 → 服务 → 钱包 → 身份信息 → 实名认证</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#微信登录</span></span><br></pre></td></tr></table></figure>
+
+<p>然后会弹出微信登录的<code>二维码地址</code>登录即可</p>
+<p>具体可看<a href="https://github.com/TimeRainStarSky/Yunzai-WeChat-Plugin">WeChat-Plugin</a></p>
+<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><h3 id="2536端口给占用？（我找不到图了）"><a href="#2536端口给占用？（我找不到图了）" class="headerlink" title="2536端口给占用？（我找不到图了）"></a>2536端口给占用？（我找不到图了）</h3><p><code>pm2</code>特性</p>
+<p>解决：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pnpm pm2 <span class="built_in">kill</span></span><br><span class="line"><span class="comment"># 后node app即可</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="发-重启-不能转后台？"><a href="#发-重启-不能转后台？" class="headerlink" title="发#重启 不能转后台？"></a>发#重启 不能转后台？</h3><p>因为有标准输入，前台不会杀掉</p>
+<p>那就自己转后台启动呗</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 后台启动</span></span><br><span class="line">pnpm run start</span><br><span class="line"><span class="comment"># 看后台日志</span></span><br><span class="line">pnpm run <span class="built_in">log</span></span><br><span class="line"><span class="comment"># 后台停止</span></span><br><span class="line">pnpm run stop</span><br></pre></td></tr></table></figure>
+
+<script>
+  new Vue({
+    data: function () {
+        this.$notify({
+            title: "提醒！",
+            message: "本页面搭建仅供参考，请勿发布在各大流量平台以及评论留言！😜",
+            position: 'top-left',
+            offset: 50,
+            showClose: true,
+            type: "warning",
+            duration: 5000
+        });
+    }
+})
+</script>]]></content>
+      <categories>
+        <category>机器人</category>
+      </categories>
+      <tags>
+        <tag>开源</tag>
+        <tag>机器人</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>本地部署deepseek-R1对话模型</title>
+    <url>/2024/11/07/deepseek/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>这是最近爆火的开源AI对话大模型———— <code>DeepSeek</code>，全称杭州深度求索人工智能基础技术研究有限公司。<code>DeepSeek</code> 是一家创新型科技公司，成立于2023年7月17日，使用数据蒸馏技术，得到更为精炼、有用的数据。由知名私募巨头幻方量化孕育而生，专注于开发先进的大语言模型（LLM）和相关技术。</p>
+<p>2025年1月20日，DeepSeek正式发布 DeepSeek-R1 模型，并同步开源模型权重。DeepSeek-R1在后训练阶段大规模使用了强化学习技术，在仅有极少标注数据的情况下，极大提升了模型推理能力。<code>DeepSeek-V3</code> 和 <code>DeepSeek-R1</code> 两款大模型，成本价格低廉，性能与 <code>OpenAI</code> 相当，让硅谷震惊，甚至引发了Meta内部的恐慌，工程师们开始连夜尝试复制DeepSeek的成果，以至于现在的网站还在被 <code>ddos</code> 攻击</p>
+<p><img src="https://dp-cdn-deepseek.obs.cn-east-3.myhuaweicloud.com/api-docs/deepseek_r1_benchmark.png" alt="对比"></p>
+<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><p>任意一台操作系统的电脑 <code>MacOS/Linux/Windows</code>，运行内存尽可能的多即可，推荐带<code>独立显卡</code>的电脑</p>
+<p>这里展示的配置是：</p>
+<ol>
+<li><code>Windows</code>操作系统</li>
+<li>运行内存：24GB</li>
+<li>CPU：13th Gen Intel(R) Core(TM) i7-13650HX</li>
+<li>显卡：英伟达4060 laptop</li>
+</ol>
+<h1 id="开始部署"><a href="#开始部署" class="headerlink" title="开始部署"></a>开始部署</h1><h2 id="1-下载ollama安装包"><a href="#1-下载ollama安装包" class="headerlink" title="1.下载ollama安装包"></a>1.下载ollama安装包</h2><p><a href="https://ollama.com/download">戳我去官网下载</a></p>
+<p>打开就是这样子，自行选择你的操作系统下载</p>
+<p><img src="https://unpkg.com/ruyuan_blog_pic/deepseek/ollama.jpg" alt="官网下载ollama安装包"></p>
+<p>下载下来双击打开安装包，目前暂时无法部署到自定义盘，只能在<code>C盘</code>，占用不是很大</p>
+<p><img src="https://unpkg.com/ruyuan_blog_pic/deepseek/install-ollama.jpg" alt="安装ollama"></p>
+<h2 id="2-克隆大模型"><a href="#2-克隆大模型" class="headerlink" title="2.克隆大模型"></a>2.克隆大模型</h2><p>搜索<code>deepseek-r1</code></p>
+<p>找不到我给你个<a href="https://ollama.com/library/deepseek-r1">传送门</a></p>
+<p><img src="https://unpkg.com/ruyuan_blog_pic/deepseek/search-deepseek.jpg" alt="搜索deepseek"></p>
+<p>打开就是这样，选择你合适的模型，在确保你配置够的情况下可以适当往下选择最好的模型资源，等级从下往上递减</p>
+<p><img src="https://unpkg.com/ruyuan_blog_pic/deepseek/instructions.jpg" alt="复制指令"></p>
+<p>对应的模型配置大概是这样：</p>
+<p>1.5b：4GB显存<br>7b&#x2F;8b：8GB显存（我是这个）<br>14b：12GB显存<br>32b：24GB显存（差不多4090的配置了）<br>显存不够他会调用<code>CPU</code>跑，且吃核心数，生成对话速度会慢很多，</p>
+<p>使用<code>Win+R</code>键输入<code>cmd</code>打开终端</p>
+<p>可以敲<code>ollama</code>看看环境是否生效，会提示ollama相关指令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ollama</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://unpkg.com/ruyuan_blog_pic/deepseek/check.jpg" alt="检查下环境变量是否生效"></p>
+<p>下载大模型，我这里是7b</p>
+<blockquote>
+<p>下载前先往下滑到拓展页编辑环境变量，里面包含了更改模型<code>默认下载路径！</code></p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ollama run deepseek-r1:7b</span><br></pre></td></tr></table></figure>
+
+<p>等待下载完成，会自动进入<code>&gt;&gt;&gt;</code>命令行</p>
+<p>这时候你就可以随心所欲进行对话了，敲<code>/?</code>提示常用命令</p>
+<kbd>CTRL</kbd> + <kbd>C</kbd>结束交互
+
+<p><img src="https://unpkg.com/ruyuan_blog_pic/deepseek/success.jpg" alt="部署成功"></p>
+<h2 id="拓展-UI增强对话"><a href="#拓展-UI增强对话" class="headerlink" title="拓展-UI增强对话"></a>拓展-UI增强对话</h2><p>终端难免会使用难受，所以可以使用ui的方式对话，参考了以下视频，使用的是<code>ChatBox AI</code></p>
+<div align=center class="aspect-ratio">
+    <iframe src="https://player.bilibili.com/player.html?aid=113910820639135&bvid=BV1viFaeBE3z&cid=28138275900&p=1&autoplay=0" 
+    scrolling="no" 
+    border="0" 
+    frameborder="no" 
+    framespacing="0" 
+    high_quality=1
+    danmaku=1 
+    allowfullscreen="true"> 
+    </iframe>
+</div>
+
+<p>首先检查下你的接口是否能访问，地址是<code>&lt;http://localhost:11434&gt;</code></p>
+<p>显示<code>Ollama is running</code>就是run成功了</p>
+<p>配置系统环境变量，具体怎么在哪我不多说了哈，参数如下</p>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>OLLAMA_HOST</td>
+<td>0.0.0.0</td>
+</tr>
+<tr>
+<td>OLLAMA_MODELS</td>
+<td>路径</td>
+</tr>
+<tr>
+<td>OLLAMA_ORIGINS</td>
+<td>*</td>
+</tr>
+</tbody></table>
+<p>这里重点说下路径，因为ollama默认下载路径默认C盘，用户当然都不想要在C盘下载，所以可以进行更改存储路径</p>
+<p><img src="https://unpkg.com/ruyuan_blog_pic/deepseek/environment%20variable.jpg" alt="改环境变量"></p>
+<p>之后下载<code>ChatBox AI</code>，官网在这<a href="https://chatboxai.app/zh/">https://chatboxai.app/zh/</a>，官网国内访问较慢，建议打开魔法食用（</p>
+<p>下载完打开进行配置，点击右下角齿轮，<code>模型提供方</code>选择<code>OLLAMA API</code>，<code>API域名</code>填你本地域名，之后保存，就可以进行流畅对话啦~</p>
+<p><img src="https://unpkg.com/ruyuan_blog_pic/deepseek/chatboxai.jpg" alt="chatboxai对接"></p>
+]]></content>
+      <categories>
+        <category>机器人</category>
+      </categories>
+      <tags>
+        <tag>开源</tag>
+        <tag>AI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>frp搭建</title>
+    <url>/2024/11/08/frp/</url>
+    <content><![CDATA[<h1 id="frp部署教程"><a href="#frp部署教程" class="headerlink" title="frp部署教程"></a>frp部署教程</h1><h2 id="什么是frp（内网穿透）？"><a href="#什么是frp（内网穿透）？" class="headerlink" title="什么是frp（内网穿透）？"></a>什么是frp（内网穿透）？</h2><p>FRP（Fast Reverse Proxy）是一个<code>高性能</code>的<code>反向代理</code>应用，它主要用于<code>内网穿透</code>，允许您在不暴露您的内网服务的情况下将内网服务映射到公网上，从而能够被外部访问。常用于物联网设备、内网服务器或任何您希望从外部网络访问的服务。</p>
+<p>图解是这样：<br><img src="/images/frp/frp%E5%9B%BE%E8%A7%A3.png" alt="frp图解"></p>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>1.准备一台<code>公网服务器</code>（阿里云、腾讯云等等），没有？白嫖！<del><a href="https://freefrp.net/">白嫖FRP</a></del>这个已经炸了，请换另一个<a href="https://freefrp.com/">白嫖节点</a>（这里的frp版本都是0.56+，且你只需要配置<code>frpc</code>客户端）</p>
+<p>2.一台内网主机</p>
+<p>4.<a href="https://github.com/fatedier/frp/releases">下载frp</a>，这里使用的0.36.2版本，因为0.50开始frp的配置文件开始和老的配置会有所差别，个人喜欢老的配置QAQ</p>
+<p>解压出来如下：</p>
+<p><img src="/images/frp/frp%E8%A7%A3%E5%8E%8B.png" alt="解压frp"></p>
+<p>其中，<code>frps.ini</code>是服务端配置文件，<code>frpc.ini</code>是客户端的配置文件.</p>
+<h2 id="配置frp服务端"><a href="#配置frp服务端" class="headerlink" title="配置frp服务端"></a>配置frp服务端</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[common]</span><br><span class="line">bind_port = 7000 <span class="comment"># 这里是通讯端口，需要你去某个服务器的管理后台放开它</span></span><br><span class="line">token = 123456 <span class="comment"># 这里是连接校验的token，随便填写即可，最终需要和frpc.ini的token一致</span></span><br><span class="line">dashboard_port = 7500 <span class="comment"># 这里是frp的监控访问端口，可选</span></span><br><span class="line">vhost_http_port = 23333 <span class="comment"># http的穿透端口，用于穿透内网的web页面，可选项</span></span><br><span class="line">ashboard_user = admin <span class="comment"># 这个是frp监控面板的用户名</span></span><br><span class="line">dashboard_pwd = 123456 <span class="comment"># 这个是frp监控面板的密码</span></span><br></pre></td></tr></table></figure>
+
+<p>其中<code>dashboard_port</code>，<code>vhost_http_port</code>，<code>ashboard_user</code>，<code>dashboard_pwd</code>这些如果你不需要监控面板，你可以<code>删掉</code>或者<code>注释</code>掉</p>
+<p>随后启动frp服务端</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 前台启动</span></span><br><span class="line">./frps -c ./frps.ini</span><br><span class="line"><span class="comment"># 后台启动</span></span><br><span class="line"><span class="built_in">nohup</span> ./frps -c ./frps.ini &amp;</span><br><span class="line"><span class="comment">#然后回车两下，没有显示exit就是启动成功</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="配置frp客户端"><a href="#配置frp客户端" class="headerlink" title="配置frp客户端"></a>配置frp客户端</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[common]</span><br><span class="line">server_addr = <span class="comment"># 填写你的公网服务器ip</span></span><br><span class="line">server_port = 7000 <span class="comment"># 给内网服务器放开端口或者直接防火墙关了也可</span></span><br><span class="line">token = 123456 <span class="comment"># 这里是连接校验的token，随便填写即可，最终需要和frps.ini的token一致</span></span><br><span class="line">tls_enable = <span class="literal">true</span> <span class="comment"># 这个，emmm忘了，反正是必须填上去</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 事例</span></span><br><span class="line">[ssh]</span><br><span class="line"><span class="built_in">type</span> = tcp <span class="comment"># tcp协议</span></span><br><span class="line">local_ip = 127.0.0.1 <span class="comment"># 本地ip</span></span><br><span class="line">local_port = 22 <span class="comment"># ssh端口</span></span><br><span class="line">remote_port = 6000 <span class="comment"># 映射到的端口</span></span><br><span class="line"></span><br><span class="line">[ssh_2] <span class="comment"># 这里变成了ssh_2是不能和ssh同名</span></span><br><span class="line"><span class="built_in">type</span> = tcp <span class="comment"># tcp协议</span></span><br><span class="line">local_ip = 127.0.0.1 <span class="comment"># 本地ip</span></span><br><span class="line">local_port = 23 <span class="comment"># ssh端口</span></span><br><span class="line">remote_port = 6001 <span class="comment"># 映射到的端口</span></span><br><span class="line"></span><br><span class="line">[web01]</span><br><span class="line"><span class="built_in">type</span> = http <span class="comment"># http协议</span></span><br><span class="line">local_ip = 127.0.0.1 <span class="comment"># 本地ip</span></span><br><span class="line">local_port = 23333 <span class="comment"># 本地端口</span></span><br><span class="line">remote_port = 23333 <span class="comment"># 映射出来的端口</span></span><br><span class="line">custom_domains = <span class="comment"># 填写你的公网服务器ip</span></span><br></pre></td></tr></table></figure>
+
+<p>然后就是启动服务端</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 前台启动</span></span><br><span class="line">./frpc -c ./frpc.ini</span><br><span class="line"><span class="comment"># 后台启动</span></span><br><span class="line"><span class="built_in">nohup</span> ./frpc -c ./frpc.ini &amp;</span><br><span class="line"><span class="comment">#然后回车两下，没有显示exit就是启动成功</span></span><br></pre></td></tr></table></figure>
+
+<p>随后可以看看检查有没有连接成功</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 服务端和客户端查看日志都是一样的</span></span><br><span class="line"><span class="built_in">tail</span> -f nohup.out</span><br></pre></td></tr></table></figure>
+
+<p>服务端日志长这样：</p>
+<p><img src="/images/frp/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%97%A5%E5%BF%97.png" alt="服务端日志"></p>
+<p>客户端日志长这样：</p>
+<p><img src="/images/frp/%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%97%A5%E5%BF%97.png" alt="客户端日志"></p>
+<p>尝试下是否能够使用：</p>
+<p><img src="/images/frp/%E8%AF%95%E8%AF%95.png" alt="试试"></p>
+<h2 id="新frp教程"><a href="#新frp教程" class="headerlink" title="新frp教程"></a>新frp教程</h2><h3 id="编辑新服务端frps-toml"><a href="#编辑新服务端frps-toml" class="headerlink" title="编辑新服务端frps.toml"></a>编辑新服务端frps.toml</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># frp服务的特定端口，防火墙也需放开该端口</span></span><br><span class="line">bindPort = 7000</span><br><span class="line"><span class="comment"># 自定义的监听的端口，所有对服务器该端口访问将被转发到本地内网，做了反向代理可不处理防火墙放行</span></span><br><span class="line">vhostHTTPPort = 23333</span><br><span class="line">auth.token = <span class="string">&quot;token&quot;</span></span><br><span class="line">transport.tls.force = <span class="literal">true</span> <span class="comment"># 服务器仅接受tls连接可选可不选</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="编辑新客户端frpc-toml"><a href="#编辑新客户端frpc-toml" class="headerlink" title="编辑新客户端frpc.toml"></a>编辑新客户端frpc.toml</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 服务器的公网ip</span></span><br><span class="line">serverAddr = <span class="string">&quot;xxx.xxx.xxx.xxx&quot;</span></span><br><span class="line"><span class="comment"># 7000端口 与frps.toml一致</span></span><br><span class="line">serverPort = 7000</span><br><span class="line">auth.method = <span class="string">&quot;token&quot;</span> <span class="comment">#如果你设置了token校验</span></span><br><span class="line">auth.token = <span class="string">&quot;public.freefrp.com&quot;</span> <span class="comment"># token值</span></span><br><span class="line">transport.tls.enable = <span class="literal">true</span> <span class="comment"># 仅接受tls连接</span></span><br><span class="line"></span><br><span class="line">[[proxies]]</span><br><span class="line">name = <span class="string">&quot;自定义名字，一定要英文&quot;</span></span><br><span class="line"><span class="built_in">type</span> = <span class="string">&quot;tcp&quot;</span></span><br><span class="line">localPort = 22 <span class="comment"># 看你需求，这里举例ssh端口</span></span><br><span class="line">remotePort = 6000 <span class="comment"># 穿出来的端口</span></span><br><span class="line"></span><br><span class="line">[[proxies]]</span><br><span class="line">name = <span class="string">&quot;自定义名字，一定要英文&quot;</span></span><br><span class="line"><span class="built_in">type</span> = <span class="string">&quot;tcp&quot;</span></span><br><span class="line">localPort = 3389 <span class="comment"># 看你需求，这里举例windows远程端口</span></span><br><span class="line">remotePort = 6001 <span class="comment"># 穿出来的端口</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 按照同样的格式自行添加</span></span><br><span class="line">[[proxies]]</span><br><span class="line">name = <span class="string">&quot;web&quot;</span></span><br><span class="line"><span class="built_in">type</span> = <span class="string">&quot;http&quot;</span></span><br><span class="line">localPort = 8080 <span class="comment"># 看你需求</span></span><br><span class="line">remotePort = 8080 <span class="comment"># 穿出来的端口</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="启动服务端"><a href="#启动服务端" class="headerlink" title="启动服务端"></a>启动服务端</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 自行确保是否在frp目录下</span></span><br><span class="line"><span class="built_in">nohup</span> ./frps -c ./frps.toml &amp;</span><br></pre></td></tr></table></figure>
+
+<h3 id="启动客户端"><a href="#启动客户端" class="headerlink" title="启动客户端"></a>启动客户端</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">nohup</span> ./frpc -c ./frpc.toml &amp;</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>开源</tag>
+        <tag>IT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>GPTBox的使用</title>
+    <url>/2024/11/04/gptbox/</url>
+    <content><![CDATA[<h1 id="GPT-Box的使用"><a href="#GPT-Box的使用" class="headerlink" title="GPT Box的使用"></a>GPT Box的使用</h1><span id="more"></span>
+
+<h2 id="简单讲讲openai是什么"><a href="#简单讲讲openai是什么" class="headerlink" title="简单讲讲openai是什么"></a>简单讲讲openai是什么</h2><p>OpenAI，是一家开放人工智能研究和部署公司，其使命是确保通用人工智能造福全人类。创立于2015年12月，总部位于美国旧金山。现由营利性公司OpenAI LP及非营利性母公司OpenAI Inc组成。</p>
+<h3 id="下载GPT-Box"><a href="#下载GPT-Box" class="headerlink" title="下载GPT Box"></a>下载GPT Box</h3><p>下载<a href="https://github.com/lollipopkit/flutter_gpt_box/tree/main">安卓端</a>我们可以在手机上轻松使用OpenAI</p>
+<p>GPT Box安装包下载：<br><a href="https://github.com/lollipopkit/flutter_gpt_box/releases">Github发行版</a> | <a href="https://pan.ruyuan.icu/">去我的资源分享站下载</a></p>
+<h3 id="进入应用"><a href="#进入应用" class="headerlink" title="进入应用"></a>进入应用</h3><p>进去长这酱紫<br><img src="/images/gptbox/1.png" alt="首页"></p>
+<h3 id="之后来到应用项"><a href="#之后来到应用项" class="headerlink" title="之后来到应用项"></a>之后来到应用项</h3><p>点击左上角的齿轮图标，来到应用页面，先登个录~<br><img src="/images/gptbox/2.png" alt="应用页"></p>
+<h3 id="最后来到配置项"><a href="#最后来到配置项" class="headerlink" title="最后来到配置项"></a>最后来到配置项</h3><p>这里有两个需要更改的地方一个是<code>密钥</code>，一个是<code>URL</code>，密钥首先要自己去获取<br>密钥可以直接去<a href="https://github.com/chatanywhere/GPT_API_free">Github</a>白嫖即可，确保你有<code>github</code>账号能进行登录，获取到密钥之后就可以填上去啦！<br>最后就是更改接口，因为默认是openai官方接口，国内是无法访问的，所以要进行更改~</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">https://api.chatanywhere.tech/v1</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/gptbox/3.png" alt="配置页"></p>
+<p>这里记得要更改模型，因为<code>gpt-4o</code>给免费用户只能使用可怜的3次，一般情况下切换<code>gpt-4o-mini</code>就可以满足生活中的大部分需求了（每天0点刷新，每天可以对话200次）</p>
+<p><img src="/images/gptbox/4.png" alt="提示改模型页"></p>
+]]></content>
+      <tags>
+        <tag>开源</tag>
+        <tag>AI</tag>
+        <tag>APP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hadoop的搭建</title>
+    <url>/2024/11/04/hadoop/</url>
+    <content><![CDATA[<h1 id="Hadoop的部署"><a href="#Hadoop的部署" class="headerlink" title="Hadoop的部署"></a>Hadoop的部署</h1><h2 id="Hadoop简介"><a href="#Hadoop简介" class="headerlink" title="Hadoop简介"></a>Hadoop简介</h2><p><code>Hadoop</code> 是一个开源软件框架，用于在分布式计算环境中存储和处理大量数据。它由Apache软件基金会开发，旨在处理大数据，并基于<code>MapReduce</code>编程模型，允许对大型数据集进行并行处理。</p>
+<p><strong>Hadoop主要组件如下</strong></p>
+<p>1.<code>HDFS</code>（Hadoop分布式文件系统）：这是Hadoop的存储组件，允许在多台机器上存储大量数据。它设计用于与廉价硬件一起工作，从而具有成本效益。</p>
+<p>2.<code>YARN</code>（Yet Another Resource Negotiator）：这是Hadoop的资源管理组件，管理处理HDFS中存储的数据所需的资源（如CPU和内存）。</p>
+<p>3.<code>MapReduce</code>：这是一个基于YARN的系统，用于对大型数据集进行并行处理。</p>
+<p><strong>Hadoop的特点</strong></p>
+<p>1.分布式存储：Hadoop将大数据集存储在多台机器上，允许存储和处理极<code>大量</code>的数据。</p>
+<p>2.可扩展性：Hadoop可以从单台服务器扩展到数千台机器，使其易于根据需要增加容量。</p>
+<p>3.容错性：Hadoop设计为高度容错，即使在硬件故障的情况下也能继续运行。</p>
+<p>4.数据本地化：Hadoop提供数据本地化功能，数据存储在将要处理的节点上，有助于减少网络流量并提高性能。</p>
+<p>5.高可用性：Hadoop提供高可用性功能，确保数据始终可用且不会丢失。</p>
+<p>6.灵活的数据处理：Hadoop的MapReduce编程模型允许以分布式方式处理数据，使其易于实现各种数据处理任务。</p>
+<h2 id="开始部署"><a href="#开始部署" class="headerlink" title="开始部署"></a>开始部署</h2><p>准备三台 <code>虚拟机/物理机/服务器</code> 来构建分布式集群</p>
+<p>建议使用<code>root</code>用户来执行，否则会出现权限不够等问题！</p>
+<h3 id="1-更改主机名"><a href="#1-更改主机名" class="headerlink" title="1.更改主机名"></a>1.更改主机名</h3><p>注意这里<code>三台</code>机器都要操作</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># nmtui修改主机名方便</span></span><br><span class="line">nmtui</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/hadoop/nmtui1.png"></p>
+<p>随后修改第一台名为<code>node1</code>，第二台<code>node2</code>，第三台<code>node3</code>（当然改其他名都行，看你自己~）</p>
+<p><img src="/images/hadoop/nmtui2.png"></p>
+<h3 id="2-主机映射"><a href="#2-主机映射" class="headerlink" title="2.主机映射"></a>2.主机映射</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># vim进去编辑</span></span><br><span class="line">vim /etc/hosts</span><br><span class="line"><span class="comment"># 进去后长这样</span></span><br><span class="line">127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4</span><br><span class="line">::1         localhost localhost.localdomain localhost6 localhost6.localdomain6</span><br><span class="line"></span><br><span class="line"><span class="comment">#你只需要编辑下面的格式，ip自行更改</span></span><br><span class="line">192.168.88.151 node1 node1</span><br><span class="line">192.168.88.152 node2 node2</span><br><span class="line">192.168.88.153 node3 node3</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-部署jdk"><a href="#3-部署jdk" class="headerlink" title="3.部署jdk"></a>3.部署jdk</h3><p>自行上传jdk压缩包，建议用1.8不要用<code>高于</code>1.8否则会出现奇怪的问题！</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 这里举例/export/server/下，</span></span><br><span class="line"><span class="built_in">mkdir</span> -p /export/server</span><br><span class="line"><span class="built_in">cd</span> /export/server/</span><br><span class="line"><span class="comment"># 注意你的jdk包如果名字不一样自行改名</span></span><br><span class="line">tar zxvf jdk-8u241-linux-x64.tar.gz</span><br></pre></td></tr></table></figure>
+
+<p>随后编辑环境变量</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/profile</span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=/export/server/jdk1.8.0_241</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$JAVA_HOME</span>/bin</span><br><span class="line"><span class="built_in">export</span> CLASSPATH=.:<span class="variable">$JAVA_HOME</span>/lib/dt.jar:<span class="variable">$JAVA_HOME</span>/lib/tools.jar</span><br></pre></td></tr></table></figure>
+
+<p>刷新环境变量</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> /etc/profile</span><br><span class="line"><span class="comment"># 随后敲java-version就出来了</span></span><br><span class="line">java -version</span><br></pre></td></tr></table></figure>
+
+<h3 id="集群时间同步"><a href="#集群时间同步" class="headerlink" title="集群时间同步"></a>集群时间同步</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 先下载包，centos用yum，debian/ubuntu用apt-get</span></span><br><span class="line">yum install ntpdate -y</span><br><span class="line">apt install ntpdate -y</span><br><span class="line"><span class="comment"># 同步阿里云时间</span></span><br><span class="line">ntpdate ntp5.aliyun.com</span><br></pre></td></tr></table></figure>
+
+<h3 id="关闭防火墙（重要！）"><a href="#关闭防火墙（重要！）" class="headerlink" title="关闭防火墙（重要！）"></a>关闭防火墙（重要！）</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --state	<span class="comment">#查看防火墙状态</span></span><br><span class="line">systemctl stop firewalld.service  <span class="comment">#停止firewalld服务</span></span><br><span class="line">systemctl <span class="built_in">disable</span> firewalld.service  <span class="comment">#开机禁用firewalld服务</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="做免密登录"><a href="#做免密登录" class="headerlink" title="做免密登录"></a>做免密登录</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 一路回车即可，三台机器一起执行</span></span><br><span class="line">ssh-keygen</span><br></pre></td></tr></table></figure>
+
+<p>然后配置免密登录到node1、node2、node3</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 同样是三台一起做</span></span><br><span class="line">ssh-copy-id node1</span><br><span class="line">ssh-copy-id node2</span><br><span class="line">ssh-copy-id node3</span><br></pre></td></tr></table></figure>
+
+<p>到这里基础环境基本完成~</p>
+<h3 id="配置Hadoop"><a href="#配置Hadoop" class="headerlink" title="配置Hadoop"></a>配置Hadoop</h3><p>先上传Hadoop安装包，这里教程说的都是3.0的hadoop</p>
+<p>这里要注意的是配置只在<code>主节点</code>配置就行了（即node1），配置完后分发给其他节点即可</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 解压</span></span><br><span class="line">tar zxvf hadoop-3.3.0-src.tar.gz</span><br><span class="line"><span class="comment"># 放到/export/server下</span></span><br><span class="line"><span class="built_in">mv</span> hadoop-3.3.0 /export/server</span><br></pre></td></tr></table></figure>
+
+<p>编辑<code>hadoop-env.sh</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 文件最后添加</span></span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=/export/server/jdk1.8.0_381</span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> HDFS_NAMENODE_USER=root</span><br><span class="line"><span class="built_in">export</span> HDFS_DATANODE_USER=root</span><br><span class="line"><span class="built_in">export</span> HDFS_SECONDARYNAMENODE_USER=root</span><br><span class="line"><span class="built_in">export</span> YARN_RESOURCEMANAGER_USER=root</span><br><span class="line"><span class="built_in">export</span> YARN_NODEMANAGER_USER=root </span><br></pre></td></tr></table></figure>
+
+<p>::: tip 提醒</p>
+<p>编辑前请仔细阅读配置文件，且以下配置文件都要在<code>configuration</code>里面来进行编辑~</p>
+<p>:::</p>
+<p>编辑<code>core-site.xml</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;!-- 设置默认使用的文件系统 Hadoop支持file、HDFS、GFS、ali|Amazon云等文件系统 --&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">    &lt;name&gt;fs.defaultFS&lt;/name&gt;</span><br><span class="line">    &lt;!-- 如果你的主机名和我不一样请仔细观察再更改！ --&gt;</span><br><span class="line">    &lt;value&gt;hdfs://node1:8020&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 设置Hadoop本地保存数据路径 --&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">    &lt;name&gt;hadoop.tmp.dir&lt;/name&gt;</span><br><span class="line">    &lt;value&gt;/export/data/hadoop-3.3.0&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 设置HDFS web UI用户身份 --&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">    &lt;name&gt;hadoop.http.staticuser.user&lt;/name&gt;</span><br><span class="line">    &lt;value&gt;root&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 整合hive 用户代理设置 --&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">    &lt;name&gt;hadoop.proxyuser.root.hosts&lt;/name&gt;</span><br><span class="line">    &lt;value&gt;*&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line"></span><br><span class="line">&lt;property&gt;</span><br><span class="line">    &lt;name&gt;hadoop.proxyuser.root.groups&lt;/name&gt;</span><br><span class="line">    &lt;value&gt;*&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 文件系统垃圾桶保存时间 --&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">    &lt;name&gt;fs.trash.interval&lt;/name&gt;</span><br><span class="line">    &lt;value&gt;1440&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br></pre></td></tr></table></figure>
+
+<p>编辑<code>hdfs-site.xml</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;!-- 设置SNN进程运行机器位置信息 --&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">    &lt;name&gt;dfs.namenode.secondary.http-address&lt;/name&gt;</span><br><span class="line">    &lt;value&gt;node2:9868&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br></pre></td></tr></table></figure>
+
+<p>编辑<code>mapred-site.xml</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;!-- 设置MR程序默认运行模式： yarn集群模式 <span class="built_in">local</span>本地模式 --&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">  &lt;name&gt;mapreduce.framework.name&lt;/name&gt;</span><br><span class="line">  &lt;value&gt;yarn&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- MR程序历史服务地址 --&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">  &lt;name&gt;mapreduce.jobhistory.address&lt;/name&gt;</span><br><span class="line">  &lt;value&gt;node1:10020&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line"> </span><br><span class="line">&lt;!-- MR程序历史服务器web端地址 --&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">  &lt;name&gt;mapreduce.jobhistory.webapp.address&lt;/name&gt;</span><br><span class="line">  &lt;value&gt;node1:19888&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line"></span><br><span class="line">&lt;property&gt;</span><br><span class="line">  &lt;name&gt;yarn.app.mapreduce.am.env&lt;/name&gt;</span><br><span class="line">  &lt;value&gt;HADOOP_MAPRED_HOME=<span class="variable">$&#123;HADOOP_HOME&#125;</span>&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line"></span><br><span class="line">&lt;property&gt;</span><br><span class="line">  &lt;name&gt;mapreduce.map.env&lt;/name&gt;</span><br><span class="line">  &lt;value&gt;HADOOP_MAPRED_HOME=<span class="variable">$&#123;HADOOP_HOME&#125;</span>&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line"></span><br><span class="line">&lt;property&gt;</span><br><span class="line">  &lt;name&gt;mapreduce.reduce.env&lt;/name&gt;</span><br><span class="line">  &lt;value&gt;HADOOP_MAPRED_HOME=<span class="variable">$&#123;HADOOP_HOME&#125;</span>&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br></pre></td></tr></table></figure>
+
+<p>编辑<code>yarn-site.xml</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;!-- 设置YARN集群主角色运行机器位置 --&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">	&lt;name&gt;yarn.resourcemanager.hostname&lt;/name&gt;</span><br><span class="line">	&lt;value&gt;node1&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line"></span><br><span class="line">&lt;property&gt;</span><br><span class="line">    &lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt;</span><br><span class="line">    &lt;value&gt;mapreduce_shuffle&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 是否将对容器实施物理内存限制 --&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">    &lt;name&gt;yarn.nodemanager.pmem-check-enabled&lt;/name&gt;</span><br><span class="line">    &lt;value&gt;<span class="literal">false</span>&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 是否将对容器实施虚拟内存限制。 --&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">    &lt;name&gt;yarn.nodemanager.vmem-check-enabled&lt;/name&gt;</span><br><span class="line">    &lt;value&gt;<span class="literal">false</span>&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 开启日志聚集 --&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">  &lt;name&gt;yarn.log-aggregation-enable&lt;/name&gt;</span><br><span class="line">  &lt;value&gt;<span class="literal">true</span>&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 设置yarn历史服务器地址 --&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">    &lt;name&gt;yarn.log.server.url&lt;/name&gt;</span><br><span class="line">    &lt;value&gt;http://node1:19888/jobhistory/logs&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 历史日志保存的时间 7天 --&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">  &lt;name&gt;yarn.log-aggregation.retain-seconds&lt;/name&gt;</span><br><span class="line">  &lt;value&gt;604800&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br></pre></td></tr></table></figure>
+
+<p>最后编辑<code>workers</code></p>
+<p>里面会有一个<code>localhost</code>，把它删了即可</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node1</span><br><span class="line">node2</span><br><span class="line">node3</span><br></pre></td></tr></table></figure>
+
+<p>分发同步hadoop安装包</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 仅在主节点敲</span></span><br><span class="line"><span class="built_in">cd</span> /export/server</span><br><span class="line"></span><br><span class="line">scp -r hadoop-3.3.0 root@node2:<span class="variable">$PWD</span></span><br><span class="line">scp -r hadoop-3.3.0 root@node3:<span class="variable">$PWD</span></span><br></pre></td></tr></table></figure>
+
+<p>添加<code>环境变量</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/profile</span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> HADOOP_HOME=/export/server/hadoop-3.3.0</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$HADOOP_HOME</span>/bin:<span class="variable">$HADOOP_HOME</span>/sbin</span><br><span class="line"></span><br><span class="line"><span class="comment"># 最后刷新</span></span><br><span class="line"><span class="built_in">source</span> /etc/profile</span><br></pre></td></tr></table></figure>
+
+<p>检查环境是否生效</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hadoop version</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/hadoop/%E6%A3%80%E6%9F%A5hadoop%E7%8E%AF%E5%A2%83.png" alt="查看环境"></p>
+<p>格式化<code>namenode</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 会出现一长串</span></span><br><span class="line">hdfs namenode -format</span><br></pre></td></tr></table></figure>
+
+<h3 id="集群启动！"><a href="#集群启动！" class="headerlink" title="集群启动！"></a>集群启动！</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">start-all.sh</span><br></pre></td></tr></table></figure>
+
+<p>无报错基本就是成功了，随后你可以去<code>http://你的ip:9870</code>来看看网站是否能访问</p>
+<p><img src="/images/hadoop/web%E9%A1%B5%E9%9D%A2.png" alt="查看web"></p>
+]]></content>
+      <tags>
+        <tag>大数据</tag>
+        <tag>bigdata</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>本地Memes的搭建</title>
+    <url>/2024/12/11/memes/</url>
+    <content><![CDATA[<h1 id="本地Memes的搭建"><a href="#本地Memes的搭建" class="headerlink" title="本地Memes的搭建"></a>本地Memes的搭建</h1><p>一个制作表情包的接口搭建，可以为<code>云崽</code>&#x2F;<code>NoneBot2</code>等机器人实现表情包制作服务</p>
+<p>如果你觉得别人的服务不好用（比如访问慢，返回接口慢，或者是时不时寄），推荐你本地部署，调用自己的接口</p>
+<p>我也准备了Meme表情包服务接口，放心调用（不要d窝QAQ）</p>
+<p><a href="https://www.ruyuan.icu/memes">https://www.ruyuan.icu/memes</a></p>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>一台Linux🐔，CPU一核心就行，内存可以尽量高点（一般占用到200MB~300MB不等）</p>
+<h3 id="方法一：docker部署（推荐）"><a href="#方法一：docker部署（推荐）" class="headerlink" title="方法一：docker部署（推荐）"></a>方法一：docker部署（推荐）</h3><p><code>docker</code>的好处就是隔离主机环境</p>
+<p>首先确认你是否有具有<code>docker</code>环境</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker version</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/Memes/%E6%A3%80%E6%9F%A5docker.png" alt="检查docker环境"></p>
+<p>若有请跳过</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install docker-ce docker-ce-cli containerd.i -y</span><br></pre></td></tr></table></figure>
+
+<p>安装Memes表情包</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d --name=meme-generator -p 2233:2233 --restart always -v 这里换你额外表情要放的位置:/data/memes -e MEME_DIRS=<span class="string">&#x27;[&quot;/data/memes&quot;]&#x27;</span> meetwq/meme-generator:latest</span><br></pre></td></tr></table></figure>
+
+<p>简单解释下每一行的含义：</p>
+<p><code>这里换你额外表情要放的位置:/data/memes</code>：这里将路径填写成你要存储额外表情的路径，比如我放在了<code>/root/meme-generator</code>目录下</p>
+<p><code>2233:2233</code>：是<code>主机映射端口</code>:容器映射端口，你只需要注意主机映射端口即可，若访问不了请放开对应<code>防火墙</code></p>
+<p><code>--restart always</code>：一直重启，开机自启</p>
+<p><code>meetwq/meme-generator:main</code>：使用main分支</p>
+<p><code>meetwq/meme-generator:latest</code>：使用latest分支（<code>main</code>和<code>latest</code>的区别是：latest是最近稳定分支，main是git的一个分支，两者也就表情包数量上的区别其他差别不大）</p>
+<p>然后是检查访问：<code>http://&lt;YOUR IP&gt;:2233</code></p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;detail&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Not Found&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>出现这种即访问成功</p>
+<h3 id="方法二：本地安装（不推荐，问就是容器一键不香吗）"><a href="#方法二：本地安装（不推荐，问就是容器一键不香吗）" class="headerlink" title="方法二：本地安装（不推荐，问就是容器一键不香吗）"></a>方法二：本地安装（不推荐，问就是容器一键不香吗）</h3><ol>
+<li>使用 <code>pip</code> 安装</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install -U meme_generator</span><br></pre></td></tr></table></figure>
+
+<p>安装后可以使用 <code>meme</code> 命令，可以通过命令行制作表情等，具体用法可以运行 <code>meme -h</code> 查看</p>
+<ol start="2">
+<li>直接克隆源码运行</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> --depth 1 https://github.com/MeetWq/meme-generator</span><br></pre></td></tr></table></figure>
+
+<p>若你的网络状况不好，那就使用代理代理</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> --depth 1 https://ghp.ci/https://github.com/MeetWq/meme-generator</span><br></pre></td></tr></table></figure>
+
+<p>通过 <code>python -m meme_generator.app</code> 运行 web 服务器</p>
+<p>通过 <code>python -m meme_generator.cli meme</code> 运行命令行程序</p>
+<h2 id="安装字体"><a href="#安装字体" class="headerlink" title="安装字体"></a>安装字体</h2><p>不安装字体会出现乱码问题</p>
+<p>若你是使用的本地安装，则需要安装字体（docker则不需要，因为容器里面自带）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install ttf-wqy-zenhei -y</span><br><span class="line"><span class="comment"># 刷新字体缓存</span></span><br><span class="line"><span class="built_in">sudo</span> fc-cache -fv</span><br></pre></td></tr></table></figure>
+
+<h2 id="添加额外表情（可选）"><a href="#添加额外表情（可选）" class="headerlink" title="添加额外表情（可选）"></a>添加额外表情（可选）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> --depth 1 https://github.com/MeetWq/meme-generator-contrib</span><br><span class="line"><span class="comment"># 网络不好就加代理</span></span><br><span class="line">git <span class="built_in">clone</span> --depth 1 https://ghp.ci/https://github.com/MeetWq/meme-generator-contrib</span><br></pre></td></tr></table></figure>
+
+<p>克隆出来的目录下有一个<code>memes</code>的文件夹，将里面的文件夹放在<code>你配置的额外表情包路径</code>（全要或者都不要看你自己），比如我的是<code>/root/meme-generator</code></p>
+<p>内容如下：</p>
+<p><img src="/images/Memes/%E7%9B%AE%E5%BD%95.png" alt="大致目录"></p>
+<p>之后需要<code>重启容器/本地服务</code></p>
+]]></content>
+      <tags>
+        <tag>开源</tag>
+        <tag>表情包</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>常用镜像站合集</title>
+    <url>/2025/01/13/mirror%20image/</url>
+    <content><![CDATA[<h1 id="常用镜像站合集"><a href="#常用镜像站合集" class="headerlink" title="常用镜像站合集"></a>常用镜像站合集</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>因受到 <code>GFW</code> 的影响，我们访问国外的镜像站容易下载慢且会被墙，所以就有大佬们搬运国外资源到国内设置镜像站供大家使用</p>
+<h3 id="Python-Pip包管理工具"><a href="#Python-Pip包管理工具" class="headerlink" title="Python-Pip包管理工具"></a>Python-Pip包管理工具</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 清华源（比较好用，推荐）</span></span><br><span class="line">pip config <span class="built_in">set</span> global.index-url https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line"><span class="comment"># 阿里源</span></span><br><span class="line">pip config <span class="built_in">set</span> global.index-url https://mirrors.aliyun.com/pypi/simple/</span><br><span class="line"><span class="comment"># 腾讯源</span></span><br><span class="line">pip config <span class="built_in">set</span> global.index-url http://mirrors.cloud.tencent.com/pypi/simple</span><br><span class="line"><span class="comment"># 换回默认源</span></span><br><span class="line">pip config <span class="built_in">unset</span> global.index-url</span><br></pre></td></tr></table></figure>
+
+<h3 id="Node-js-npm-pnpm-cnpm包管理工具"><a href="#Node-js-npm-pnpm-cnpm包管理工具" class="headerlink" title="Node.js-npm-pnpm-cnpm包管理工具"></a>Node.js-npm-pnpm-cnpm包管理工具</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># npm pnpm cnpm也只有前缀的区别，自行修改即可</span></span><br><span class="line">npm config <span class="built_in">set</span> registry https://registry.npmmirror.com</span><br><span class="line"><span class="comment"># 换回默认源</span></span><br><span class="line">npm config delete registry</span><br></pre></td></tr></table></figure>
+
+<h3 id="GitHub-Releases加速下载"><a href="#GitHub-Releases加速下载" class="headerlink" title="GitHub-Releases加速下载"></a>GitHub-Releases加速下载</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 两个都行</span></span><br><span class="line">https://ghproxy.net/</span><br><span class="line">https://github.akams.cn/</span><br></pre></td></tr></table></figure>
+
+<p><code>加速克隆/GitHub文件下载加速</code></p>
+<p>网站：<a href="https://ghproxy.net/">https://ghproxy.net/</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 暂时这些稳定，其他不知道了~</span></span><br><span class="line"><span class="comment"># 首推第一个链接，其次第二个</span></span><br><span class="line">git <span class="built_in">clone</span> --depth 1 https://githubfast.com/用户名/项目名.git</span><br><span class="line">git <span class="built_in">clone</span> --depth 1 https://ghproxy.net/https://github.com/用户名/项目名.git</span><br></pre></td></tr></table></figure>
+
+<p>克隆私库加速</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 源指令</span></span><br><span class="line">git <span class="built_in">clone</span> https://用户名:TOKEN@github.com/用户/项目名.git</span><br><span class="line"><span class="comment"># 加速指令</span></span><br><span class="line">git <span class="built_in">clone</span> https://用户名:TOKEN@ghproxy.net/https://github.com/用户/项目名.git</span><br></pre></td></tr></table></figure>
+
+<h3 id="Docker-hub访问"><a href="#Docker-hub访问" class="headerlink" title="Docker-hub访问"></a>Docker-hub访问</h3><p>使用cloudflare搭建</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">https://docker.ruyuan.us.kg</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><code>us.kg</code>因滥用域名，被漂亮国制裁，近期换了个域名，等好了以后我更新</p>
+</blockquote>
+<p>END.</p>
+]]></content>
+      <categories>
+        <category>实用网站</category>
+      </categories>
+      <tags>
+        <tag>开源</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>用cloudflare申请ssl证书</title>
+    <url>/2024/12/22/ssl/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>SSL证书通过在客户端浏览器和web浏览器之间建立一条SSL安全通道（Secure socket layer(SSL)，对传送的数据进行加密和隐藏；确保数据在传送中不被改变，保证数据的完整性，现已成为该领域中全球化的标准.</p>
+<p>利用<code>cloudflare</code>来申请免费ssl证书，搭配<code>1panel</code>可以做到自动删除证书续期.</p>
+<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><p>具备<code>1panel</code>Linux面板即可，没有就去安装！「<a href="https://1panel.cn/">1panel官方文档地址</a>」</p>
+<p>还有就是<code>cloudflare</code>账户，没有就注册，注册不用说了吧</p>
+<h1 id="创建令牌"><a href="#创建令牌" class="headerlink" title="创建令牌"></a>创建令牌</h1><p>进去后正常来到这个界面，你需要将一个域名托管在cloudflare</p>
+<p>教程参考至<a href="https://post.smzdm.com/p/a2xok2r2/">域名DNS服务托管至Cloudflare，就是如此简单</a></p>
+<p><img src="https://unpkg.com/ruyuan_blog_pic/cf/view.png"></p>
+<p>点击右上角的<code>个人资料</code>，然后就来到了这个页面</p>
+<p>点击<code>API令牌</code>&#x2F;<code>创建令牌</code></p>
+<p><img src="https://unpkg.com/ruyuan_blog_pic/cf/create-token.png"></p>
+<p>选择<code>编辑区域DNS</code></p>
+<p><img src="https://unpkg.com/ruyuan_blog_pic/cf/choose-dns.png"></p>
+<p>在区域资源中选择你的域名即可，然后到到下面点击蓝色按钮<code>继续以显示摘要</code></p>
+<p><img src="https://unpkg.com/ruyuan_blog_pic/cf/save.png"></p>
+<p>最后创建令牌~</p>
+<p><img src="https://unpkg.com/ruyuan_blog_pic/cf/create.png"></p>
+<p>来到这个界面，复制你的令牌，记得保存令牌~</p>
+<p><img src="https://unpkg.com/ruyuan_blog_pic/cf/cv-token.png"></p>
+<h1 id="1panel申请证书"><a href="#1panel申请证书" class="headerlink" title="1panel申请证书"></a>1panel申请证书</h1><p>打开你的1panel界面，点击<code>网站/证书</code></p>
+<p>具体长这样：</p>
+<p><img src="https://unpkg.com/ruyuan_blog_pic/cf/dns.png"></p>
+<p>点击<code>DNS账户</code></p>
+<p>然后<code>创建DNS账户</code></p>
+<p><img src="https://unpkg.com/ruyuan_blog_pic/cf/create-unpkg.zhimg.com.png"></p>
+<p>名称随便填，email填你的注册<code>cloudflare</code>的邮箱，<code>apitoken</code>就是你的刚刚复制的token</p>
+<p>随后来到<code>申请证书</code>，主域名填你自己的，其他域名暂时不用填，若你要申请三级域名证书则在主域名填三级域名就行，其他域名不需要写</p>
+<p><img src="https://unpkg.com/ruyuan_blog_pic/cf/ssl1.png"></p>
+<p>选择<code>DNS解析</code>（应该是默认的），勾选<code>自动续签</code>，可以再勾选<code>推送证书到本地目录</code>，我这里填的是&#x2F;root&#x2F;ssl</p>
+<p>点击确认即可</p>
+<p><img src="https://unpkg.com/ruyuan_blog_pic/cf/ssl2.png"></p>
+<p>最后等待它申请ssl证书完吧~出现这种日志就是申请成功了</p>
+<p><img src="https://unpkg.com/ruyuan_blog_pic/cf/success.png"></p>
+<p>接下来尽情感受ssl带来的安全感吧~</p>
+]]></content>
+      <tags>
+        <tag>IT</tag>
+        <tag>网站</tag>
+      </tags>
+  </entry>
+</search>
