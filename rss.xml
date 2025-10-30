@@ -3,11 +3,11 @@
   <title>如愿</title>
   
   <subtitle>生命不息，奋斗不止！</subtitle>
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="http://www.ruyuan.icu/rss.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="http://www.ruyuan.icu/"/>
   <updated>2025-10-30T03:12:56.356Z</updated>
-  <id>http://example.com/</id>
+  <id>http://www.ruyuan.icu/</id>
   
   <author>
     <name>如愿</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>每日60s</title>
-    <link href="http://example.com/2025/10/30/60s/"/>
-    <id>http://example.com/2025/10/30/60s/</id>
+    <link href="http://www.ruyuan.icu/2025/10/30/60s/"/>
+    <id>http://www.ruyuan.icu/2025/10/30/60s/</id>
     <published>2025-10-30T03:00:00.000Z</published>
     <updated>2025-10-30T03:12:56.356Z</updated>
     
@@ -44,8 +44,8 @@
   
   <entry>
     <title>无服务器快速建站</title>
-    <link href="http://example.com/2025/08/30/vercel/"/>
-    <id>http://example.com/2025/08/30/vercel/</id>
+    <link href="http://www.ruyuan.icu/2025/08/30/vercel/"/>
+    <id>http://www.ruyuan.icu/2025/08/30/vercel/</id>
     <published>2025-08-30T14:00:00.000Z</published>
     <updated>2025-09-30T02:55:00.121Z</updated>
     
@@ -62,14 +62,14 @@
     
     
     
-    <category term="建站" scheme="http://example.com/tags/%E5%BB%BA%E7%AB%99/"/>
+    <category term="建站" scheme="http://www.ruyuan.icu/tags/%E5%BB%BA%E7%AB%99/"/>
     
   </entry>
   
   <entry>
     <title>教你安装Debian系统</title>
-    <link href="http://example.com/2025/04/16/debian/"/>
-    <id>http://example.com/2025/04/16/debian/</id>
+    <link href="http://www.ruyuan.icu/2025/04/16/debian/"/>
+    <id>http://www.ruyuan.icu/2025/04/16/debian/</id>
     <published>2025-04-16T00:52:34.000Z</published>
     <updated>2025-10-29T06:35:25.014Z</updated>
     
@@ -84,16 +84,16 @@
     
     
     
-    <category term="开源" scheme="http://example.com/tags/%E5%BC%80%E6%BA%90/"/>
+    <category term="开源" scheme="http://www.ruyuan.icu/tags/%E5%BC%80%E6%BA%90/"/>
     
-    <category term="操作系统" scheme="http://example.com/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    <category term="操作系统" scheme="http://www.ruyuan.icu/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     
   </entry>
   
   <entry>
     <title>常用镜像站合集</title>
-    <link href="http://example.com/2025/01/13/mirror%20image/"/>
-    <id>http://example.com/2025/01/13/mirror%20image/</id>
+    <link href="http://www.ruyuan.icu/2025/01/13/mirror%20image/"/>
+    <id>http://www.ruyuan.icu/2025/01/13/mirror%20image/</id>
     <published>2025-01-13T14:00:00.000Z</published>
     <updated>2025-05-15T01:44:24.660Z</updated>
     
@@ -107,17 +107,17 @@
     
     
     
-    <category term="实用网站" scheme="http://example.com/categories/%E5%AE%9E%E7%94%A8%E7%BD%91%E7%AB%99/"/>
+    <category term="实用网站" scheme="http://www.ruyuan.icu/categories/%E5%AE%9E%E7%94%A8%E7%BD%91%E7%AB%99/"/>
     
     
-    <category term="开源" scheme="http://example.com/tags/%E5%BC%80%E6%BA%90/"/>
+    <category term="开源" scheme="http://www.ruyuan.icu/tags/%E5%BC%80%E6%BA%90/"/>
     
   </entry>
   
   <entry>
     <title>用cloudflare申请ssl证书</title>
-    <link href="http://example.com/2024/12/22/ssl/"/>
-    <id>http://example.com/2024/12/22/ssl/</id>
+    <link href="http://www.ruyuan.icu/2024/12/22/ssl/"/>
+    <id>http://www.ruyuan.icu/2024/12/22/ssl/</id>
     <published>2024-12-22T15:00:00.000Z</published>
     <updated>2025-03-24T12:27:15.966Z</updated>
     
@@ -129,16 +129,16 @@
     
     
     
-    <category term="IT" scheme="http://example.com/tags/IT/"/>
+    <category term="IT" scheme="http://www.ruyuan.icu/tags/IT/"/>
     
-    <category term="网站" scheme="http://example.com/tags/%E7%BD%91%E7%AB%99/"/>
+    <category term="网站" scheme="http://www.ruyuan.icu/tags/%E7%BD%91%E7%AB%99/"/>
     
   </entry>
   
   <entry>
     <title>安装fail2ban</title>
-    <link href="http://example.com/2024/12/11/fail2ban/"/>
-    <id>http://example.com/2024/12/11/fail2ban/</id>
+    <link href="http://www.ruyuan.icu/2024/12/11/fail2ban/"/>
+    <id>http://www.ruyuan.icu/2024/12/11/fail2ban/</id>
     <published>2024-12-11T15:00:00.000Z</published>
     <updated>2024-12-21T16:51:11.996Z</updated>
     
@@ -150,16 +150,16 @@
     
     
     
-    <category term="开源" scheme="http://example.com/tags/%E5%BC%80%E6%BA%90/"/>
+    <category term="开源" scheme="http://www.ruyuan.icu/tags/%E5%BC%80%E6%BA%90/"/>
     
-    <category term="IT" scheme="http://example.com/tags/IT/"/>
+    <category term="IT" scheme="http://www.ruyuan.icu/tags/IT/"/>
     
   </entry>
   
   <entry>
     <title>本地Memes的搭建</title>
-    <link href="http://example.com/2024/12/11/memes/"/>
-    <id>http://example.com/2024/12/11/memes/</id>
+    <link href="http://www.ruyuan.icu/2024/12/11/memes/"/>
+    <id>http://www.ruyuan.icu/2024/12/11/memes/</id>
     <published>2024-12-11T07:00:00.000Z</published>
     <updated>2025-04-23T00:50:34.203Z</updated>
     
@@ -171,16 +171,16 @@
     
     
     
-    <category term="开源" scheme="http://example.com/tags/%E5%BC%80%E6%BA%90/"/>
+    <category term="开源" scheme="http://www.ruyuan.icu/tags/%E5%BC%80%E6%BA%90/"/>
     
-    <category term="表情包" scheme="http://example.com/tags/%E8%A1%A8%E6%83%85%E5%8C%85/"/>
+    <category term="表情包" scheme="http://www.ruyuan.icu/tags/%E8%A1%A8%E6%83%85%E5%8C%85/"/>
     
   </entry>
   
   <entry>
     <title>MC（fabric）端开服教程</title>
-    <link href="http://example.com/2024/11/28/MC/"/>
-    <id>http://example.com/2024/11/28/MC/</id>
+    <link href="http://www.ruyuan.icu/2024/11/28/MC/"/>
+    <id>http://www.ruyuan.icu/2024/11/28/MC/</id>
     <published>2024-11-28T15:00:00.000Z</published>
     <updated>2025-10-30T03:24:53.750Z</updated>
     
@@ -192,16 +192,16 @@
     
     
     
-    <category term="开源" scheme="http://example.com/tags/%E5%BC%80%E6%BA%90/"/>
+    <category term="开源" scheme="http://www.ruyuan.icu/tags/%E5%BC%80%E6%BA%90/"/>
     
-    <category term="开服" scheme="http://example.com/tags/%E5%BC%80%E6%9C%8D/"/>
+    <category term="开服" scheme="http://www.ruyuan.icu/tags/%E5%BC%80%E6%9C%8D/"/>
     
   </entry>
   
   <entry>
     <title>frp搭建</title>
-    <link href="http://example.com/2024/11/08/frp/"/>
-    <id>http://example.com/2024/11/08/frp/</id>
+    <link href="http://www.ruyuan.icu/2024/11/08/frp/"/>
+    <id>http://www.ruyuan.icu/2024/11/08/frp/</id>
     <published>2024-11-08T03:00:00.000Z</published>
     <updated>2025-04-23T00:50:59.311Z</updated>
     
@@ -213,16 +213,16 @@
     
     
     
-    <category term="开源" scheme="http://example.com/tags/%E5%BC%80%E6%BA%90/"/>
+    <category term="开源" scheme="http://www.ruyuan.icu/tags/%E5%BC%80%E6%BA%90/"/>
     
-    <category term="IT" scheme="http://example.com/tags/IT/"/>
+    <category term="IT" scheme="http://www.ruyuan.icu/tags/IT/"/>
     
   </entry>
   
   <entry>
     <title>Miao-Yunzai搭建</title>
-    <link href="http://example.com/2024/11/07/Miao-Yunzai/"/>
-    <id>http://example.com/2024/11/07/Miao-Yunzai/</id>
+    <link href="http://www.ruyuan.icu/2024/11/07/Miao-Yunzai/"/>
+    <id>http://www.ruyuan.icu/2024/11/07/Miao-Yunzai/</id>
     <published>2024-11-07T13:00:00.000Z</published>
     <updated>2025-07-17T04:22:13.082Z</updated>
     
@@ -239,19 +239,19 @@
     
     
     
-    <category term="机器人" scheme="http://example.com/categories/%E6%9C%BA%E5%99%A8%E4%BA%BA/"/>
+    <category term="机器人" scheme="http://www.ruyuan.icu/categories/%E6%9C%BA%E5%99%A8%E4%BA%BA/"/>
     
     
-    <category term="开源" scheme="http://example.com/tags/%E5%BC%80%E6%BA%90/"/>
+    <category term="开源" scheme="http://www.ruyuan.icu/tags/%E5%BC%80%E6%BA%90/"/>
     
-    <category term="机器人" scheme="http://example.com/tags/%E6%9C%BA%E5%99%A8%E4%BA%BA/"/>
+    <category term="机器人" scheme="http://www.ruyuan.icu/tags/%E6%9C%BA%E5%99%A8%E4%BA%BA/"/>
     
   </entry>
   
   <entry>
     <title>本地部署deepseek-R1对话模型</title>
-    <link href="http://example.com/2024/11/07/deepseek/"/>
-    <id>http://example.com/2024/11/07/deepseek/</id>
+    <link href="http://www.ruyuan.icu/2024/11/07/deepseek/"/>
+    <id>http://www.ruyuan.icu/2024/11/07/deepseek/</id>
     <published>2024-11-07T13:00:00.000Z</published>
     <updated>2025-08-16T15:41:18.025Z</updated>
     
@@ -262,19 +262,19 @@
     
     
     
-    <category term="机器人" scheme="http://example.com/categories/%E6%9C%BA%E5%99%A8%E4%BA%BA/"/>
+    <category term="机器人" scheme="http://www.ruyuan.icu/categories/%E6%9C%BA%E5%99%A8%E4%BA%BA/"/>
     
     
-    <category term="开源" scheme="http://example.com/tags/%E5%BC%80%E6%BA%90/"/>
+    <category term="开源" scheme="http://www.ruyuan.icu/tags/%E5%BC%80%E6%BA%90/"/>
     
-    <category term="AI" scheme="http://example.com/tags/AI/"/>
+    <category term="AI" scheme="http://www.ruyuan.icu/tags/AI/"/>
     
   </entry>
   
   <entry>
     <title>GPTBox的使用</title>
-    <link href="http://example.com/2024/11/04/gptbox/"/>
-    <id>http://example.com/2024/11/04/gptbox/</id>
+    <link href="http://www.ruyuan.icu/2024/11/04/gptbox/"/>
+    <id>http://www.ruyuan.icu/2024/11/04/gptbox/</id>
     <published>2024-11-04T13:00:00.000Z</published>
     <updated>2024-12-21T16:51:15.217Z</updated>
     
@@ -286,18 +286,18 @@
     
     
     
-    <category term="开源" scheme="http://example.com/tags/%E5%BC%80%E6%BA%90/"/>
+    <category term="开源" scheme="http://www.ruyuan.icu/tags/%E5%BC%80%E6%BA%90/"/>
     
-    <category term="AI" scheme="http://example.com/tags/AI/"/>
+    <category term="AI" scheme="http://www.ruyuan.icu/tags/AI/"/>
     
-    <category term="APP" scheme="http://example.com/tags/APP/"/>
+    <category term="APP" scheme="http://www.ruyuan.icu/tags/APP/"/>
     
   </entry>
   
   <entry>
     <title>Hadoop的搭建</title>
-    <link href="http://example.com/2024/11/04/hadoop/"/>
-    <id>http://example.com/2024/11/04/hadoop/</id>
+    <link href="http://www.ruyuan.icu/2024/11/04/hadoop/"/>
+    <id>http://www.ruyuan.icu/2024/11/04/hadoop/</id>
     <published>2024-11-04T03:00:00.000Z</published>
     <updated>2024-12-21T16:51:04.072Z</updated>
     
@@ -309,16 +309,16 @@
     
     
     
-    <category term="大数据" scheme="http://example.com/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+    <category term="大数据" scheme="http://www.ruyuan.icu/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
     
-    <category term="bigdata" scheme="http://example.com/tags/bigdata/"/>
+    <category term="bigdata" scheme="http://www.ruyuan.icu/tags/bigdata/"/>
     
   </entry>
   
   <entry>
     <title>TRSS-Yunzai的搭建</title>
-    <link href="http://example.com/2024/11/03/TRSS-Yunzai/"/>
-    <id>http://example.com/2024/11/03/TRSS-Yunzai/</id>
+    <link href="http://www.ruyuan.icu/2024/11/03/TRSS-Yunzai/"/>
+    <id>http://www.ruyuan.icu/2024/11/03/TRSS-Yunzai/</id>
     <published>2024-11-02T16:00:00.000Z</published>
     <updated>2025-04-23T01:26:48.348Z</updated>
     
@@ -335,12 +335,12 @@
     
     
     
-    <category term="机器人" scheme="http://example.com/categories/%E6%9C%BA%E5%99%A8%E4%BA%BA/"/>
+    <category term="机器人" scheme="http://www.ruyuan.icu/categories/%E6%9C%BA%E5%99%A8%E4%BA%BA/"/>
     
     
-    <category term="开源" scheme="http://example.com/tags/%E5%BC%80%E6%BA%90/"/>
+    <category term="开源" scheme="http://www.ruyuan.icu/tags/%E5%BC%80%E6%BA%90/"/>
     
-    <category term="机器人" scheme="http://example.com/tags/%E6%9C%BA%E5%99%A8%E4%BA%BA/"/>
+    <category term="机器人" scheme="http://www.ruyuan.icu/tags/%E6%9C%BA%E5%99%A8%E4%BA%BA/"/>
     
   </entry>
   
