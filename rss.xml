@@ -220,6 +220,29 @@
   </entry>
   
   <entry>
+    <title>本地部署deepseek-R1对话模型</title>
+    <link href="http://www.ruyuan.icu/posts/5fa86ecc.html"/>
+    <id>http://www.ruyuan.icu/posts/5fa86ecc.html</id>
+    <published>2024-11-07T13:00:00.000Z</published>
+    <updated>2025-11-13T02:18:54.917Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>这是最近爆火的开源AI对话大模型———— <code>DeepSeek</code>，全称杭州深度求索人工智能基础技术研究有限公司。<code>DeepSeek</code> 是一家创新型科技公司，成立于2023年7月17日，使用数据蒸馏技术，得到更为精炼、有用的数据。由知名私募巨头幻方量化孕育而生，专注于开发先进的大语言模型（LLM）和相关技术。</p><p>2025年1月20日，DeepSeek正式发布 DeepSeek-R1 模型，并同步开源模型权重。DeepSeek-R1在后训练阶段大规模使用了强化学习技术，在仅有极少标注数据的情况下，极大提升了模型推理能力。<code>DeepSeek-V3</code> 和 <code>DeepSeek-R1</code> 两款大模型，成本价格低廉，性能与 <code>OpenAI</code> 相当，让硅谷震惊，甚至引发了Meta内部的恐慌，工程师们开始连夜尝试复制DeepSeek的成果</p><h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><p>任意一台操作系统的电脑 <code>MacOS/Linux/Windows</code>，运行内存尽可能的多即可，推荐带<code>独立显卡</code>的电脑</p><p>这里展示的配置是：</p><ol><li><code>Windows</code>操作系统</li><li>运行内存：24GB</li><li>CPU：13th Gen Intel(R) Core(TM) i7-13650HX</li><li>显卡：英伟达4060 laptop</li></ol><h1 id="开始部署"><a href="#开始部署" class="headerlink" title="开始部署"></a>开始部署</h1><h2 id="1-下载ollama安装包"><a href="#1-下载ollama安装包" class="headerlink" title="1.下载ollama安装包"></a>1.下载ollama安装包</h2><p><a href="https://ollama.com/download">戳我去官网下载</a></p><p>打开就是这样子，自行选择你的操作系统下载</p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.ruyuan.dpdns.org/deepseek/%E5%AE%98%E7%BD%91%E4%B8%8B%E8%BD%BDollama%E5%AE%89%E8%A3%85%E5%8C%85.jpg" alt="官网下载ollama安装包"></p><p>下载下来双击打开安装包，目前暂时无法部署到自定义盘，只能在<code>C盘</code>，占用不是很大</p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.ruyuan.dpdns.org/deepseek/%E5%AE%89%E8%A3%85ollama.jpg" alt="安装ollama"></p><h2 id="2-克隆大模型"><a href="#2-克隆大模型" class="headerlink" title="2.克隆大模型"></a>2.克隆大模型</h2><p>搜索<code>deepseek-r1</code></p><p>找不到我给你个<a href="https://ollama.com/library/deepseek-r1">传送门</a></p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.ruyuan.dpdns.org/deepseek/%E6%90%9C%E7%B4%A2deepseek.jpg" alt="搜索deepseek"></p><p>打开就是这样，选择你合适的模型，在确保你配置够的情况下可以适当往下选择最好的模型资源，等级从下往上递减</p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.ruyuan.dpdns.org/deepseek/%E5%A4%8D%E5%88%B6%E6%8C%87%E4%BB%A4.jpg" alt="复制指令"></p><p>对应的模型配置大概是这样：</p><p>1.5b：4GB显存<br>7b&#x2F;8b：8GB显存（我是这个）<br>14b：12GB显存<br>32b：24GB显存（差不多4090的配置了）<br>显存不够他会调用<code>CPU</code>跑，且吃核心数，生成对话速度会慢很多，</p><p>使用<code>Win+R</code>键输入<code>cmd</code>打开终端</p><p>可以敲<code>ollama</code>看看环境是否生效，会提示ollama相关指令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ollama</span><br></pre></td></tr></table></figure><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.ruyuan.dpdns.org/deepseek/%E6%A3%80%E9%AA%8C%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.jpg" alt="检查下环境变量是否生效"></p><p>下载大模型，我这里是7b</p><blockquote><p>下载前先往下滑到拓展页编辑环境变量，里面包含了更改模型<code>默认下载路径！</code></p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ollama run deepseek-r1:7b</span><br></pre></td></tr></table></figure><p>等待下载完成，会自动进入<code>&gt;&gt;&gt;</code>命令行</p><p>这时候你就可以随心所欲进行对话了，敲<code>/?</code>提示常用命令</p><kbd>CTRL</kbd> + <kbd>C</kbd>结束交互<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.ruyuan.dpdns.org/deepseek/%E9%83%A8%E7%BD%B2%E6%88%90%E5%8A%9F.jpg" alt="部署成功"></p><h2 id="拓展-UI增强对话"><a href="#拓展-UI增强对话" class="headerlink" title="拓展-UI增强对话"></a>拓展-UI增强对话</h2><p>终端难免会使用难受，所以可以使用ui的方式对话，参考了以下视频，使用的是<code>ChatBox AI</code></p><div align=center class="aspect-ratio">    <iframe src="https://player.bilibili.com/player.html?aid=113910820639135&bvid=BV1viFaeBE3z&cid=28138275900&p=1&autoplay=0"     scrolling="no"     border="0"     frameborder="no"     framespacing="0"     high_quality=1    danmaku=1     allowfullscreen="true">     </iframe></div><p>首先检查下你的接口是否能访问，地址是<code>&lt;http://localhost:11434&gt;</code></p><p>显示<code>Ollama is running</code>就是run成功了</p><p>配置系统环境变量，具体怎么在哪我不多说了哈，参数如下</p><table><thead><tr><th>变量</th><th>值</th></tr></thead><tbody><tr><td>OLLAMA_HOST</td><td>0.0.0.0</td></tr><tr><td>OLLAMA_MODELS</td><td>路径</td></tr><tr><td>OLLAMA_ORIGINS</td><td>*</td></tr></tbody></table><h2 id="以下步骤据说不用做了"><a href="#以下步骤据说不用做了" class="headerlink" title="以下步骤据说不用做了"></a>以下步骤据说不用做了</h2><p>这里重点说下路径，因为ollama默认下载路径默认C盘，用户当然都不想要在C盘下载，所以可以进行更改存储路径</p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.ruyuan.dpdns.org/deepseek/%E6%94%B9%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.jpg" alt="改环境变量"></p><p>之后下载<code>ChatBox AI</code>，官网在这<a href="https://chatboxai.app/zh/">https://chatboxai.app/zh/</a>，官网国内访问较慢，建议打开魔法食用（</p><p>下载完打开进行配置，点击右下角齿轮，<code>模型提供方</code>选择<code>OLLAMA API</code>，<code>API域名</code>填你本地域名，之后保存，就可以进行流畅对话啦~</p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.ruyuan.dpdns.org/deepseek/chatboxai%E5%AF%B9%E6%8E%A5.jpg" alt="chatboxai对接"></p>]]></content>
+    
+    
+    <summary type="html">本地部署deepseek-R1对话模型</summary>
+    
+    
+    
+    <category term="机器人" scheme="http://www.ruyuan.icu/categories/%E6%9C%BA%E5%99%A8%E4%BA%BA/"/>
+    
+    
+    <category term="开源" scheme="http://www.ruyuan.icu/tags/%E5%BC%80%E6%BA%90/"/>
+    
+    <category term="AI" scheme="http://www.ruyuan.icu/tags/AI/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Miao-Yunzai搭建</title>
     <link href="http://www.ruyuan.icu/posts/1c2e5117.html"/>
     <id>http://www.ruyuan.icu/posts/1c2e5117.html</id>
@@ -249,29 +272,6 @@
   </entry>
   
   <entry>
-    <title>本地部署deepseek-R1对话模型</title>
-    <link href="http://www.ruyuan.icu/posts/5fa86ecc.html"/>
-    <id>http://www.ruyuan.icu/posts/5fa86ecc.html</id>
-    <published>2024-11-07T13:00:00.000Z</published>
-    <updated>2025-11-13T02:18:54.917Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>这是最近爆火的开源AI对话大模型———— <code>DeepSeek</code>，全称杭州深度求索人工智能基础技术研究有限公司。<code>DeepSeek</code> 是一家创新型科技公司，成立于2023年7月17日，使用数据蒸馏技术，得到更为精炼、有用的数据。由知名私募巨头幻方量化孕育而生，专注于开发先进的大语言模型（LLM）和相关技术。</p><p>2025年1月20日，DeepSeek正式发布 DeepSeek-R1 模型，并同步开源模型权重。DeepSeek-R1在后训练阶段大规模使用了强化学习技术，在仅有极少标注数据的情况下，极大提升了模型推理能力。<code>DeepSeek-V3</code> 和 <code>DeepSeek-R1</code> 两款大模型，成本价格低廉，性能与 <code>OpenAI</code> 相当，让硅谷震惊，甚至引发了Meta内部的恐慌，工程师们开始连夜尝试复制DeepSeek的成果</p><h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><p>任意一台操作系统的电脑 <code>MacOS/Linux/Windows</code>，运行内存尽可能的多即可，推荐带<code>独立显卡</code>的电脑</p><p>这里展示的配置是：</p><ol><li><code>Windows</code>操作系统</li><li>运行内存：24GB</li><li>CPU：13th Gen Intel(R) Core(TM) i7-13650HX</li><li>显卡：英伟达4060 laptop</li></ol><h1 id="开始部署"><a href="#开始部署" class="headerlink" title="开始部署"></a>开始部署</h1><h2 id="1-下载ollama安装包"><a href="#1-下载ollama安装包" class="headerlink" title="1.下载ollama安装包"></a>1.下载ollama安装包</h2><p><a href="https://ollama.com/download">戳我去官网下载</a></p><p>打开就是这样子，自行选择你的操作系统下载</p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.ruyuan.dpdns.org/deepseek/%E5%AE%98%E7%BD%91%E4%B8%8B%E8%BD%BDollama%E5%AE%89%E8%A3%85%E5%8C%85.jpg" alt="官网下载ollama安装包"></p><p>下载下来双击打开安装包，目前暂时无法部署到自定义盘，只能在<code>C盘</code>，占用不是很大</p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.ruyuan.dpdns.org/deepseek/%E5%AE%89%E8%A3%85ollama.jpg" alt="安装ollama"></p><h2 id="2-克隆大模型"><a href="#2-克隆大模型" class="headerlink" title="2.克隆大模型"></a>2.克隆大模型</h2><p>搜索<code>deepseek-r1</code></p><p>找不到我给你个<a href="https://ollama.com/library/deepseek-r1">传送门</a></p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.ruyuan.dpdns.org/deepseek/%E6%90%9C%E7%B4%A2deepseek.jpg" alt="搜索deepseek"></p><p>打开就是这样，选择你合适的模型，在确保你配置够的情况下可以适当往下选择最好的模型资源，等级从下往上递减</p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.ruyuan.dpdns.org/deepseek/%E5%A4%8D%E5%88%B6%E6%8C%87%E4%BB%A4.jpg" alt="复制指令"></p><p>对应的模型配置大概是这样：</p><p>1.5b：4GB显存<br>7b&#x2F;8b：8GB显存（我是这个）<br>14b：12GB显存<br>32b：24GB显存（差不多4090的配置了）<br>显存不够他会调用<code>CPU</code>跑，且吃核心数，生成对话速度会慢很多，</p><p>使用<code>Win+R</code>键输入<code>cmd</code>打开终端</p><p>可以敲<code>ollama</code>看看环境是否生效，会提示ollama相关指令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ollama</span><br></pre></td></tr></table></figure><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.ruyuan.dpdns.org/deepseek/%E6%A3%80%E9%AA%8C%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.jpg" alt="检查下环境变量是否生效"></p><p>下载大模型，我这里是7b</p><blockquote><p>下载前先往下滑到拓展页编辑环境变量，里面包含了更改模型<code>默认下载路径！</code></p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ollama run deepseek-r1:7b</span><br></pre></td></tr></table></figure><p>等待下载完成，会自动进入<code>&gt;&gt;&gt;</code>命令行</p><p>这时候你就可以随心所欲进行对话了，敲<code>/?</code>提示常用命令</p><kbd>CTRL</kbd> + <kbd>C</kbd>结束交互<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.ruyuan.dpdns.org/deepseek/%E9%83%A8%E7%BD%B2%E6%88%90%E5%8A%9F.jpg" alt="部署成功"></p><h2 id="拓展-UI增强对话"><a href="#拓展-UI增强对话" class="headerlink" title="拓展-UI增强对话"></a>拓展-UI增强对话</h2><p>终端难免会使用难受，所以可以使用ui的方式对话，参考了以下视频，使用的是<code>ChatBox AI</code></p><div align=center class="aspect-ratio">    <iframe src="https://player.bilibili.com/player.html?aid=113910820639135&bvid=BV1viFaeBE3z&cid=28138275900&p=1&autoplay=0"     scrolling="no"     border="0"     frameborder="no"     framespacing="0"     high_quality=1    danmaku=1     allowfullscreen="true">     </iframe></div><p>首先检查下你的接口是否能访问，地址是<code>&lt;http://localhost:11434&gt;</code></p><p>显示<code>Ollama is running</code>就是run成功了</p><p>配置系统环境变量，具体怎么在哪我不多说了哈，参数如下</p><table><thead><tr><th>变量</th><th>值</th></tr></thead><tbody><tr><td>OLLAMA_HOST</td><td>0.0.0.0</td></tr><tr><td>OLLAMA_MODELS</td><td>路径</td></tr><tr><td>OLLAMA_ORIGINS</td><td>*</td></tr></tbody></table><h2 id="以下步骤据说不用做了"><a href="#以下步骤据说不用做了" class="headerlink" title="以下步骤据说不用做了"></a>以下步骤据说不用做了</h2><p>这里重点说下路径，因为ollama默认下载路径默认C盘，用户当然都不想要在C盘下载，所以可以进行更改存储路径</p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.ruyuan.dpdns.org/deepseek/%E6%94%B9%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.jpg" alt="改环境变量"></p><p>之后下载<code>ChatBox AI</code>，官网在这<a href="https://chatboxai.app/zh/">https://chatboxai.app/zh/</a>，官网国内访问较慢，建议打开魔法食用（</p><p>下载完打开进行配置，点击右下角齿轮，<code>模型提供方</code>选择<code>OLLAMA API</code>，<code>API域名</code>填你本地域名，之后保存，就可以进行流畅对话啦~</p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.ruyuan.dpdns.org/deepseek/chatboxai%E5%AF%B9%E6%8E%A5.jpg" alt="chatboxai对接"></p>]]></content>
-    
-    
-    <summary type="html">本地部署deepseek-R1对话模型</summary>
-    
-    
-    
-    <category term="机器人" scheme="http://www.ruyuan.icu/categories/%E6%9C%BA%E5%99%A8%E4%BA%BA/"/>
-    
-    
-    <category term="开源" scheme="http://www.ruyuan.icu/tags/%E5%BC%80%E6%BA%90/"/>
-    
-    <category term="AI" scheme="http://www.ruyuan.icu/tags/AI/"/>
-    
-  </entry>
-  
-  <entry>
     <title>GPTBox的使用</title>
     <link href="http://www.ruyuan.icu/posts/4fab8ce1.html"/>
     <id>http://www.ruyuan.icu/posts/4fab8ce1.html</id>
@@ -288,9 +288,9 @@
     
     <category term="开源" scheme="http://www.ruyuan.icu/tags/%E5%BC%80%E6%BA%90/"/>
     
-    <category term="APP" scheme="http://www.ruyuan.icu/tags/APP/"/>
-    
     <category term="AI" scheme="http://www.ruyuan.icu/tags/AI/"/>
+    
+    <category term="APP" scheme="http://www.ruyuan.icu/tags/APP/"/>
     
   </entry>
   
