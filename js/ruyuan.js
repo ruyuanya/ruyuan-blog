@@ -1,1 +1,559 @@
-function _typeof(n){return(_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(n){return typeof n}:function(n){return n&&"function"==typeof Symbol&&n.constructor===Symbol&&n!==Symbol.prototype?"symbol":typeof n})(n)}function _slicedToArray(n,t){return _arrayWithHoles(n)||_iterableToArrayLimit(n,t)||_unsupportedIterableToArray(n,t)||_nonIterableRest()}function _nonIterableRest(){throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}function _unsupportedIterableToArray(n,t){var e;if(n)return"string"==typeof n?_arrayLikeToArray(n,t):"Map"===(e="Object"===(e={}.toString.call(n).slice(8,-1))&&n.constructor?n.constructor.name:e)||"Set"===e?Array.from(n):"Arguments"===e||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(e)?_arrayLikeToArray(n,t):void 0}function _arrayLikeToArray(n,t){(null==t||t>n.length)&&(t=n.length);for(var e=0,r=Array(t);e<t;e++)r[e]=n[e];return r}function _iterableToArrayLimit(n,t){var e=null==n?null:"undefined"!=typeof Symbol&&n[Symbol.iterator]||n["@@iterator"];if(null!=e){var r,o,a,i,c=[],s=!0,u=!1;try{if(a=(e=e.call(n)).next,0===t){if(Object(e)!==e)return;s=!1}else for(;!(s=(r=a.call(e)).done)&&(c.push(r.value),c.length!==t);s=!0);}catch(n){u=!0,o=n}finally{try{if(!s&&null!=e.return&&(i=e.return(),Object(i)!==i))return}finally{if(u)throw o}}return c}}function _arrayWithHoles(n){if(Array.isArray(n))return n}function _regeneratorRuntime(){_regeneratorRuntime=function(){return i};var s,i={},n=Object.prototype,u=n.hasOwnProperty,l=Object.defineProperty||function(n,t,e){n[t]=e.value},t="function"==typeof Symbol?Symbol:{},r=t.iterator||"@@iterator",e=t.asyncIterator||"@@asyncIterator",o=t.toStringTag||"@@toStringTag";function a(n,t,e){return Object.defineProperty(n,t,{value:e,enumerable:!0,configurable:!0,writable:!0}),n[t]}try{a({},"")}catch(s){a=function(n,t,e){return n[t]=e}}function c(n,t,e,r){var o,a,i,c,t=t&&t.prototype instanceof y?t:y,t=Object.create(t.prototype),r=new O(r||[]);return l(t,"_invoke",{value:(o=n,a=e,i=r,c=d,function(n,t){if(c===h)throw Error("Generator is already running");if(c===m){if("throw"===n)throw t;return{value:s,done:!0}}for(i.method=n,i.arg=t;;){var e=i.delegate;if(e){e=function n(t,e){var r=e.method,o=t.iterator[r];if(o===s)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=s,n(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),g;r=f(o,t.iterator,e.arg);if("throw"===r.type)return e.method="throw",e.arg=r.arg,e.delegate=null,g;o=r.arg;return o?o.done?(e[t.resultName]=o.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=s),e.delegate=null,g):o:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,g)}(e,i);if(e){if(e===g)continue;return e}}if("next"===i.method)i.sent=i._sent=i.arg;else if("throw"===i.method){if(c===d)throw c=m,i.arg;i.dispatchException(i.arg)}else"return"===i.method&&i.abrupt("return",i.arg);c=h;e=f(o,a,i);if("normal"===e.type){if(c=i.done?m:p,e.arg===g)continue;return{value:e.arg,done:i.done}}"throw"===e.type&&(c=m,i.method="throw",i.arg=e.arg)}})}),t}function f(n,t,e){try{return{type:"normal",arg:n.call(t,e)}}catch(n){return{type:"throw",arg:n}}}i.wrap=c;var d="suspendedStart",p="suspendedYield",h="executing",m="completed",g={};function y(){}function v(){}function w(){}var t={},b=(a(t,r,function(){return this}),Object.getPrototypeOf),b=b&&b(b(T([]))),x=(b&&b!==n&&u.call(b,r)&&(t=b),w.prototype=y.prototype=Object.create(t));function I(n){["next","throw","return"].forEach(function(t){a(n,t,function(n){return this._invoke(t,n)})})}function L(i,c){var t;l(this,"_invoke",{value:function(e,r){function n(){return new c(function(n,t){!function t(n,e,r,o){var a,n=f(i[n],i,e);if("throw"!==n.type)return(e=(a=n.arg).value)&&"object"==_typeof(e)&&u.call(e,"__await")?c.resolve(e.__await).then(function(n){t("next",n,r,o)},function(n){t("throw",n,r,o)}):c.resolve(e).then(function(n){a.value=n,r(a)},function(n){return t("throw",n,r,o)});o(n.arg)}(e,r,n,t)})}return t=t?t.then(n,n):n()}})}function _(n){var t={tryLoc:n[0]};1 in n&&(t.catchLoc=n[1]),2 in n&&(t.finallyLoc=n[2],t.afterLoc=n[3]),this.tryEntries.push(t)}function E(n){var t=n.completion||{};t.type="normal",delete t.arg,n.completion=t}function O(n){this.tryEntries=[{tryLoc:"root"}],n.forEach(_,this),this.reset(!0)}function T(t){if(t||""===t){var e,n=t[r];if(n)return n.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length))return e=-1,(n=function n(){for(;++e<t.length;)if(u.call(t,e))return n.value=t[e],n.done=!1,n;return n.value=s,n.done=!0,n}).next=n}throw new TypeError(_typeof(t)+" is not iterable")}return l(x,"constructor",{value:v.prototype=w,configurable:!0}),l(w,"constructor",{value:v,configurable:!0}),v.displayName=a(w,o,"GeneratorFunction"),i.isGeneratorFunction=function(n){n="function"==typeof n&&n.constructor;return!!n&&(n===v||"GeneratorFunction"===(n.displayName||n.name))},i.mark=function(n){return Object.setPrototypeOf?Object.setPrototypeOf(n,w):(n.__proto__=w,a(n,o,"GeneratorFunction")),n.prototype=Object.create(x),n},i.awrap=function(n){return{__await:n}},I(L.prototype),a(L.prototype,e,function(){return this}),i.AsyncIterator=L,i.async=function(n,t,e,r,o){void 0===o&&(o=Promise);var a=new L(c(n,t,e,r),o);return i.isGeneratorFunction(t)?a:a.next().then(function(n){return n.done?n.value:a.next()})},I(x),a(x,o,"Generator"),a(x,r,function(){return this}),a(x,"toString",function(){return"[object Generator]"}),i.keys=function(n){var t,e=Object(n),r=[];for(t in e)r.push(t);return r.reverse(),function n(){for(;r.length;){var t=r.pop();if(t in e)return n.value=t,n.done=!1,n}return n.done=!0,n}},i.values=T,O.prototype={constructor:O,reset:function(n){if(this.prev=0,this.next=0,this.sent=this._sent=s,this.done=!1,this.delegate=null,this.method="next",this.arg=s,this.tryEntries.forEach(E),!n)for(var t in this)"t"===t.charAt(0)&&u.call(this,t)&&!isNaN(+t.slice(1))&&(this[t]=s)},stop:function(){this.done=!0;var n=this.tryEntries[0].completion;if("throw"===n.type)throw n.arg;return this.rval},dispatchException:function(e){if(this.done)throw e;var r=this;function n(n,t){return a.type="throw",a.arg=e,r.next=n,t&&(r.method="next",r.arg=s),!!t}for(var t=this.tryEntries.length-1;0<=t;--t){var o=this.tryEntries[t],a=o.completion;if("root"===o.tryLoc)return n("end");if(o.tryLoc<=this.prev){var i=u.call(o,"catchLoc"),c=u.call(o,"finallyLoc");if(i&&c){if(this.prev<o.catchLoc)return n(o.catchLoc,!0);if(this.prev<o.finallyLoc)return n(o.finallyLoc)}else if(i){if(this.prev<o.catchLoc)return n(o.catchLoc,!0)}else{if(!c)throw Error("try statement without catch or finally");if(this.prev<o.finallyLoc)return n(o.finallyLoc)}}}},abrupt:function(n,t){for(var e=this.tryEntries.length-1;0<=e;--e){var r=this.tryEntries[e];if(r.tryLoc<=this.prev&&u.call(r,"finallyLoc")&&this.prev<r.finallyLoc){var o=r;break}}var a=(o=o&&("break"===n||"continue"===n)&&o.tryLoc<=t&&t<=o.finallyLoc?null:o)?o.completion:{};return a.type=n,a.arg=t,o?(this.method="next",this.next=o.finallyLoc,g):this.complete(a)},complete:function(n,t){if("throw"===n.type)throw n.arg;return"break"===n.type||"continue"===n.type?this.next=n.arg:"return"===n.type?(this.rval=this.arg=n.arg,this.method="return",this.next="end"):"normal"===n.type&&t&&(this.next=t),g},finish:function(n){for(var t=this.tryEntries.length-1;0<=t;--t){var e=this.tryEntries[t];if(e.finallyLoc===n)return this.complete(e.completion,e.afterLoc),E(e),g}},catch:function(n){for(var t=this.tryEntries.length-1;0<=t;--t){var e,r,o=this.tryEntries[t];if(o.tryLoc===n)return"throw"===(e=o.completion).type&&(r=e.arg,E(o)),r}throw Error("illegal catch attempt")},delegateYield:function(n,t,e){return this.delegate={iterator:T(n),resultName:t,nextLoc:e},"next"===this.method&&(this.arg=s),g}},i}function asyncGeneratorStep(n,t,e,r,o,a,i){try{var c=n[a](i),s=c.value}catch(n){return void e(n)}c.done?t(s):Promise.resolve(s).then(r,o)}function _asyncToGenerator(c){return function(){var n=this,i=arguments;return new Promise(function(t,e){var r=c.apply(n,i);function o(n){asyncGeneratorStep(r,t,e,o,a,"next",n)}function a(n){asyncGeneratorStep(r,t,e,o,a,"throw",n)}o(void 0)})}}var TT=null;function debounce(n,t){null!==TT&&clearTimeout(TT),TT=setTimeout(n,t)}window.IP_CONFIG={API_KEY:"v3VEP2OEBL7qva3g3dUqf1ENfp",BLOG_LOCATION:{lng:113.666,lat:34.666},CACHE_DURATION:36e5,HOME_PAGE_ONLY:!0};var insertAnnouncementComponent=function(){var n=document.querySelectorAll(".card-widget.card-announcement");n.length&&(IP_CONFIG.HOME_PAGE_ONLY&&!isHomePage()?n.forEach(function(n){return n.remove()}):document.querySelector("#welcome-info")&&fetchIpInfo())},getWelcomeInfoElement=function(){return document.querySelector("#welcome-info")},fetchIpData=(()=>{var n=_asyncToGenerator(_regeneratorRuntime().mark(function n(){var t;return _regeneratorRuntime().wrap(function(n){for(;;)switch(n.prev=n.next){case 0:return n.next=2,fetch("https://api.nsmao.net/api/ip/query?key=".concat(encodeURIComponent(IP_CONFIG.API_KEY)));case 2:if((t=n.sent).ok){n.next=5;break}throw new Error("网络响应不正常");case 5:return n.next=7,t.json();case 7:return n.abrupt("return",n.sent);case 8:case"end":return n.stop()}},n)}));return function(){return n.apply(this,arguments)}})(),showWelcome=function(n){var t=n.data,n=n.ip;if(!t)return showErrorMessage();var e=t.lng,r=t.lat,o=t.country,a=t.prov,t=t.city,i=getWelcomeInfoElement();i&&(e=calculateDistance(e,r),r=formatIpDisplay(n),n=formatLocation(o,a,t),i.style.display="block",i.style.height="auto",i.innerHTML=generateWelcomeMessage(n,e,r,o,a,t))},calculateDistance=function(n,t){var e=Math.PI/180,r=(t-IP_CONFIG.BLOG_LOCATION.lat)*e,n=(n-IP_CONFIG.BLOG_LOCATION.lng)*e,r=Math.sin(r/2)*Math.sin(r/2)+Math.cos(IP_CONFIG.BLOG_LOCATION.lat*e)*Math.cos(t*e)*Math.sin(n/2)*Math.sin(n/2);return Math.round(12742*Math.atan2(Math.sqrt(r),Math.sqrt(1-r)))},formatIpDisplay=function(n){return n.includes(":")?"<br>好复杂，咱看不懂~(ipv6)":n},formatLocation=function(n,t,e){return n?"中国"===n?"".concat(t," ").concat(e):n:"神秘地区"},generateWelcomeMessage=function(n,t,e,r,o,a){return"\n    欢迎来自 <b>".concat(n,"</b> 的小友💖<br>\n    你当前距博主约 <b>").concat(t,'</b> 公里！<br>\n    你的IP地址：<b class="ip-address">').concat(e,"</b><br>\n    ").concat(getTimeGreeting(),"<br>\n    Tip：<b>").concat(getGreeting(r,o,a),"🍂</b>\n")},addStyles=function(){var n=document.createElement("style");n.textContent="\n        #welcome-info {\n            user-select: none;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            height: 212px;\n            padding: 10px;\n            margin-top: 5px;\n            border-radius: 12px;\n            background-color: var(--anzhiyu-background);\n            outline: 1px solid var(--anzhiyu-card-border);\n        }\n        .loading-spinner {\n            width: 50px;\n            height: 50px;\n            border: 3px solid rgba(0, 0, 0, 0.1);\n            border-radius: 50%;\n            border-top: 3px solid var(--anzhiyu-main);\n            animation: spin 1s linear infinite;\n        }\n        @keyframes spin {\n            0% { transform: rotate(0deg); }\n            100% { transform: rotate(360deg); }\n        }\n        .ip-address {\n            filter: blur(5px);\n            transition: filter 0.3s ease;\n        }\n        .ip-address:hover {\n            filter: blur(0);\n        }\n        .error-message {\n            color: #ff6565;\n            display: flex;\n            flex-direction: column;\n            justify-content: center;\n            align-items: center;\n        }\n        .error-message p,\n        .permission-dialog p {\n            margin: 0;\n        }\n        .error-icon {\n            font-size: 3rem;\n        }\n        #retry-button {\n            margin: 0 5px;\n            color: var(--anzhiyu-main);\n            transition: transform 0.3s ease;\n        }\n        #retry-button:hover {\n            transform: rotate(180deg);\n        }\n        .permission-dialog {\n            text-align: center;\n        }\n        .permission-dialog button {\n            margin: 10px 5px;\n            padding: 5px 10px;\n            border: none;\n            border-radius: 5px;\n            background-color: var(--anzhiyu-main);\n            color: white;\n            transition: opacity 0.3s ease;\n        }\n        .permission-dialog button:hover {\n            opacity: 0.8;\n        }\n    ",document.head.appendChild(n)},checkLocationPermission=function(){return"granted"===localStorage.getItem("locationPermission")},saveLocationPermission=function(n){localStorage.setItem("locationPermission",n)},showLocationPermissionDialog=function(){var n=document.getElementById("welcome-info");n.innerHTML='\n        <div class="permission-dialog">\n            <div class="error-icon">❓</div>\n            <p>是否允许访问您的位置信息？</p>\n            <button data-action="allow">允许</button>\n            <button data-action="deny">拒绝</button>\n        </div>\n    ',n.addEventListener("click",function(n){"BUTTON"===n.target.tagName&&(n=n.target.dataset.action,handleLocationPermission("allow"===n?"granted":"denied"))})},handleLocationPermission=function(n){saveLocationPermission(n),"granted"===n?(showLoadingSpinner(),fetchIpInfo()):showErrorMessage("您已拒绝访问位置信息")},showLoadingSpinner=function(){var n=document.querySelector("#welcome-info");n&&(n.innerHTML='<div class="loading-spinner"></div>')},IP_CACHE_KEY="ip_info_cache",getIpInfoFromCache=function(){var n,t=localStorage.getItem(IP_CACHE_KEY);return t?(n=(t=JSON.parse(t)).data,t=t.timestamp,Date.now()-t>IP_CONFIG.CACHE_DURATION?(localStorage.removeItem(IP_CACHE_KEY),null):n):null},setIpInfoCache=function(n){localStorage.setItem(IP_CACHE_KEY,JSON.stringify({data:n,timestamp:Date.now()}))},fetchIpInfo=(()=>{var n=_asyncToGenerator(_regeneratorRuntime().mark(function n(){var t;return _regeneratorRuntime().wrap(function(n){for(;;)switch(n.prev=n.next){case 0:if(checkLocationPermission()){n.next=3;break}return showLocationPermissionDialog(),n.abrupt("return");case 3:if(showLoadingSpinner(),t=getIpInfoFromCache())return showWelcome(t),n.abrupt("return");n.next=8;break;case 8:return n.prev=8,n.next=11,fetchIpData();case 11:t=n.sent,setIpInfoCache(t),showWelcome(t),n.next=20;break;case 16:n.prev=16,n.t0=n.catch(8),console.error("获取IP信息失败:",n.t0),showErrorMessage();case 20:case"end":return n.stop()}},n,null,[[8,16]])}));return function(){return n.apply(this,arguments)}})(),greetings={"中国":{"北京市":"北——京——欢迎你~~~","天津市":"讲段相声吧","河北省":"山势巍巍成壁垒，天下雄关铁马金戈由此向，无限江山","山西省":"展开坐具长三尺，已占山河五百余","内蒙古自治区":"天苍苍，野茫茫，风吹草低见牛羊","辽宁省":"我想吃烤鸡架！","吉林省":"状元阁就是东北烧烤之王","黑龙江省":"很喜欢哈尔滨大剧院","上海市":"众所周知，中国只有两个城市","江苏省":{"南京市":"这是我挺想去的城市啦","苏州市":"上有天堂，下有苏杭","其他":"散装是必须要散装的"},"浙江省":{"杭州市":"东风渐绿西湖柳，雁已还人未南归","其他":"望海楼明照曙霞,护江堤白蹋晴沙"},"河南省":{"郑州市":"豫州之域，天地之中","信阳市":"品信阳毛尖，悟人间芳华","南阳市":"臣本布衣，躬耕于南阳此南阳非彼南阳！","驻马店市":"峰峰有奇石，石石挟仙气嵖岈山的花很美哦！","开封市":"刚正不阿包青天","洛阳市":"洛阳牡丹甲天下","其他":"可否带我品尝河南烩面啦？"},"安徽省":"蚌埠住了，芜湖起飞","福建省":"井邑白云间，岩城远带山","江西省":"落霞与孤鹜齐飞，秋水共长天一色","山东省":"遥望齐州九点烟，一泓海水杯中泻","湖北省":{"黄冈市":"红安将军县！辈出将才！","其他":"来碗热干面~"},"湖南省":"74751，长沙斯塔克","广东省":{"广州市":"看小蛮腰，喝早茶了嘛~","深圳市":"今天你逛商场了嘛~","阳江市":"阳春合水！博主家乡~ 欢迎来玩~","其他":"来两斤福建人~"},"广西壮族自治区":"桂林山水甲天下","海南省":"朝观日出逐白浪，夕看云起收霞光","四川省":"康康川妹子","贵州省":"茅台，学生，再塞200","云南省":"玉龙飞舞云缠绕，万仞冰川直耸天","西藏自治区":"躺在茫茫草原上，仰望蓝天","陕西省":"来份臊子面加馍","甘肃省":"羌笛何须怨杨柳，春风不度玉门关","青海省":"牛肉干和老酸奶都好好吃","宁夏回族自治区":"大漠孤烟直，长河落日圆","新疆维吾尔自治区":"驼铃古道丝绸路，胡马犹闻唐汉风","台湾省":"我在这头，大陆在那头","香港特别行政区":"永定贼有残留地鬼嚎，迎击光非岁玉","澳门特别行政区":"性感荷官，在线发牌","其他":"带我去你的城市逛逛吧！"},"美国":"Let us live in peace!","日本":"よろしく、一緒に桜を見ませんか","俄罗斯":"干了这瓶伏特加！","法国":"C'est La Vie","德国":"Die Zeit verging im Fluge.","澳大利亚":"一起去大堡礁吧！","加拿大":"拾起一片枫叶赠予你","其他":"带我去你的国家逛逛吧"},getGreeting=function(n,t,e){n=greetings[n]||greetings["其他"];return"string"==typeof n?n:"string"==typeof(t=n[t]||n["其他"])?t:t[e]||t["其他"]||n["其他"]},getTimeGreeting=function(){var n=(new Date).getHours();return n<11?"早上好🌤️ ，一日之计在于晨":n<13?"中午好☀️ ，记得午休喔~":n<17?"下午好🕞 ，饮茶先啦！":n<19?"即将下班🚶‍♂️，记得按时吃饭~":"晚上好🌙 ，夜生活嗨起来！"},showErrorMessage=function(){var n=0<arguments.length&&void 0!==arguments[0]?arguments[0]:"抱歉，无法获取信息";document.getElementById("welcome-info").innerHTML='\n        <div class="error-message">\n            <div class="error-icon">😕</div>\n            <p>'.concat(n,'</p>\n            <p>请<i id="retry-button" class="fa-solid fa-arrows-rotate"></i>重试或检查网络连接</p>\n        </div>\n    '),document.getElementById("retry-button").addEventListener("click",fetchIpInfo)},isHomePage=function(){return"/"===window.location.pathname||"/index.html"===window.location.pathname},CountdownTimer=(document.addEventListener("DOMContentLoaded",function(){addStyles(),insertAnnouncementComponent(),document.addEventListener("pjax:complete",insertAnnouncementComponent)}),(()=>{var t,i={targetDate:"2026-02-17",targetName:"春节",units:{day:{text:"今日",unit:"小时"},week:{text:"本周",unit:"天"},month:{text:"本月",unit:"天"},year:{text:"本年",unit:"天"}}},c={day:function(){var n=(new Date).getHours();return{remaining:24-n,percentage:n/24*100}},week:function(){var n=(new Date).getDay(),n=0===n?6:n-1;return{remaining:6-n,percentage:(1+n)/7*100}},month:function(){var n=new Date,t=new Date(n.getFullYear(),n.getMonth()+1,0).getDate(),n=n.getDate()-1;return{remaining:t-n,percentage:n/t*100}},year:function(){var n=new Date,t=new Date(n.getFullYear(),0,1),e=365+(n.getFullYear()%4==0?1:0),n=Math.floor((n-t)/864e5);return{remaining:e-n,percentage:n/e*100}}};function e(){var n,t,e,r,o,a=["eventName","eventDate","daysUntil","countRight"].map(function(n){return document.getElementById(n)});a.some(function(n){return!n})||(n=(a=_slicedToArray(a,4))[0],t=a[1],e=a[2],a=a[3],r=new Date,o=new Date(i.targetDate),n.textContent=i.targetName,t.textContent=i.targetDate,e.textContent=Math.round((o-r.setHours(0,0,0,0))/864e5),a.innerHTML=Object.entries(i.units).map(function(n){var n=_slicedToArray(n,2),t=n[0],n=n[1],e=n.text,n=n.unit,t=c[t](),r=t.remaining,t=t.percentage;return'\n                    <div class="cd-count-item">\n                        <div class="cd-item-name">'.concat(e,'</div>\n                        <div class="cd-item-progress">\n                            <div class="cd-progress-bar" style="width: ').concat(t,"%; opacity: ").concat(t/100,'"></div>\n                            <span class="cd-percentage ').concat(46<=t?"cd-many":"",'">').concat(t.toFixed(2),'%</span>\n                            <span class="cd-remaining ').concat(60<=t?"cd-many":"",'">\n                                <span class="cd-tip">还剩</span>').concat(r,'<span class="cd-tip">').concat(n,"</span>\n                            </span>\n                        </div>\n                    </div>\n                ")}).join(""))}function r(){var n;(n=document.createElement("style")).textContent='\n            .card-countdown .item-content {\n                display: flex;\n            }\n            .cd-count-left {\n                position: relative;\n                display: flex;\n                flex-direction: column;\n                margin-right: 0.8rem;\n                line-height: 1.5;\n                align-items: center;\n                justify-content: center;\n            }\n            .cd-count-left .cd-text {\n                font-size: 14px;\n            }\n            .cd-count-left .cd-name {\n                font-weight: bold;\n                font-size: 18px;\n            }\n            .cd-count-left .cd-time {\n                font-size: 30px;\n                font-weight: bold;\n                color: var(--anzhiyu-main);\n            }\n            .cd-count-left .cd-date {\n                font-size: 12px;\n                opacity: 0.6;\n            }\n            .cd-count-left::after {\n                content: "";\n                position: absolute;\n                right: -0.8rem;\n                width: 2px;\n                height: 80%;\n                background-color: var(--anzhiyu-main);\n                opacity: 0.5;\n            }\n            .cd-count-right {\n                flex: 1;\n                margin-left: .8rem;\n                display: flex;\n                flex-direction: column;\n                justify-content: space-between;\n            }\n            .cd-count-item {\n                display: flex;\n                flex-direction: row;\n                align-items: center;\n                height: 24px;\n            }\n            .cd-item-name {\n                font-size: 14px;\n                margin-right: 0.8rem;\n                white-space: nowrap;\n            }\n            .cd-item-progress {\n                position: relative;\n                display: flex;\n                flex-direction: row;\n                align-items: center;\n                justify-content: space-between;\n                height: 100%;\n                width: 100%;\n                border-radius: 8px;\n                background-color: var(--anzhiyu-background);\n                overflow: hidden;\n            }\n            .cd-progress-bar {\n                height: 100%;\n                border-radius: 8px;\n                background-color: var(--anzhiyu-main);\n            }\n            .cd-percentage,\n            .cd-remaining {\n                position: absolute;\n                font-size: 12px;\n                margin: 0 6px;\n                transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;\n            }\n            .cd-many {\n                color: #fff;\n            }\n            .cd-remaining {\n                opacity: 0;\n                transform: translateX(10px);\n            }\n            .card-countdown .item-content:hover .cd-remaining {\n                transform: translateX(0);\n                opacity: 1;\n            }\n            .card-countdown .item-content:hover .cd-percentage {\n                transform: translateX(-10px);\n                opacity: 0;\n            }\n        ',document.head.appendChild(n),e(),t=setInterval(e,6e5)}return["pjax:complete","DOMContentLoaded"].forEach(function(n){return document.addEventListener(n,r)}),document.addEventListener("pjax:send",function(){return t&&clearInterval(t)}),{start:r,stop:function(){return t&&clearInterval(t)}}})());
+// 防抖全局计时器
+let TT = null;    //time用来控制事件的触发
+// 防抖函数:fn->逻辑 time->防抖时间
+function debounce(fn, time) {
+    if (TT !== null) clearTimeout(TT);
+    TT = setTimeout(fn, time);
+}
+
+/* 来访者名片 */
+window.IP_CONFIG = {
+    API_KEY: 'v3VEP2OEBL7qva3g3dUqf1ENfp', // API密钥 申请地址：https://api.76.al/
+    BLOG_LOCATION: {
+        lng: 113.666, // 经度
+        lat: 34.666 // 纬度
+    },
+    CACHE_DURATION: 1000 * 60 * 60, // 可配置缓存时间(默认1小时)
+    HOME_PAGE_ONLY: true, // 是否只在首页显示 开启后其它页面将不会显示这个容器
+};
+
+const insertAnnouncementComponent = () => {
+    // 获取所有公告卡片
+    const announcementCards = document.querySelectorAll('.card-widget.card-announcement');
+    if (!announcementCards.length) return;
+
+    if (IP_CONFIG.HOME_PAGE_ONLY && !isHomePage()) {
+        announcementCards.forEach(card => card.remove());
+        return;
+    }
+
+    if (!document.querySelector('#welcome-info')) return;
+    fetchIpInfo();
+};
+
+const getWelcomeInfoElement = () => document.querySelector('#welcome-info');
+
+const fetchIpData = async () => {
+    const response = await fetch(`https://api.nsmao.net/api/ip/query?key=${encodeURIComponent(IP_CONFIG.API_KEY)}`);
+    if (!response.ok) throw new Error('网络响应不正常');
+    return await response.json();
+};
+
+const showWelcome = ({
+    data,
+    ip
+}) => {
+    if (!data) return showErrorMessage();
+
+    const {
+        lng,
+        lat,
+        country,
+        prov,
+        city
+    } = data;
+    const welcomeInfo = getWelcomeInfoElement();
+    if (!welcomeInfo) return;
+
+    const dist = calculateDistance(lng, lat);
+    const ipDisplay = formatIpDisplay(ip);
+    const pos = formatLocation(country, prov, city);
+
+    welcomeInfo.style.display = 'block';
+    welcomeInfo.style.height = 'auto';
+    welcomeInfo.innerHTML = generateWelcomeMessage(pos, dist, ipDisplay, country, prov, city);
+};
+
+const calculateDistance = (lng, lat) => {
+    const R = 6371; // 地球半径(km)
+    const rad = Math.PI / 180;
+    const dLat = (lat - IP_CONFIG.BLOG_LOCATION.lat) * rad;
+    const dLon = (lng - IP_CONFIG.BLOG_LOCATION.lng) * rad;
+    const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+        Math.cos(IP_CONFIG.BLOG_LOCATION.lat * rad) * Math.cos(lat * rad) *
+        Math.sin(dLon / 2) * Math.sin(dLon / 2);
+
+    return Math.round(R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a)));
+};
+const formatIpDisplay = (ip) => ip.includes(":") ? "<br>好复杂，咱看不懂~(ipv6)" : ip;
+const formatLocation = (country, prov, city) => {
+    return country ? (country === "中国" ? `${prov} ${city}` : country) : '神秘地区';
+};
+
+const generateWelcomeMessage = (pos, dist, ipDisplay, country, prov, city) => `
+    欢迎来自 <b>${pos}</b> 的小友💖<br>
+    你当前距博主约 <b>${dist}</b> 公里！<br>
+    你的IP地址：<b class="ip-address">${ipDisplay}</b><br>
+    ${getTimeGreeting()}<br>
+    Tip：<b>${getGreeting(country, prov, city)}🍂</b>
+`;
+
+const addStyles = () => {
+    const style = document.createElement('style');
+    style.textContent = `
+        #welcome-info {
+            user-select: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 212px;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 12px;
+            background-color: var(--anzhiyu-background);
+            outline: 1px solid var(--anzhiyu-card-border);
+        }
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            border-top: 3px solid var(--anzhiyu-main);
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .ip-address {
+            filter: blur(5px);
+            transition: filter 0.3s ease;
+        }
+        .ip-address:hover {
+            filter: blur(0);
+        }
+        .error-message {
+            color: #ff6565;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .error-message p,
+        .permission-dialog p {
+            margin: 0;
+        }
+        .error-icon {
+            font-size: 3rem;
+        }
+        #retry-button {
+            margin: 0 5px;
+            color: var(--anzhiyu-main);
+            transition: transform 0.3s ease;
+        }
+        #retry-button:hover {
+            transform: rotate(180deg);
+        }
+        .permission-dialog {
+            text-align: center;
+        }
+        .permission-dialog button {
+            margin: 10px 5px;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: var(--anzhiyu-main);
+            color: white;
+            transition: opacity 0.3s ease;
+        }
+        .permission-dialog button:hover {
+            opacity: 0.8;
+        }
+    `;
+    document.head.appendChild(style);
+};
+
+// 位置权限相关函数
+const checkLocationPermission = () => localStorage.getItem('locationPermission') === 'granted';
+const saveLocationPermission = (permission) => {
+    localStorage.setItem('locationPermission', permission);
+};
+const showLocationPermissionDialog = () => {
+    const welcomeInfoElement = document.getElementById("welcome-info");
+    welcomeInfoElement.innerHTML = `
+        <div class="permission-dialog">
+            <div class="error-icon">❓</div>
+            <p>是否允许访问您的位置信息？</p>
+            <button data-action="allow">允许</button>
+            <button data-action="deny">拒绝</button>
+        </div>
+    `;
+
+    welcomeInfoElement.addEventListener('click', (e) => {
+        if (e.target.tagName === 'BUTTON') {
+            const action = e.target.dataset.action;
+            const permission = action === 'allow' ? 'granted' : 'denied';
+            handleLocationPermission(permission);
+        }
+    });
+};
+const handleLocationPermission = (permission) => {
+    saveLocationPermission(permission);
+    if (permission === 'granted') {
+        showLoadingSpinner();
+        fetchIpInfo();
+    } else {
+        showErrorMessage('您已拒绝访问位置信息');
+    }
+};
+
+const showLoadingSpinner = () => {
+    const welcomeInfoElement = document.querySelector("#welcome-info");
+    if (!welcomeInfoElement) return;
+    welcomeInfoElement.innerHTML = '<div class="loading-spinner"></div>';
+};
+
+const IP_CACHE_KEY = 'ip_info_cache';
+const getIpInfoFromCache = () => {
+    const cached = localStorage.getItem(IP_CACHE_KEY);
+    if (!cached) return null;
+
+    const { data, timestamp } = JSON.parse(cached);
+    if (Date.now() - timestamp > IP_CONFIG.CACHE_DURATION) {
+        localStorage.removeItem(IP_CACHE_KEY);
+        return null;
+    }
+    return data;
+};
+const setIpInfoCache = (data) => {
+    localStorage.setItem(IP_CACHE_KEY, JSON.stringify({
+        data,
+        timestamp: Date.now()
+    }));
+};
+
+const fetchIpInfo = async () => {
+    if (!checkLocationPermission()) {
+        showLocationPermissionDialog();
+        return;
+    }
+
+    showLoadingSpinner();
+
+    const cachedData = getIpInfoFromCache();
+    if (cachedData) {
+        showWelcome(cachedData);
+        return;
+    }
+
+    try {
+        const data = await fetchIpData();
+        setIpInfoCache(data);
+        showWelcome(data);
+    } catch (error) {
+        console.error('获取IP信息失败:', error);
+        showErrorMessage();
+    }
+};
+
+const greetings = {
+    "中国": {
+        "北京市": "北——京——欢迎你~~~",
+        "天津市": "讲段相声吧",
+        "河北省": "山势巍巍成壁垒，天下雄关铁马金戈由此向，无限江山",
+        "山西省": "展开坐具长三尺，已占山河五百余",
+        "内蒙古自治区": "天苍苍，野茫茫，风吹草低见牛羊",
+        "辽宁省": "我想吃烤鸡架！",
+        "吉林省": "状元阁就是东北烧烤之王",
+        "黑龙江省": "很喜欢哈尔滨大剧院",
+        "上海市": "众所周知，中国只有两个城市",
+        "江苏省": {
+            "南京市": "这是我挺想去的城市啦",
+            "苏州市": "上有天堂，下有苏杭",
+            "其他": "散装是必须要散装的"
+        },
+        "浙江省": {
+            "杭州市": "东风渐绿西湖柳，雁已还人未南归",
+            "其他": "望海楼明照曙霞,护江堤白蹋晴沙"
+        },
+        "河南省": {
+            "郑州市": "豫州之域，天地之中",
+            "信阳市": "品信阳毛尖，悟人间芳华",
+            "南阳市": "臣本布衣，躬耕于南阳此南阳非彼南阳！",
+            "驻马店市": "峰峰有奇石，石石挟仙气嵖岈山的花很美哦！",
+            "开封市": "刚正不阿包青天",
+            "洛阳市": "洛阳牡丹甲天下",
+            "其他": "可否带我品尝河南烩面啦？"
+        },
+        "安徽省": "蚌埠住了，芜湖起飞",
+        "福建省": "井邑白云间，岩城远带山",
+        "江西省": "落霞与孤鹜齐飞，秋水共长天一色",
+        "山东省": "遥望齐州九点烟，一泓海水杯中泻",
+        "湖北省": {
+            "黄冈市": "红安将军县！辈出将才！",
+            "其他": "来碗热干面~"
+        },
+        "湖南省": "74751，长沙斯塔克",
+        "广东省": {
+            "广州市": "看小蛮腰，喝早茶了嘛~",
+            "深圳市": "今天你逛商场了嘛~",
+            "阳江市": "阳春合水！博主家乡~ 欢迎来玩~",
+            "其他": "来两斤福建人~"
+        },
+        "广西壮族自治区": "桂林山水甲天下",
+        "海南省": "朝观日出逐白浪，夕看云起收霞光",
+        "四川省": "康康川妹子",
+        "贵州省": "茅台，学生，再塞200",
+        "云南省": "玉龙飞舞云缠绕，万仞冰川直耸天",
+        "西藏自治区": "躺在茫茫草原上，仰望蓝天",
+        "陕西省": "来份臊子面加馍",
+        "甘肃省": "羌笛何须怨杨柳，春风不度玉门关",
+        "青海省": "牛肉干和老酸奶都好好吃",
+        "宁夏回族自治区": "大漠孤烟直，长河落日圆",
+        "新疆维吾尔自治区": "驼铃古道丝绸路，胡马犹闻唐汉风",
+        "台湾省": "我在这头，大陆在那头",
+        "香港特别行政区": "永定贼有残留地鬼嚎，迎击光非岁玉",
+        "澳门特别行政区": "性感荷官，在线发牌",
+        "其他": "带我去你的城市逛逛吧！"
+    },
+    "美国": "Let us live in peace!",
+    "日本": "よろしく、一緒に桜を見ませんか",
+    "俄罗斯": "干了这瓶伏特加！",
+    "法国": "C'est La Vie",
+    "德国": "Die Zeit verging im Fluge.",
+    "澳大利亚": "一起去大堡礁吧！",
+    "加拿大": "拾起一片枫叶赠予你",
+    "其他": "带我去你的国家逛逛吧"
+};
+
+const getGreeting = (country, province, city) => {
+    const countryGreeting = greetings[country] || greetings["其他"];
+    if (typeof countryGreeting === 'string') {
+        return countryGreeting;
+    }
+    const provinceGreeting = countryGreeting[province] || countryGreeting["其他"];
+    if (typeof provinceGreeting === 'string') {
+        return provinceGreeting;
+    }
+    return provinceGreeting[city] || provinceGreeting["其他"] || countryGreeting["其他"];
+};
+const getTimeGreeting = () => {
+    const hour = new Date().getHours();
+    if (hour < 11) return "早上好🌤️ ，一日之计在于晨";
+    if (hour < 13) return "中午好☀️ ，记得午休喔~";
+    if (hour < 17) return "下午好🕞 ，饮茶先啦！";
+    if (hour < 19) return "即将下班🚶‍♂️，记得按时吃饭~";
+    return "晚上好🌙 ，夜生活嗨起来！";
+};
+
+const showErrorMessage = (message = '抱歉，无法获取信息') => {
+    const welcomeInfoElement = document.getElementById("welcome-info");
+    welcomeInfoElement.innerHTML = `
+        <div class="error-message">
+            <div class="error-icon">😕</div>
+            <p>${message}</p>
+            <p>请<i id="retry-button" class="fa-solid fa-arrows-rotate"></i>重试或检查网络连接</p>
+        </div>
+    `;
+
+    document.getElementById('retry-button').addEventListener('click', fetchIpInfo);
+};
+
+const isHomePage = () => {
+    return window.location.pathname === '/' || window.location.pathname === '/index.html';
+};
+
+// 初始化
+document.addEventListener('DOMContentLoaded', () => {
+    addStyles();
+    insertAnnouncementComponent();
+    document.addEventListener('pjax:complete', insertAnnouncementComponent);
+});
+
+// 日历
+const CountdownTimer = (() => {
+    const config = {
+        targetDate: "2026-10-01",
+        targetName: "国庆节",
+        units: {
+            day: { text: "今日", unit: "小时" },
+            week: { text: "本周", unit: "天" },
+            month: { text: "本月", unit: "天" },
+            year: { text: "本年", unit: "天" }
+        }
+    };
+
+    const calculators = {
+        day: () => {
+            const hours = new Date().getHours();
+            return {
+                remaining: 24 - hours,
+                percentage: (hours / 24) * 100
+            };
+        },
+        week: () => {
+            const day = new Date().getDay();
+            const passed = day === 0 ? 6 : day - 1;
+            return {
+                remaining: 6 - passed,
+                percentage: ((passed + 1) / 7) * 100
+            };
+        },
+        month: () => {
+            const now = new Date();
+            const total = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
+            const passed = now.getDate() - 1;
+            return {
+                remaining: total - passed,
+                percentage: (passed / total) * 100
+            };
+        },
+        year: () => {
+            const now = new Date();
+            const start = new Date(now.getFullYear(), 0, 1);
+            const total = 365 + (now.getFullYear() % 4 === 0 ? 1 : 0);
+            const passed = Math.floor((now - start) / 86400000);
+            return {
+                remaining: total - passed,
+                percentage: (passed / total) * 100
+            };
+        }
+    };
+
+    function updateCountdown() {
+        const elements = ['eventName', 'eventDate', 'daysUntil', 'countRight']
+            .map(id => document.getElementById(id));
+
+        if (elements.some(el => !el)) return;
+
+        const [eventName, eventDate, daysUntil, countRight] = elements;
+        const now = new Date();
+        const target = new Date(config.targetDate);
+
+        eventName.textContent = config.targetName;
+        eventDate.textContent = config.targetDate;
+        daysUntil.textContent = Math.round((target - now.setHours(0, 0, 0, 0)) / 86400000);
+
+        countRight.innerHTML = Object.entries(config.units)
+            .map(([key, { text, unit }]) => {
+                const { remaining, percentage } = calculators[key]();
+                return `
+                    <div class="cd-count-item">
+                        <div class="cd-item-name">${text}</div>
+                        <div class="cd-item-progress">
+                            <div class="cd-progress-bar" style="width: ${percentage}%; opacity: ${percentage / 100}"></div>
+                            <span class="cd-percentage ${percentage >= 46 ? 'cd-many' : ''}">${percentage.toFixed(2)}%</span>
+                            <span class="cd-remaining ${percentage >= 60 ? 'cd-many' : ''}">
+                                <span class="cd-tip">还剩</span>${remaining}<span class="cd-tip">${unit}</span>
+                            </span>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+    }
+
+    function injectStyles() {
+        const styles = `
+            .card-countdown .item-content {
+                display: flex;
+            }
+            .cd-count-left {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                margin-right: 0.8rem;
+                line-height: 1.5;
+                align-items: center;
+                justify-content: center;
+            }
+            .cd-count-left .cd-text {
+                font-size: 14px;
+            }
+            .cd-count-left .cd-name {
+                font-weight: bold;
+                font-size: 18px;
+            }
+            .cd-count-left .cd-time {
+                font-size: 30px;
+                font-weight: bold;
+                color: var(--anzhiyu-main);
+            }
+            .cd-count-left .cd-date {
+                font-size: 12px;
+                opacity: 0.6;
+            }
+            .cd-count-left::after {
+                content: "";
+                position: absolute;
+                right: -0.8rem;
+                width: 2px;
+                height: 80%;
+                background-color: var(--anzhiyu-main);
+                opacity: 0.5;
+            }
+            .cd-count-right {
+                flex: 1;
+                margin-left: .8rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            .cd-count-item {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                height: 24px;
+            }
+            .cd-item-name {
+                font-size: 14px;
+                margin-right: 0.8rem;
+                white-space: nowrap;
+            }
+            .cd-item-progress {
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                height: 100%;
+                width: 100%;
+                border-radius: 8px;
+                background-color: var(--anzhiyu-background);
+                overflow: hidden;
+            }
+            .cd-progress-bar {
+                height: 100%;
+                border-radius: 8px;
+                background-color: var(--anzhiyu-main);
+            }
+            .cd-percentage,
+            .cd-remaining {
+                position: absolute;
+                font-size: 12px;
+                margin: 0 6px;
+                transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+            }
+            .cd-many {
+                color: #fff;
+            }
+            .cd-remaining {
+                opacity: 0;
+                transform: translateX(10px);
+            }
+            .card-countdown .item-content:hover .cd-remaining {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            .card-countdown .item-content:hover .cd-percentage {
+                transform: translateX(-10px);
+                opacity: 0;
+            }
+        `;
+
+        const styleSheet = document.createElement("style");
+        styleSheet.textContent = styles;
+        document.head.appendChild(styleSheet);
+    }
+
+    let timer;
+    const start = () => {
+        injectStyles();
+        updateCountdown();
+        timer = setInterval(updateCountdown, 600000);
+    };
+
+    ['pjax:complete', 'DOMContentLoaded'].forEach(event => document.addEventListener(event, start));
+    document.addEventListener('pjax:send', () => timer && clearInterval(timer));
+
+    return { start, stop: () => timer && clearInterval(timer) };
+})();

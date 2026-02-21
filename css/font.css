@@ -1,1 +1,8 @@
-@font-face{font-family:LXGWZhenKaiGB-Regular;font-display:swap;src:url(/fonts/LXGWZhenKaiGB-Regular.ttf) format("truetype");font-weight:400;font-style:normal}
+/* 字体css */
+@font-face{
+  font-family: 'LXGWZhenKaiGB-Regular'; 
+  font-display: swap;
+  src: url('/fonts/LXGWZhenKaiGB-Regular.ttf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
