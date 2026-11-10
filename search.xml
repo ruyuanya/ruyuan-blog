@@ -611,16 +611,16 @@
 <h2 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h2><p>CDN工作原理就是将源站的资源缓存在全国各地CDN节点上，用户请求时返回离用户最近的节点来获取缓存的资源，而不需要每个用户来请求你的服务器来获取，避免了网络堵塞，缓解源站压力，提升访问速度体验</p>
 <h1 id="进入正题，怎么白嫖vercel来建站"><a href="#进入正题，怎么白嫖vercel来建站" class="headerlink" title="进入正题，怎么白嫖vercel来建站"></a>进入正题，怎么白嫖vercel来建站</h1><p>打开<a href="https://vercel.com/">vercel</a>，右上角注册不多说了（推荐使用github登录，可以链接你的仓库）</p>
 <p>进去长这样</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.070213.xyz/vercel/1.png" alt="登录界面"></p>
+<p><img src="https://blogpic.070213.xyz/vercel/1.png" alt="登录界面"></p>
 <p>创建网站，单击右边的<code>Add New</code>点击<code>project</code></p>
 <p>然后会自动定位到你<code>github</code>的仓库，选一个你传到github上的<code>静态网站</code>（一般包括html，css，js三大文件）文件</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.070213.xyz/vercel/2.png" alt="创建网站"></p>
+<p><img src="https://blogpic.070213.xyz/vercel/2.png" alt="创建网站"></p>
 <p>创建完网站成功会回到你网站的管理页面，单击<code>Setting</code>，来到下面个截图页面</p>
 <p>单击<code>domain</code>，再单击右边的<code>Add Domain</code>，添加域名，添加完成以后需要为域名添加对应的解析，解析形式是cmake解析，这里不多说了（（</p>
 <p>添加完<code>dns</code>解析不会立即生效，传播至全球大概需要5分钟左右，到时候会有标红解析未生效，可以点击<code>Refresh</code>刷新</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.070213.xyz/vercel/3.png" alt="进入Setting"></p>
+<p><img src="https://blogpic.070213.xyz/vercel/3.png" alt="进入Setting"></p>
 <p>标蓝色√以后你就可以来访问你的网站了，国内访问基本上全国绿，少部分会因为部分运营商问题无法访问</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.070213.xyz/vercel/4.png" alt="ping"></p>
+<p><img src="https://blogpic.070213.xyz/vercel/4.png" alt="ping"></p>
 <h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><p>vercel仅适用于个人小网站，用大型公司的企业项目不适合，因为限制是：</p>
 <ol>
 <li>一个月100G流量</li>
@@ -652,64 +652,64 @@
 </ol>
 <p>创建虚拟机不多说了，具体看其他教程吧（</p>
 <h1 id="正片"><a href="#正片" class="headerlink" title="正片"></a>正片</h1><h2 id="1-选择语言"><a href="#1-选择语言" class="headerlink" title="1.选择语言"></a>1.选择语言</h2><p>选英文还是中文没啥区别，只是一个安装引导界面的语言，进去终端还是英文</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.070213.xyz/debian/%E9%80%89%E6%8B%A9%E8%AF%AD%E8%A8%801.jpg" alt="选择语言1"></p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.070213.xyz/debian/%E9%80%89%E6%8B%A9%E8%AF%AD%E8%A8%802.jpg" alt="选择语言2"></p>
+<p><img src="https://blogpic.070213.xyz/debian/%E9%80%89%E6%8B%A9%E8%AF%AD%E8%A8%801.jpg" alt="选择语言1"></p>
+<p><img src="https://blogpic.070213.xyz/debian/%E9%80%89%E6%8B%A9%E8%AF%AD%E8%A8%802.jpg" alt="选择语言2"></p>
 <h2 id="2-磁盘映射"><a href="#2-磁盘映射" class="headerlink" title="2.磁盘映射"></a>2.磁盘映射</h2><p>看不懂直接中文即可</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.070213.xyz/debian/%E7%A3%81%E7%9B%98%E6%98%A0%E5%B0%84.jpg" alt="磁盘映射"></p>
+<p><img src="https://blogpic.070213.xyz/debian/%E7%A3%81%E7%9B%98%E6%98%A0%E5%B0%84.jpg" alt="磁盘映射"></p>
 <h2 id="3-主机名"><a href="#3-主机名" class="headerlink" title="3.主机名"></a>3.主机名</h2><p>随便填</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.070213.xyz/debian/%E4%B8%BB%E6%9C%BA%E5%90%8D.jpg" alt="主机名"></p>
+<p><img src="https://blogpic.070213.xyz/debian/%E4%B8%BB%E6%9C%BA%E5%90%8D.jpg" alt="主机名"></p>
 <h2 id="4-计算机域名"><a href="#4-计算机域名" class="headerlink" title="4.计算机域名"></a>4.计算机域名</h2><p>没需求就为空</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.070213.xyz/debian/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%9F%E5%90%8D.jpg" alt="计算机域名"></p>
+<p><img src="https://blogpic.070213.xyz/debian/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%9F%E5%90%8D.jpg" alt="计算机域名"></p>
 <h2 id="5-root密码"><a href="#5-root密码" class="headerlink" title="5.root密码"></a>5.root密码</h2><p>为了方便好记我是填123456的，其他看你们自己~</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.070213.xyz/debian/root%E5%AF%86%E7%A0%81.jpg" alt="root密码"></p>
+<p><img src="https://blogpic.070213.xyz/debian/root%E5%AF%86%E7%A0%81.jpg" alt="root密码"></p>
 <h2 id="6-创建普通用户名"><a href="#6-创建普通用户名" class="headerlink" title="6.创建普通用户名"></a>6.创建普通用户名</h2><p>非root用户的账户，害怕做出错误操作的可以使用普通账户</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.070213.xyz/debian/%E6%99%AE%E9%80%9A%E7%94%A8%E6%88%B7%E5%90%8D1.jpg" alt="普通用户名1"></p>
+<p><img src="https://blogpic.070213.xyz/debian/%E6%99%AE%E9%80%9A%E7%94%A8%E6%88%B7%E5%90%8D1.jpg" alt="普通用户名1"></p>
 <p>然后小写用户名</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.070213.xyz/debian/%E6%99%AE%E9%80%9A%E7%94%A8%E6%88%B7%E5%90%8D2.jpg" alt="普通用户名2"></p>
+<p><img src="https://blogpic.070213.xyz/debian/%E6%99%AE%E9%80%9A%E7%94%A8%E6%88%B7%E5%90%8D2.jpg" alt="普通用户名2"></p>
 <h2 id="7-创建普通用户名密码"><a href="#7-创建普通用户名密码" class="headerlink" title="7.创建普通用户名密码"></a>7.创建普通用户名密码</h2><p>密码不多说</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.070213.xyz/debian/%E6%99%AE%E9%80%9A%E7%94%A8%E6%88%B7%E5%90%8D%E5%AF%86%E7%A0%81.jpg" alt="普通用户名密码"></p>
+<p><img src="https://blogpic.070213.xyz/debian/%E6%99%AE%E9%80%9A%E7%94%A8%E6%88%B7%E5%90%8D%E5%AF%86%E7%A0%81.jpg" alt="普通用户名密码"></p>
 <h2 id="8-进行磁盘分区"><a href="#8-进行磁盘分区" class="headerlink" title="8.进行磁盘分区"></a>8.进行磁盘分区</h2><p>选择<code>向导-使用整个磁盘并配置LVM</code>，服务器一般都是用整个磁盘，少部分情况你可以分成多个盘</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.070213.xyz/debian/%E9%85%8D%E7%BD%AE%E7%A3%81%E7%9B%98.jpg" alt="配置磁盘"></p>
+<p><img src="https://blogpic.070213.xyz/debian/%E9%85%8D%E7%BD%AE%E7%A3%81%E7%9B%98.jpg" alt="配置磁盘"></p>
 <p>勾选当前磁盘进行分区</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.070213.xyz/debian/%E9%80%89%E6%8B%A9%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA.jpg" alt="选择磁盘分区"></p>
+<p><img src="https://blogpic.070213.xyz/debian/%E9%80%89%E6%8B%A9%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA.jpg" alt="选择磁盘分区"></p>
 <p>&#x2F;home，&#x2F;var，&#x2F;tmp这三个</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.070213.xyz/debian/%E9%80%89%E6%8B%A9home.jpg" alt="选择home，var，tmp"></p>
+<p><img src="https://blogpic.070213.xyz/debian/%E9%80%89%E6%8B%A9home.jpg" alt="选择home，var，tmp"></p>
 <p>勾选<code>是</code></p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.070213.xyz/debian/%E9%80%89%E6%98%AF%E8%BF%9B%E8%A1%8C%E5%88%86%E5%8C%BA.jpg" alt="选“是”"></p>
+<p><img src="https://blogpic.070213.xyz/debian/%E9%80%89%E6%98%AF%E8%BF%9B%E8%A1%8C%E5%88%86%E5%8C%BA.jpg" alt="选“是”"></p>
 <p>选择最大磁盘内存</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.070213.xyz/debian/%E6%9C%80%E5%A4%A7%E5%86%85%E5%AD%98.jpg" alt="最大内存"></p>
+<p><img src="https://blogpic.070213.xyz/debian/%E6%9C%80%E5%A4%A7%E5%86%85%E5%AD%98.jpg" alt="最大内存"></p>
 <p>是否为以下磁盘分区，选<code>是</code></p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.070213.xyz/debian/%E8%BF%9B%E8%A1%8C%E5%88%86%E5%8C%BA%E9%80%89%E6%98%AF.jpg" alt="进行分区选是"></p>
+<p><img src="https://blogpic.070213.xyz/debian/%E8%BF%9B%E8%A1%8C%E5%88%86%E5%8C%BA%E9%80%89%E6%98%AF.jpg" alt="进行分区选是"></p>
 <p>然后就是进入漫长的安装系统~</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.070213.xyz/debian/%E5%BC%80%E5%A7%8B%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F.jpg" alt="开始安装系统"></p>
+<p><img src="https://blogpic.070213.xyz/debian/%E5%BC%80%E5%A7%8B%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F.jpg" alt="开始安装系统"></p>
 <h2 id="9-配置软件包"><a href="#9-配置软件包" class="headerlink" title="9.配置软件包"></a>9.配置软件包</h2><p>选<code>否</code>，因为离开了镜像iso文件后无法再次使用软件包管理器，所以需要通过网络进行安装</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.070213.xyz/debian/%E9%85%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6%E5%8C%85%E5%90%A6.jpg" alt="配置软件包否"></p>
+<p><img src="https://blogpic.070213.xyz/debian/%E9%85%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6%E5%8C%85%E5%90%A6.jpg" alt="配置软件包否"></p>
 <p>然后就是选择软件包最近的镜像国家，选中国不多说</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.070213.xyz/debian/%E9%80%89%E6%8B%A9%E8%BD%AF%E4%BB%B6%E5%8C%85%E5%9B%BD%E5%AE%B6.jpg" alt="选择软件包国家"></p>
+<p><img src="https://blogpic.070213.xyz/debian/%E9%80%89%E6%8B%A9%E8%BD%AF%E4%BB%B6%E5%8C%85%E5%9B%BD%E5%AE%B6.jpg" alt="选择软件包国家"></p>
 <p>选择软件包镜像点，我选择了<code>清华源</code>，如果你觉得其他更好用当然可以选择其他的~</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.070213.xyz/debian/%E9%80%89%E6%8B%A9%E6%B8%85%E5%8D%8E%E6%BA%90.jpg" alt="选择清华源"></p>
+<p><img src="https://blogpic.070213.xyz/debian/%E9%80%89%E6%8B%A9%E6%B8%85%E5%8D%8E%E6%BA%90.jpg" alt="选择清华源"></p>
 <p>软件包临时代理（魔法），因为连的国内源不需要，留空即可</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.070213.xyz/debian/%E7%95%99%E7%A9%BA.jpg" alt="留空.jpg"></p>
+<p><img src="https://blogpic.070213.xyz/debian/%E7%95%99%E7%A9%BA.jpg" alt="留空.jpg"></p>
 <p>接下来又是漫长的等待~</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.070213.xyz/debian/%E7%AD%89%E5%BE%85%E4%B8%8B%E5%AE%8C.jpg" alt="等待下完"></p>
+<p><img src="https://blogpic.070213.xyz/debian/%E7%AD%89%E5%BE%85%E4%B8%8B%E5%AE%8C.jpg" alt="等待下完"></p>
 <h2 id="10-参与调查"><a href="#10-参与调查" class="headerlink" title="10.参与调查"></a>10.参与调查</h2><p>不需要，选<code>否</code></p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.070213.xyz/debian/%E8%B0%83%E6%9F%A5.jpg" alt="调查.jpg"></p>
+<p><img src="https://blogpic.070213.xyz/debian/%E8%B0%83%E6%9F%A5.jpg" alt="调查.jpg"></p>
 <h2 id="11-选择基础软件"><a href="#11-选择基础软件" class="headerlink" title="11.选择基础软件"></a>11.选择基础软件</h2><p>因为linux桌面化用处不是很大，只需要勾选<code>SSH Server</code>和<code>系统工具即可</code>，如果你想玩一玩桌面环境就多勾选<code>Debian桌面环境</code></p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.070213.xyz/debian/%E5%8B%BE%E9%80%89%E7%8E%AF%E5%A2%83.jpg" alt="勾选环境"></p>
+<p><img src="https://blogpic.070213.xyz/debian/%E5%8B%BE%E9%80%89%E7%8E%AF%E5%A2%83.jpg" alt="勾选环境"></p>
 <p>最后一次漫长的等待~</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.070213.xyz/debian/%E8%BF%9B%E5%85%A5%E5%AE%89%E8%A3%85%E8%BD%AF%E4%BB%B6.jpg" alt="进入安装软件"></p>
+<p><img src="https://blogpic.070213.xyz/debian/%E8%BF%9B%E5%85%A5%E5%AE%89%E8%A3%85%E8%BD%AF%E4%BB%B6.jpg" alt="进入安装软件"></p>
 <h2 id="12-grub引导器"><a href="#12-grub引导器" class="headerlink" title="12.grub引导器"></a>12.grub引导器</h2><p>勾选是</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.070213.xyz/debian/grub%E5%8A%A0%E8%BD%BD.jpg" alt="grub引导器"></p>
+<p><img src="https://blogpic.070213.xyz/debian/grub%E5%8A%A0%E8%BD%BD.jpg" alt="grub引导器"></p>
 <p>选择引导器<code>/dev/sda</code></p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.070213.xyz/debian/%E9%80%89%E6%8B%A9%E5%BC%95%E5%AF%BC%E5%99%A8.jpg" alt="选择引导器"></p>
+<p><img src="https://blogpic.070213.xyz/debian/%E9%80%89%E6%8B%A9%E5%BC%95%E5%AF%BC%E5%99%A8.jpg" alt="选择引导器"></p>
 <h2 id="13-重启系统！"><a href="#13-重启系统！" class="headerlink" title="13.重启系统！"></a>13.重启系统！</h2><p>点继续即可</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.070213.xyz/debian/%E9%87%8D%E5%90%AF.jpg" alt="重启系统"></p>
+<p><img src="https://blogpic.070213.xyz/debian/%E9%87%8D%E5%90%AF.jpg" alt="重启系统"></p>
 <h2 id="进入系统"><a href="#进入系统" class="headerlink" title="进入系统"></a>进入系统</h2><p>输入你root用户和你的密码进入~</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.070213.xyz/debian/%E8%BF%9B%E5%85%A5%E7%B3%BB%E7%BB%9F.jpg" alt="进入系统"></p>
+<p><img src="https://blogpic.070213.xyz/debian/%E8%BF%9B%E5%85%A5%E7%B3%BB%E7%BB%9F.jpg" alt="进入系统"></p>
 <p>可以进行软件包更新来看下是否为最新</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt update &amp;&amp; apt list --upgradable &amp;&amp; apt upgrade -y &amp;&amp; apt autoremove -y</span><br></pre></td></tr></table></figure>
 
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.070213.xyz/debian/%E6%9B%B4%E6%96%B0%E8%BD%AF%E4%BB%B6%E5%8C%85.jpg" alt="更新软件包"></p>
+<p><img src="https://blogpic.070213.xyz/debian/%E6%9B%B4%E6%96%B0%E8%BD%AF%E4%BB%B6%E5%8C%85.jpg" alt="更新软件包"></p>
 ]]></content>
     <tags>
       <tag>开源</tag>
@@ -749,32 +749,32 @@
 <p>还有就是<code>cloudflare</code>账户，没有就注册，注册不用说了吧</p>
 <h1 id="创建令牌"><a href="#创建令牌" class="headerlink" title="创建令牌"></a>创建令牌</h1><p>进去后正常来到这个界面，你需要将一个域名托管在cloudflare</p>
 <p>教程参考至<a href="https://post.smzdm.com/p/a2xok2r2/">域名DNS服务托管至Cloudflare，就是如此简单</a></p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://unpkg.com/ruyuan_blog_pic/cf/view.png"></p>
+<p><img src="https://unpkg.com/ruyuan_blog_pic/cf/view.png"></p>
 <p>点击右上角的<code>个人资料</code>，然后就来到了这个页面</p>
 <p>点击<code>API令牌</code>&#x2F;<code>创建令牌</code></p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://unpkg.com/ruyuan_blog_pic/cf/create-token.png"></p>
+<p><img src="https://unpkg.com/ruyuan_blog_pic/cf/create-token.png"></p>
 <p>选择<code>编辑区域DNS</code></p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://unpkg.com/ruyuan_blog_pic/cf/choose-dns.png"></p>
+<p><img src="https://unpkg.com/ruyuan_blog_pic/cf/choose-dns.png"></p>
 <p>在区域资源中选择你的域名即可，然后到到下面点击蓝色按钮<code>继续以显示摘要</code></p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://unpkg.com/ruyuan_blog_pic/cf/save.png"></p>
+<p><img src="https://unpkg.com/ruyuan_blog_pic/cf/save.png"></p>
 <p>最后创建令牌~</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://unpkg.com/ruyuan_blog_pic/cf/create.png"></p>
+<p><img src="https://unpkg.com/ruyuan_blog_pic/cf/create.png"></p>
 <p>来到这个界面，复制你的令牌，记得保存令牌~</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://unpkg.com/ruyuan_blog_pic/cf/cv-token.png"></p>
+<p><img src="https://unpkg.com/ruyuan_blog_pic/cf/cv-token.png"></p>
 <h1 id="1panel申请证书"><a href="#1panel申请证书" class="headerlink" title="1panel申请证书"></a>1panel申请证书</h1><p>打开你的1panel界面，点击<code>网站/证书</code></p>
 <p>具体长这样：</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://unpkg.com/ruyuan_blog_pic/cf/dns.png"></p>
+<p><img src="https://unpkg.com/ruyuan_blog_pic/cf/dns.png"></p>
 <p>点击<code>DNS账户</code></p>
 <p>然后<code>创建DNS账户</code></p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://unpkg.com/ruyuan_blog_pic/cf/create-unpkg.zhimg.com.png"></p>
+<p><img src="https://unpkg.com/ruyuan_blog_pic/cf/create-unpkg.zhimg.com.png"></p>
 <p>名称随便填，email填你的注册<code>cloudflare</code>的邮箱，<code>apitoken</code>就是你的刚刚复制的token</p>
 <p>随后来到<code>申请证书</code>，主域名填你自己的，其他域名暂时不用填，若你要申请三级域名证书则在主域名填三级域名就行，其他域名不需要写</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://unpkg.com/ruyuan_blog_pic/cf/ssl1.png"></p>
+<p><img src="https://unpkg.com/ruyuan_blog_pic/cf/ssl1.png"></p>
 <p>选择<code>DNS解析</code>（应该是默认的），勾选<code>自动续签</code>，可以再勾选<code>推送证书到本地目录</code>，我这里填的是&#x2F;root&#x2F;ssl</p>
 <p>点击确认即可</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://unpkg.com/ruyuan_blog_pic/cf/ssl2.png"></p>
+<p><img src="https://unpkg.com/ruyuan_blog_pic/cf/ssl2.png"></p>
 <p>最后等待它申请ssl证书完吧~出现这种日志就是申请成功了</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://unpkg.com/ruyuan_blog_pic/cf/success.png"></p>
+<p><img src="https://unpkg.com/ruyuan_blog_pic/cf/success.png"></p>
 <p>接下来尽情感受ssl带来的安全感吧~</p>
 ]]></content>
     <tags>
@@ -799,7 +799,7 @@
 <p>首先确认你是否有具有<code>docker</code>环境</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker version</span><br></pre></td></tr></table></figure>
 
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/Memes/%E6%A3%80%E6%9F%A5docker.png" alt="检查docker环境"></p>
+<p><img src="/images/Memes/%E6%A3%80%E6%9F%A5docker.png" alt="检查docker环境"></p>
 <p>若有请跳过</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install docker-ce docker-ce-cli containerd.i -y</span><br></pre></td></tr></table></figure>
 
@@ -851,7 +851,7 @@
 
 <p>克隆出来的目录下有一个<code>memes</code>的文件夹，将里面的文件夹放在<code>你配置的额外表情包路径</code>（全要或者都不要看你自己），比如我的是<code>/root/meme-generator</code></p>
 <p>内容如下：</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/Memes/%E7%9B%AE%E5%BD%95.png" alt="大致目录"></p>
+<p><img src="/images/Memes/%E7%9B%AE%E5%BD%95.png" alt="大致目录"></p>
 <p>之后需要<code>重启容器/本地服务</code></p>
 ]]></content>
     <tags>
@@ -883,9 +883,9 @@
 </blockquote>
 <p><a href="https://mcversions.net/">戳我去Mc官方下载</a></p>
 <p><a href="https://papermc.io/downloads/paper">戳我去paper官网下载</a></p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/MC/%E8%BF%9B%E5%85%A5%E9%80%89%E6%8B%A9%E7%89%88%E6%9C%AC%E4%B8%8B%E8%BD%BD.png"></p>
+<p><img src="/images/MC/%E8%BF%9B%E5%85%A5%E9%80%89%E6%8B%A9%E7%89%88%E6%9C%AC%E4%B8%8B%E8%BD%BD.png"></p>
 <p>选择对应版本，我这里选的1.20.1</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/MC/%E9%80%89%E6%8B%A9%E7%AC%AC%E4%B8%80%E4%B8%AA.png"></p>
+<p><img src="/images/MC/%E9%80%89%E6%8B%A9%E7%AC%AC%E4%B8%80%E4%B8%AA.png"></p>
 <h2 id="安装MCSManager管理面板"><a href="#安装MCSManager管理面板" class="headerlink" title="安装MCSManager管理面板"></a>安装MCSManager管理面板</h2><div class="note warning modern"><p>注意！MCSManager更新迭代很快，UI变化有点大，会与以下教程图片有较大差别，请灵活动你的🧠来完成你的服务器搭建吧~</p>
 </div>
 
@@ -894,17 +894,17 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> su -c <span class="string">&quot;wget -qO- https://script.mcsmanager.com/setup_cn.sh | bash&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>安装成功长这样：</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/MC/%E5%AE%89%E8%A3%85mcsmanager.png" alt="安装mcsmanager"></p>
+<p><img src="/images/MC/%E5%AE%89%E8%A3%85mcsmanager.png" alt="安装mcsmanager"></p>
 <p>随后你可以前往<code>http://&lt;YOUR IP&gt;:23333</code>来进入你的管理后台</p>
 <p>访问不了的记得要放开防火墙！你是哪家云就上哪家云的控制台放通端口，对于家里云可以直接关闭防火墙即可</p>
 <p>第一次进入会设置管理员账号，随便设置即可，自己要记得账密</p>
 <p>进去长这样：</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/MC/%E8%BF%9B%E5%8E%BB%E9%95%BF%E8%BF%99%E6%A0%B7.png"></p>
+<p><img src="/images/MC/%E8%BF%9B%E5%8E%BB%E9%95%BF%E8%BF%99%E6%A0%B7.png"></p>
 <p>随后点击上边的<code>应用实例/新建实例/Minecraft Java版服务器</code></p>
 <p>选择<code>上传服务端软件</code></p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/MC/%E4%B8%8A%E4%BC%A0%E6%9C%8D%E5%8A%A1%E7%AB%AF%E8%BD%AF%E4%BB%B6.png"></p>
+<p><img src="/images/MC/%E4%B8%8A%E4%BC%A0%E6%9C%8D%E5%8A%A1%E7%AB%AF%E8%BD%AF%E4%BB%B6.png"></p>
 <p>进到创建实例窗口，随便填一个实例名称</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/MC/%E5%88%9B%E5%BB%BA%E5%AE%9E%E4%BE%8B.png"></p>
+<p><img src="/images/MC/%E5%88%9B%E5%BB%BA%E5%AE%9E%E4%BE%8B.png"></p>
 <p>进入命令助手（疑似新版本mcsmanager弃用了该功能，这里给大家提供模板指令）</p>
 <p>这串指令也可以不依赖面板进行开服</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -Xms256M -Xmx1024M -Dfile.encoding=UTF-8 -Duser.language=zh -Duser.country=CN -jar server.jar nogui</span><br></pre></td></tr></table></figure>
@@ -923,19 +923,19 @@
 </li>
 </ol>
 <p>输入根据服务端jar名填写，比如下载的是<code>paper-1.20.1-196.jar</code></p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/MC/%E4%BF%9D%E5%AD%98%E5%91%BD%E4%BB%A4.png"></p>
+<p><img src="/images/MC/%E4%BF%9D%E5%AD%98%E5%91%BD%E4%BB%A4.png"></p>
 <p>单击保存命令即可</p>
 <p>静等文件上传完毕后进入控制台即可</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/MC/%E8%BF%9B%E5%85%A5%E6%8E%A7%E5%88%B6%E5%8F%B0.png"></p>
+<p><img src="/images/MC/%E8%BF%9B%E5%85%A5%E6%8E%A7%E5%88%B6%E5%8F%B0.png"></p>
 <p>单击<code>开始</code>按钮初始化实例</p>
 <p>之后必定会<code>终止实例</code>，需要你去填写<code>同意协议</code></p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/MC/%E5%A1%AB%E5%86%99eula.png"></p>
+<p><img src="/images/MC/%E5%A1%AB%E5%86%99eula.png"></p>
 <p>来到下边的<code>服务端配置文件</code>，点进去</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/MC/%E8%BF%9B%E5%85%A5%E6%9C%8D%E5%8A%A1%E7%AB%AF%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.png"></p>
+<p><img src="/images/MC/%E8%BF%9B%E5%85%A5%E6%9C%8D%E5%8A%A1%E7%AB%AF%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.png"></p>
 <p>改是即可，然后保存</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/MC/%E6%94%B9%E6%98%AF%E5%8D%B3%E5%8F%AF.png"></p>
+<p><img src="/images/MC/%E6%94%B9%E6%98%AF%E5%8D%B3%E5%8F%AF.png"></p>
 <p>回到控制台，等它构建完世界</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/MC/%E5%90%AF%E5%8A%A8%E6%88%90%E5%8A%9F.png"></p>
+<p><img src="/images/MC/%E5%90%AF%E5%8A%A8%E6%88%90%E5%8A%9F.png"></p>
 <p>出现<code>Done</code>这个字眼代表世界初始化成功了，接下来你可以选择对应版本打开联机</p>
 <p>输入IP：<code>&lt;YOUR IP&gt;:25565</code>进入世界开始游玩吧~（访问不了还是要记得方通对应端口哦！）</p>
 <h2 id="常见问题？"><a href="#常见问题？" class="headerlink" title="常见问题？"></a>常见问题？</h2><h3 id="1-我需要管理员权限怎么办"><a href="#1-我需要管理员权限怎么办" class="headerlink" title="1.我需要管理员权限怎么办"></a>1.我需要管理员权限怎么办</h3><p>输入<code>/op 在线的用户名</code>即可获得超级管理权限（这里输入的&#x2F;op可不是在聊天框哦，可是在控制台的模拟终端输入~）</p>
@@ -943,9 +943,9 @@
 <p>随后重启服务器就能看到啦</p>
 <p>这里我准备了一张样例图片，要的自取.</p>
 <p>👉<a href="/images/MC/server-icon.png" download="server-icon.png">点我下载文件</a></p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/MC/server-icon.png"></p>
+<p><img src="/images/MC/server-icon.png"></p>
 <h3 id="3-怎么更改最大在线人数？离线玩家无法进来？游戏难度？"><a href="#3-怎么更改最大在线人数？离线玩家无法进来？游戏难度？" class="headerlink" title="3.怎么更改最大在线人数？离线玩家无法进来？游戏难度？"></a>3.怎么更改最大在线人数？离线玩家无法进来？游戏难度？</h3><p>均能在<code>终端/服务端配置文件/编辑配置文件中找到</code></p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/MC/%E6%94%B9%E6%9C%8D%E5%8A%A1%E7%AB%AF%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.png"></p>
+<p><img src="/images/MC/%E6%94%B9%E6%9C%8D%E5%8A%A1%E7%AB%AF%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.png"></p>
 ]]></content>
     <tags>
       <tag>开源</tag>
@@ -958,12 +958,12 @@
     <cover>https://blogpic.070213.xyz/nxd.png</cover>
     <date>Fri Nov 08 2024 11:00:00 GMT+0800</date>
     <content type="html"><![CDATA[<h1 id="frp部署教程"><a href="#frp部署教程" class="headerlink" title="frp部署教程"></a>frp部署教程</h1><h2 id="什么是frp（内网穿透）？"><a href="#什么是frp（内网穿透）？" class="headerlink" title="什么是frp（内网穿透）？"></a>什么是frp（内网穿透）？</h2><p>FRP（Fast Reverse Proxy）是一个<code>高性能</code>的<code>反向代理</code>应用，它主要用于<code>内网穿透</code>，允许您在不暴露您的内网服务的情况下将内网服务映射到公网上，从而能够被外部访问。常用于物联网设备、内网服务器或任何您希望从外部网络访问的服务。</p>
-<p>图解是这样：<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/frp/frp%E5%9B%BE%E8%A7%A3.png" alt="frp图解"></p>
+<p>图解是这样：<br><img src="/images/frp/frp%E5%9B%BE%E8%A7%A3.png" alt="frp图解"></p>
 <h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>1.准备一台<code>公网服务器</code>（阿里云、腾讯云等等），没有？白嫖！<del><a href="https://freefrp.net/">白嫖FRP</a></del>这个已经炸了，请换另一个<a href="https://freefrp.com/">白嫖节点</a>（这里的frp版本都是0.56+，且你只需要配置<code>frpc</code>客户端）</p>
 <p>2.一台内网主机</p>
 <p>4.<a href="https://github.com/fatedier/frp/releases">下载frp</a>，这里使用的0.36.2版本，因为0.50开始frp的配置文件开始和老的配置会有所差别，个人喜欢老的配置QAQ</p>
 <p>解压出来如下：</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/frp/frp%E8%A7%A3%E5%8E%8B.png" alt="解压frp"></p>
+<p><img src="/images/frp/frp%E8%A7%A3%E5%8E%8B.png" alt="解压frp"></p>
 <p>其中，<code>frps.ini</code>是服务端配置文件，<code>frpc.ini</code>是客户端的配置文件.</p>
 <h2 id="配置frp服务端"><a href="#配置frp服务端" class="headerlink" title="配置frp服务端"></a>配置frp服务端</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[common]</span><br><span class="line">bind_port = 7000 <span class="comment"># 这里是通讯端口，需要你去某个服务器的管理后台放开它</span></span><br><span class="line">token = 123456 <span class="comment"># 这里是连接校验的token，随便填写即可，最终需要和frpc.ini的token一致</span></span><br><span class="line">dashboard_port = 7500 <span class="comment"># 这里是frp的监控访问端口，可选</span></span><br><span class="line">vhost_http_port = 23333 <span class="comment"># http的穿透端口，用于穿透内网的web页面，可选项</span></span><br><span class="line">ashboard_user = admin <span class="comment"># 这个是frp监控面板的用户名</span></span><br><span class="line">dashboard_pwd = 123456 <span class="comment"># 这个是frp监控面板的密码</span></span><br></pre></td></tr></table></figure>
 
@@ -980,11 +980,11 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 服务端和客户端查看日志都是一样的</span></span><br><span class="line"><span class="built_in">tail</span> -f nohup.out</span><br></pre></td></tr></table></figure>
 
 <p>服务端日志长这样：</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/frp/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%97%A5%E5%BF%97.png" alt="服务端日志"></p>
+<p><img src="/images/frp/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%97%A5%E5%BF%97.png" alt="服务端日志"></p>
 <p>客户端日志长这样：</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/frp/%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%97%A5%E5%BF%97.png" alt="客户端日志"></p>
+<p><img src="/images/frp/%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%97%A5%E5%BF%97.png" alt="客户端日志"></p>
 <p>尝试下是否能够使用：</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/frp/%E8%AF%95%E8%AF%95.png" alt="试试"></p>
+<p><img src="/images/frp/%E8%AF%95%E8%AF%95.png" alt="试试"></p>
 <h2 id="新frp教程"><a href="#新frp教程" class="headerlink" title="新frp教程"></a>新frp教程</h2><h3 id="编辑新服务端frps-toml"><a href="#编辑新服务端frps-toml" class="headerlink" title="编辑新服务端frps.toml"></a>编辑新服务端frps.toml</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># frp服务的特定端口，防火墙也需放开该端口</span></span><br><span class="line">bindPort = 7000</span><br><span class="line"><span class="comment"># 自定义的监听的端口，所有对服务器该端口访问将被转发到本地内网，做了反向代理可不处理防火墙放行</span></span><br><span class="line">vhostHTTPPort = 23333</span><br><span class="line">auth.token = <span class="string">&quot;token&quot;</span></span><br><span class="line">transport.tls.force = <span class="literal">true</span> <span class="comment"># 服务器仅接受tls连接可选可不选</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="编辑新客户端frpc-toml"><a href="#编辑新客户端frpc-toml" class="headerlink" title="编辑新客户端frpc.toml"></a>编辑新客户端frpc.toml</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 服务器的公网ip</span></span><br><span class="line">serverAddr = <span class="string">&quot;xxx.xxx.xxx.xxx&quot;</span></span><br><span class="line"><span class="comment"># 7000端口 与frps.toml一致</span></span><br><span class="line">serverPort = 7000</span><br><span class="line">auth.method = <span class="string">&quot;token&quot;</span> <span class="comment">#如果你设置了token校验</span></span><br><span class="line">auth.token = <span class="string">&quot;public.freefrp.com&quot;</span> <span class="comment"># token值</span></span><br><span class="line">transport.tls.enable = <span class="literal">true</span> <span class="comment"># 仅接受tls连接</span></span><br><span class="line"></span><br><span class="line">[[proxies]]</span><br><span class="line">name = <span class="string">&quot;自定义名字，一定要英文&quot;</span></span><br><span class="line"><span class="built_in">type</span> = <span class="string">&quot;tcp&quot;</span></span><br><span class="line">localPort = 22 <span class="comment"># 看你需求，这里举例ssh端口</span></span><br><span class="line">remotePort = 6000 <span class="comment"># 穿出来的端口</span></span><br><span class="line"></span><br><span class="line">[[proxies]]</span><br><span class="line">name = <span class="string">&quot;自定义名字，一定要英文&quot;</span></span><br><span class="line"><span class="built_in">type</span> = <span class="string">&quot;tcp&quot;</span></span><br><span class="line">localPort = 3389 <span class="comment"># 看你需求，这里举例windows远程端口</span></span><br><span class="line">remotePort = 6001 <span class="comment"># 穿出来的端口</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 按照同样的格式自行添加</span></span><br><span class="line">[[proxies]]</span><br><span class="line">name = <span class="string">&quot;web&quot;</span></span><br><span class="line"><span class="built_in">type</span> = <span class="string">&quot;http&quot;</span></span><br><span class="line">localPort = 8080 <span class="comment"># 看你需求</span></span><br><span class="line">remotePort = 8080 <span class="comment"># 穿出来的端口</span></span><br></pre></td></tr></table></figure>
@@ -1022,9 +1022,9 @@
 <h2 id="2-安装linux的node-js"><a href="#2-安装linux的node-js" class="headerlink" title="2.安装linux的node.js"></a><strong>2.安装linux的node.js</strong></h2><p>不会装？简单，<code>两行</code>解决</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> curl -sL https://deb.nodesource.com/setup_24.x | <span class="built_in">sudo</span> -E bash -</span><br><span class="line"><span class="comment"># 执行完后安装</span></span><br><span class="line"><span class="built_in">sudo</span> apt install nodejs -y</span><br></pre></td></tr></table></figure>
 
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/Miao-Yunzai/%E5%AE%89%E8%A3%85node.png" alt="安装node"></p>
+<p><img src="/images/Miao-Yunzai/%E5%AE%89%E8%A3%85node.png" alt="安装node"></p>
 <p>出现<span class="red-text"><strong>successfully</strong></span>则为获取安装包成功，可执行下一步~</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/Miao-Yunzai/%E5%AE%89%E8%A3%85node%E8%BF%87%E7%A8%8B.png" alt="安装node过程"></p>
+<p><img src="/images/Miao-Yunzai/%E5%AE%89%E8%A3%85node%E8%BF%87%E7%A8%8B.png" alt="安装node过程"></p>
 <p>检查是否安装成功（可选）</p>
 <p>版本不符合图片是没有关系的，只要你有<code>大于等于18</code>的<code>node</code>环境即可</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm</span><br></pre></td></tr></table></figure>
@@ -1037,27 +1037,27 @@
 <h3 id="3-安装redis-server（机器人所需要的数据库）"><a href="#3-安装redis-server（机器人所需要的数据库）" class="headerlink" title="3.安装redis-server（机器人所需要的数据库）"></a>3.安装redis-server（机器人所需要的数据库）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install redis-server -y</span><br></pre></td></tr></table></figure>
 
 <p>当然也可以选择<a href="https://1panel.cn/">1panel</a>安装容器化数据库，备份啥的也方便（记得开启<span class="red-text"><strong>容器外部访问</strong></span>）</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/Miao-Yunzai/%E5%AE%B9%E5%99%A8redis.png" alt="容器redis"></p>
+<p><img src="/images/Miao-Yunzai/%E5%AE%B9%E5%99%A8redis.png" alt="容器redis"></p>
 <p>由于默认国外源的原因安装失败记得去配置镜像源</p>
 <p><a href="https://docker.1panel.live/">https://docker.1panel.live</a></p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/Miao-Yunzai/%E9%85%8D%E7%BD%AE%E5%AE%B9%E5%99%A8.png" alt="配置容器"></p>
+<p><img src="/images/Miao-Yunzai/%E9%85%8D%E7%BD%AE%E5%AE%B9%E5%99%A8.png" alt="配置容器"></p>
 <h3 id="4-安装文泉驿正黑体"><a href="#4-安装文泉驿正黑体" class="headerlink" title="4.安装文泉驿正黑体"></a>4.安装文泉驿正黑体</h3><p>解决<a href="https://gitee.com/SmallK111407/earth-k-plugin">土块插件(earth-k-plugin)</a>及<a href="https://gitee.com/yhArcadia/ap-plugin">绘图插件(ap-plugin)</a>乱码问题</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install ttf-wqy-zenhei -y</span><br><span class="line"><span class="comment"># 二选一即可</span></span><br><span class="line"><span class="built_in">sudo</span> apt install fonts-wqy-microhei -y</span><br><span class="line"><span class="comment"># 刷新字体缓存</span></span><br><span class="line"><span class="built_in">sudo</span> fc-cache -fv</span><br></pre></td></tr></table></figure>
 
 <p>当然如果你有其他好看的字体也可以不用参考这个教程的字体~</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/Miao-Yunzai/%E5%AE%89%E8%A3%85%E5%AD%97%E4%BD%93.png" alt="安装字体"></p>
+<p><img src="/images/Miao-Yunzai/%E5%AE%89%E8%A3%85%E5%AD%97%E4%BD%93.png" alt="安装字体"></p>
 <p>出现<span class="red-text"><strong>succeeded</strong></span>即安装成功</p>
 <h3 id="5-安装pnpm包管理工具"><a href="#5-安装pnpm包管理工具" class="headerlink" title="5.安装pnpm包管理工具"></a>5.安装pnpm包管理工具</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install pnpm -g</span><br><span class="line"><span class="comment"># 若安装pnpm缓慢推荐指定国内阿里云镜像源安装，海外服务器则不需要换源安装</span></span><br><span class="line">npm --registry=https://registry.npmmirror.com install pnpm -g</span><br></pre></td></tr></table></figure>
 
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/Miao-Yunzai/%E5%AE%89%E8%A3%85pnpm.png" alt="安装pnpm"></p>
+<p><img src="/images/Miao-Yunzai/%E5%AE%89%E8%A3%85pnpm.png" alt="安装pnpm"></p>
 <h2 id="3-安装喵崽"><a href="#3-安装喵崽" class="headerlink" title="3.安装喵崽"></a>3.安装喵崽</h2><p>根据服务器所在地</p>
 <p>选择<a href="https://gitee.com/">Gitee</a>源（国内）和<a href="https://github.com/">GitHub</a>源（国外）</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用 Github </span></span><br><span class="line">git <span class="built_in">clone</span> --depth=1 https://github.com/yoimiya-kokomi/Miao-Yunzai.git</span><br><span class="line"><span class="comment"># 进入喵崽目录</span></span><br><span class="line"><span class="built_in">cd</span> Miao-Yunzai </span><br><span class="line">git <span class="built_in">clone</span> --depth=1 https://github.com/yoimiya-kokomi/miao-plugin.git ./plugins/miao-plugin/</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 使用Gitee</span></span><br><span class="line">git <span class="built_in">clone</span> --depth=1 https://gitee.com/yoimiya-kokomi/Miao-Yunzai.git</span><br><span class="line"><span class="comment"># 进入喵目录</span></span><br><span class="line"><span class="built_in">cd</span> Miao-Yunzai </span><br><span class="line">git <span class="built_in">clone</span> --depth=1 https://gitee.com/yoimiya-kokomi/miao-plugin.git ./plugins/miao-plugin/</span><br></pre></td></tr></table></figure>
 
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/Miao-Yunzai/%E5%AE%89%E8%A3%85yunzai.png" alt="安装yunzai"></p>
+<p><img src="/images/Miao-Yunzai/%E5%AE%89%E8%A3%85yunzai.png" alt="安装yunzai"></p>
 <h3 id="随后安装依赖"><a href="#随后安装依赖" class="headerlink" title="随后安装依赖"></a>随后安装依赖</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 更换淘宝源加快依赖安装</span></span><br><span class="line">pnpm config <span class="built_in">set</span> registry https://registry.npmmirror.com &amp;&amp; pnpm install -P</span><br></pre></td></tr></table></figure>
 
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/Miao-Yunzai/%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96.png" alt="安装依赖"></p>
+<p><img src="/images/Miao-Yunzai/%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96.png" alt="安装依赖"></p>
 <p>全程无报错算安装成功</p>
 <h2 id="4-添加协议端补丁"><a href="#4-添加协议端补丁" class="headerlink" title="4.添加协议端补丁"></a>4.添加协议端补丁</h2><p>由于ICQQ0.6.10协议版本只包含了9.0.17的QQ版本，现如今的QQ版本都需要9.1.25+，所以需要添加协议版本</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在根目录运行</span></span><br><span class="line"><span class="comment"># 感谢大佬提供的补丁，这里我就不说是谁了（）</span></span><br><span class="line">bash curl -sL Gitee.com/haanxuan/QSign/raw/main/ver | bash</span><br></pre></td></tr></table></figure>
@@ -1066,17 +1066,18 @@
 
 <p>根据提示来到提示登录设备的时候，选择<code>aPad</code>协议登入</p>
 <p>后续可通过<code>CTRL+C</code>直接退出终端进程</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/Miao-Yunzai/%E5%90%AF%E5%8A%A8.png" alt="启动"></p>
+<p><img src="/images/Miao-Yunzai/%E5%90%AF%E5%8A%A8.png" alt="启动"></p>
 <p>如果你是使用的<code>1panel</code>安装的<code>redis-server</code>记得去根目录<code>/config/config/redis.yaml</code>填写你的密码</p>
 <p>为什么要这么晚说呢，因为<code>redis.yaml</code>是在你第一次启动后才创建后的文件，你也可以去根目录<code>/config/default_config</code>下的<code>redis.yaml</code>复制一份到根目录<code>/config/config</code>下并进行填写</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/Miao-Yunzai/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AF%86%E7%A0%81.png" alt="数据库密码"></p>
-<h2 id="常见问题？-建议看看"><a href="#常见问题？-建议看看" class="headerlink" title="常见问题？(建议看看~)"></a>常见问题？(建议看看~)</h2><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/Miao-Yunzai/%E5%96%9C%E6%8A%A5.gif" alt="喜报"></p>
+<p><img src="/images/Miao-Yunzai/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AF%86%E7%A0%81.png" alt="数据库密码"></p>
+<h2 id="常见问题？-建议看看"><a href="#常见问题？-建议看看" class="headerlink" title="常见问题？(建议看看~)"></a>常见问题？(建议看看~)</h2><div class="rz-gif-video-wrap"><video class="rz-gif-video" autoplay loop muted playsinline preload="metadata" poster="/images/Miao-Yunzai/喜报-poster.webp"><source src="/images/Miao-Yunzai/喜报.mp4" type="video/mp4"></video></div>
+
 <h3 id="1-签名怎么填？报错45无法登录？"><a href="#1-签名怎么填？报错45无法登录？" class="headerlink" title="1.签名怎么填？报错45无法登录？"></a>1.签名怎么填？报错45无法登录？</h3><p>可以选择蹭别人的签名或者<del>自建</del></p>
 <h3 id="2-关终端了无法让他在后台运行，怎么让它运行保持在后台？"><a href="#2-关终端了无法让他在后台运行，怎么让它运行保持在后台？" class="headerlink" title="2.关终端了无法让他在后台运行，怎么让它运行保持在后台？"></a>2.关终端了无法让他在后台运行，怎么让它运行保持在后台？</h3><p>对机器人发个<span class="red-text"><strong>#重启</strong></span>即可</p>
 <p>当然你的🐔🐔人封号刚解需要上终端解冻要用<code>node app</code>前台运行才能进行操作</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 进入根目录</span></span><br><span class="line"><span class="built_in">cd</span> Miao-Yunzai</span><br><span class="line"><span class="comment"># 后台查看日志</span></span><br><span class="line">npm run <span class="built_in">log</span></span><br><span class="line"><span class="comment"># 后台启动</span></span><br><span class="line">npm run start</span><br><span class="line"><span class="comment"># 后台停止</span></span><br><span class="line">npm run stop</span><br></pre></td></tr></table></figure>
 
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/Miao-Yunzai/npm%E6%8C%87%E4%BB%A4.png" alt="npm指令"></p>
+<p><img src="/images/Miao-Yunzai/npm%E6%8C%87%E4%BB%A4.png" alt="npm指令"></p>
 <h3 id="3-如何去安装插件？"><a href="#3-如何去安装插件？" class="headerlink" title="3.如何去安装插件？"></a>3.如何去安装插件？</h3><p>去<a href="https://gitee.com/yhArcadia/Yunzai-Bot-plugins-index">索引库</a>寻找插件自行安装或是<del>自己写</del></p>
 <p>一般来说，大插件作者会给安装指令和依赖指令，<code>根目录</code>安装后启动即可</p>
 <p>小插件js需要你手动下载源码到<code>根目录/plugins/example</code>下，一般都需要<code>重启</code>，防止出现一些bug</p>
@@ -1091,7 +1092,7 @@
 <h3 id="5-安装了锅巴（Guoba-Plugin）无法访问？"><a href="#5-安装了锅巴（Guoba-Plugin）无法访问？" class="headerlink" title="5.安装了锅巴（Guoba-Plugin）无法访问？"></a>5.安装了锅巴（Guoba-Plugin）无法访问？</h3><p>检查服务器防火墙<code>放开端口50831（即锅巴默认启动端口）</code>，你是哪家云就上哪家云的<code>管理后台</code>。部分云可能存在50831端口放开也无法访问的情况（比如华为云）</p>
 <p>改锅巴配置文件下的<code>config/application.yaml</code>为<code>80</code>端口</p>
 <p>箭头下一行有一个<code>“是否需要拼接端口号”</code>记得要改<code>false</code>为<code>true</code></p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/Miao-Yunzai/%E9%94%85%E5%B7%B4%E9%97%AE%E9%A2%98.png" alt="锅巴问题"></p>
+<p><img src="/images/Miao-Yunzai/%E9%94%85%E5%B7%B4%E9%97%AE%E9%A2%98.png" alt="锅巴问题"></p>
 <h3 id="6-图床链接无法访问问题，如「-添加表情」无法添加"><a href="#6-图床链接无法访问问题，如「-添加表情」无法添加" class="headerlink" title="6.图床链接无法访问问题，如「#添加表情」无法添加"></a>6.图床链接无法访问问题，如「#添加表情」无法添加</h3><p>新NT图床链接问题，加上ICQQ<code>已不再更新</code>，需要去改新图链，<code>记得重启！</code></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 别的群友提供</span></span><br><span class="line">curl -# https://img.kookapp.cn/attachments/2024-09/11/66e0f2f7c93f4 -o node_modules/icqq/lib/message/parser.js</span><br><span class="line"><span class="comment"># 备用链接</span></span><br><span class="line">curl -# https://h.winterqkl.cn/ICQQ/parser.js -o node_modules/icqq/lib/message/parser.js</span><br></pre></td></tr></table></figure>
 
@@ -1134,21 +1135,21 @@
 </ol>
 <h1 id="开始部署"><a href="#开始部署" class="headerlink" title="开始部署"></a>开始部署</h1><h2 id="1-下载ollama安装包"><a href="#1-下载ollama安装包" class="headerlink" title="1.下载ollama安装包"></a>1.下载ollama安装包</h2><p><a href="https://ollama.com/download">戳我去官网下载</a></p>
 <p>打开就是这样子，自行选择你的操作系统下载</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.070213.xyz/deepseek/%E5%AE%98%E7%BD%91%E4%B8%8B%E8%BD%BDollama%E5%AE%89%E8%A3%85%E5%8C%85.jpg" alt="官网下载ollama安装包"></p>
+<p><img src="https://blogpic.070213.xyz/deepseek/%E5%AE%98%E7%BD%91%E4%B8%8B%E8%BD%BDollama%E5%AE%89%E8%A3%85%E5%8C%85.jpg" alt="官网下载ollama安装包"></p>
 <p>下载下来双击打开安装包，目前暂时无法部署到自定义盘，只能在<code>C盘</code>，占用不是很大</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.070213.xyz/deepseek/%E5%AE%89%E8%A3%85ollama.jpg" alt="安装ollama"></p>
+<p><img src="https://blogpic.070213.xyz/deepseek/%E5%AE%89%E8%A3%85ollama.jpg" alt="安装ollama"></p>
 <h2 id="2-克隆大模型"><a href="#2-克隆大模型" class="headerlink" title="2.克隆大模型"></a>2.克隆大模型</h2><p>搜索<code>deepseek-r1</code></p>
 <p>找不到我给你个<a href="https://ollama.com/library/deepseek-r1">传送门</a></p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.070213.xyz/deepseek/%E6%90%9C%E7%B4%A2deepseek.jpg" alt="搜索deepseek"></p>
+<p><img src="https://blogpic.070213.xyz/deepseek/%E6%90%9C%E7%B4%A2deepseek.jpg" alt="搜索deepseek"></p>
 <p>打开就是这样，选择你合适的模型，在确保你配置够的情况下可以适当往下选择最好的模型资源，等级从下往上递减</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.070213.xyz/deepseek/%E5%A4%8D%E5%88%B6%E6%8C%87%E4%BB%A4.jpg" alt="复制指令"></p>
+<p><img src="https://blogpic.070213.xyz/deepseek/%E5%A4%8D%E5%88%B6%E6%8C%87%E4%BB%A4.jpg" alt="复制指令"></p>
 <p>对应的模型配置大概是这样：</p>
 <p>1.5b：4GB显存<br>7b&#x2F;8b：8GB显存（我是这个）<br>14b：12GB显存<br>32b：24GB显存（差不多4090的配置了）<br>显存不够他会调用<code>CPU</code>跑，且吃核心数，生成对话速度会慢很多，</p>
 <p>使用<code>Win+R</code>键输入<code>cmd</code>打开终端</p>
 <p>可以敲<code>ollama</code>看看环境是否生效，会提示ollama相关指令</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ollama</span><br></pre></td></tr></table></figure>
 
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.070213.xyz/deepseek/%E6%A3%80%E9%AA%8C%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.jpg" alt="检查下环境变量是否生效"></p>
+<p><img src="https://blogpic.070213.xyz/deepseek/%E6%A3%80%E9%AA%8C%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.jpg" alt="检查下环境变量是否生效"></p>
 <p>下载大模型，我这里是7b</p>
 <blockquote>
 <p>下载前先往下滑到拓展页编辑环境变量，里面包含了更改模型<code>默认下载路径！</code></p>
@@ -1159,7 +1160,7 @@
 <p>这时候你就可以随心所欲进行对话了，敲<code>/?</code>提示常用命令</p>
 <kbd>CTRL</kbd> + <kbd>C</kbd>结束交互
 
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.070213.xyz/deepseek/%E9%83%A8%E7%BD%B2%E6%88%90%E5%8A%9F.jpg" alt="部署成功"></p>
+<p><img src="https://blogpic.070213.xyz/deepseek/%E9%83%A8%E7%BD%B2%E6%88%90%E5%8A%9F.jpg" alt="部署成功"></p>
 <h2 id="拓展-UI增强对话"><a href="#拓展-UI增强对话" class="headerlink" title="拓展-UI增强对话"></a>拓展-UI增强对话</h2><p>终端难免会使用难受，所以可以使用ui的方式对话，参考了以下视频，使用的是<code>ChatBox AI</code></p>
 <div align=center class="aspect-ratio">
     <iframe src="https://player.bilibili.com/player.html?aid=113910820639135&bvid=BV1viFaeBE3z&cid=28138275900&p=1&autoplay=0" 
@@ -1197,10 +1198,10 @@
 </tr>
 </tbody></table>
 <h2 id="以下步骤据说不用做了"><a href="#以下步骤据说不用做了" class="headerlink" title="以下步骤据说不用做了"></a>以下步骤据说不用做了</h2><p>这里重点说下路径，因为ollama默认下载路径默认C盘，用户当然都不想要在C盘下载，所以可以进行更改存储路径</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.070213.xyz/deepseek/%E6%94%B9%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.jpg" alt="改环境变量"></p>
+<p><img src="https://blogpic.070213.xyz/deepseek/%E6%94%B9%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.jpg" alt="改环境变量"></p>
 <p>之后下载<code>ChatBox AI</code>，官网在这<a href="https://chatboxai.app/zh/">https://chatboxai.app/zh/</a>，官网国内访问较慢，建议打开魔法食用（</p>
 <p>下载完打开进行配置，点击右下角齿轮，<code>模型提供方</code>选择<code>OLLAMA API</code>，<code>API域名</code>填你本地域名，之后保存，就可以进行流畅对话啦~</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://blogpic.070213.xyz/deepseek/chatboxai%E5%AF%B9%E6%8E%A5.jpg" alt="chatboxai对接"></p>
+<p><img src="https://blogpic.070213.xyz/deepseek/chatboxai%E5%AF%B9%E6%8E%A5.jpg" alt="chatboxai对接"></p>
 ]]></content>
     <tags>
       <tag>开源</tag>
@@ -1217,14 +1218,14 @@
 <h2 id="简单讲讲openai是什么"><a href="#简单讲讲openai是什么" class="headerlink" title="简单讲讲openai是什么"></a>简单讲讲openai是什么</h2><p>OpenAI，是一家开放人工智能研究和部署公司，其使命是确保通用人工智能造福全人类。创立于2015年12月，总部位于美国旧金山。现由营利性公司OpenAI LP及非营利性母公司OpenAI Inc组成。</p>
 <h3 id="下载GPT-Box"><a href="#下载GPT-Box" class="headerlink" title="下载GPT Box"></a>下载GPT Box</h3><p>下载<a href="https://github.com/lollipopkit/flutter_gpt_box/tree/main">安卓端</a>我们可以在手机上轻松使用OpenAI</p>
 <p>GPT Box安装包下载：<br><a href="https://github.com/lollipopkit/flutter_gpt_box/releases">Github发行版</a> | <a href="https://pan.ruyuan.icu/">去我的资源分享站下载</a></p>
-<h3 id="进入应用"><a href="#进入应用" class="headerlink" title="进入应用"></a>进入应用</h3><p>进去长这酱紫<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/gptbox/1.png" alt="首页"></p>
-<h3 id="之后来到应用项"><a href="#之后来到应用项" class="headerlink" title="之后来到应用项"></a>之后来到应用项</h3><p>点击左上角的齿轮图标，来到应用页面，先登个录~<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/gptbox/2.png" alt="应用页"></p>
+<h3 id="进入应用"><a href="#进入应用" class="headerlink" title="进入应用"></a>进入应用</h3><p>进去长这酱紫<br><img src="/images/gptbox/1.png" alt="首页"></p>
+<h3 id="之后来到应用项"><a href="#之后来到应用项" class="headerlink" title="之后来到应用项"></a>之后来到应用项</h3><p>点击左上角的齿轮图标，来到应用页面，先登个录~<br><img src="/images/gptbox/2.png" alt="应用页"></p>
 <h3 id="最后来到配置项"><a href="#最后来到配置项" class="headerlink" title="最后来到配置项"></a>最后来到配置项</h3><p>这里有两个需要更改的地方一个是<code>密钥</code>，一个是<code>URL</code>，密钥首先要自己去获取<br>密钥可以直接去<a href="https://github.com/chatanywhere/GPT_API_free">Github</a>白嫖即可，确保你有<code>github</code>账号能进行登录，获取到密钥之后就可以填上去啦！<br>最后就是更改接口，因为默认是openai官方接口，国内是无法访问的，所以要进行更改~</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://api.chatanywhere.tech/v1</span><br></pre></td></tr></table></figure>
 
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/gptbox/3.png" alt="配置页"></p>
+<p><img src="/images/gptbox/3.png" alt="配置页"></p>
 <p>这里记得要更改模型，因为<code>gpt-4o</code>给免费用户只能使用可怜的3次，一般情况下切换<code>gpt-4o-mini</code>就可以满足生活中的大部分需求了（每天0点刷新，每天可以对话200次）</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/gptbox/4.png" alt="提示改模型页"></p>
+<p><img src="/images/gptbox/4.png" alt="提示改模型页"></p>
 ]]></content>
     <tags>
       <tag>开源</tag>
@@ -1254,9 +1255,9 @@
 <h3 id="1-更改主机名"><a href="#1-更改主机名" class="headerlink" title="1.更改主机名"></a>1.更改主机名</h3><p>注意这里<code>三台</code>机器都要操作</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># nmtui修改主机名方便</span></span><br><span class="line">nmtui</span><br></pre></td></tr></table></figure>
 
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/hadoop/nmtui1.png"></p>
+<p><img src="/images/hadoop/nmtui1.png"></p>
 <p>随后修改第一台名为<code>node1</code>，第二台<code>node2</code>，第三台<code>node3</code>（当然改其他名都行，看你自己~）</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/hadoop/nmtui2.png"></p>
+<p><img src="/images/hadoop/nmtui2.png"></p>
 <h3 id="2-主机映射"><a href="#2-主机映射" class="headerlink" title="2.主机映射"></a>2.主机映射</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># vim进去编辑</span></span><br><span class="line">vim /etc/hosts</span><br><span class="line"><span class="comment"># 进去后长这样</span></span><br><span class="line">127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4</span><br><span class="line">::1         localhost localhost.localdomain localhost6 localhost6.localdomain6</span><br><span class="line"></span><br><span class="line"><span class="comment">#你只需要编辑下面的格式，ip自行更改</span></span><br><span class="line">192.168.88.151 node1 node1</span><br><span class="line">192.168.88.152 node2 node2</span><br><span class="line">192.168.88.153 node3 node3</span><br></pre></td></tr></table></figure>
 
 <h3 id="3-部署jdk"><a href="#3-部署jdk" class="headerlink" title="3.部署jdk"></a>3.部署jdk</h3><p>自行上传jdk压缩包，建议用1.8不要用<code>高于</code>1.8否则会出现奇怪的问题！</p>
@@ -1313,14 +1314,14 @@
 <p>检查环境是否生效</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hadoop version</span><br></pre></td></tr></table></figure>
 
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/hadoop/%E6%A3%80%E6%9F%A5hadoop%E7%8E%AF%E5%A2%83.png" alt="查看环境"></p>
+<p><img src="/images/hadoop/%E6%A3%80%E6%9F%A5hadoop%E7%8E%AF%E5%A2%83.png" alt="查看环境"></p>
 <p>格式化<code>namenode</code></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 会出现一长串</span></span><br><span class="line">hdfs namenode -format</span><br></pre></td></tr></table></figure>
 
 <h3 id="集群启动！"><a href="#集群启动！" class="headerlink" title="集群启动！"></a>集群启动！</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">start-all.sh</span><br></pre></td></tr></table></figure>
 
 <p>无报错基本就是成功了，随后你可以去<code>http://你的ip:9870</code>来看看网站是否能访问</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/hadoop/web%E9%A1%B5%E9%9D%A2.png" alt="查看web"></p>
+<p><img src="/images/hadoop/web%E9%A1%B5%E9%9D%A2.png" alt="查看web"></p>
 ]]></content>
     <tags>
       <tag>大数据</tag>
@@ -1365,7 +1366,7 @@
 <h3 id="1-ICQQ登录（需要签名）"><a href="#1-ICQQ登录（需要签名）" class="headerlink" title="1.ICQQ登录（需要签名）"></a>1.ICQQ登录（需要签名）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#安装ICQQ-Plugin</span></span><br></pre></td></tr></table></figure>
 
 <p>然后它会自己安装依赖重启</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/%E5%AE%89%E8%A3%85ICQQ-Plugin.png" alt="安装ICQQ-Plugin"></p>
+<p><img src="/images/%E5%AE%89%E8%A3%85ICQQ-Plugin.png" alt="安装ICQQ-Plugin"></p>
 <p>填写<code>签名</code></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#QQ签名https://example.com/?ver=9.0.70</span></span><br></pre></td></tr></table></figure>
 
