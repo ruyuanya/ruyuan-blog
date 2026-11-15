@@ -1,6 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>本站的优化日记</title>
+    <url>/posts/7d20f77b.html</url>
+    <cover>https://blogpic.070213.xyz/firefly.jpg</cover>
+    <date>Sun Nov 15 2026 13:55:19 GMT+0800</date>
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>首先是兴趣使然，命运的齿轮从大概是<code>2024年9月左右</code>开始，偶然逛到几个好看的博客，于是萌生了搭博客的想法。</p>
+<p>最开始选择的博客框架是<a href="https://vuepress.vuejs.org/zh/">VuePress</a>，这个是当时逛到觉得第一个还不错的博客框架，他的那种框架是基于Vue的，选择主题是<a href="https://theme-hope.vuejs.press/zh/">vue-hope</a>而且示例网站偏向那种文档教程，当时也有群u搭建过这个，非常喜欢，就搭建了一个试试。</p>
+<p>最开始搭建效果还不错大体功能也实现了，后面在逛别人博客时发现别人有很多很炫酷的功能，vuepress的文件配置很复杂，动不动就报错，奈何当时我的水平太差，魔改需要很好的基础，我无法实现，所以就放弃了，开始寻找第二个博客框架。</p>
+<p>第二个博客框架也就是现在的<a href="https://hexo.io/zh-cn/">hexo</a>，这个是基于<a href="https://nodejs.org/zh-cn">node.js</a>，然后选择的主题是<a href="https://butterfly.js.org/">butterfly</a>。当时市面上的魔改教程已经越来越多了，也与butterfly的版本不会相差太远。我就开始了魔改之路。</p>
+<p>最开始是看的<a href="https://www.fomal.cc/">fomal大佬的博客</a>他的魔改教程详细且没出过啥错，当时对魔改非常上瘾，以至于搞到凌晨2、3点。网站整体效果不错</p>
+<p>后面边改博客边逛着别人的博客，遇到了<a href="https://docs.anheyu.com/">安知鱼佬的主题</a>，好看简洁又带点苹果的风格，于是马不停蹄的转向了安知鱼的博客主题。</p>
+<h1 id="转折"><a href="#转折" class="headerlink" title="转折"></a>转折</h1><p>后面功能越改越多，就出现了网站的暴露性问题：</p>
+<ol>
+<li><p>网站加载开始变慢，特别影响观感</p>
+</li>
+<li><p>自己的服务器配置不够，当越来越多人访问时，网站会崩溃卡顿</p>
+</li>
+<li><p>网站的图片是毁灭性的灾难，图片越大，加载越慢</p>
+</li>
+</ol>
+<h1 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h1><p>于是开始了优化，从加载慢开始已经持续了大概半年了，真正的优化开始于2026年10月1日。我从国庆放假下班回到家开始了优化工作。</p>
+<p>我认为现在的智能体工作流真正的开始在2026年（也不知道大概几月几号），今年的智能体agent已经非常成熟，只需要冲点token就可以让ai干活了，我选择的是<a href="https://www.workbuddy.cn/">workbuddy</a> + <a href="https://www.deepseek.com/">deepseek-v4.1-flash</a> 来进行整个网站的功能添加和优化。</p>
+<h2 id="优化内容1-重写网站加载逻辑"><a href="#优化内容1-重写网站加载逻辑" class="headerlink" title="优化内容1-重写网站加载逻辑"></a>优化内容1-重写网站加载逻辑</h2><p>参考了其他人写的<code>gulp.js</code>来压缩代码提升加载速度，发现代码压缩了，字体没压缩，我就喂给了AI，AI给出的问题如下：</p>
+<ol>
+<li><code>fonts/LXGWZhenKaiGB-Regular.ttf</code> 有 4.61 MB，页面完全不引用（font.css 只引 woff2）</li>
+</ol>
+<p>也就说字体文件很大，实际你网站用不到这么多。</p>
+<ol start="2">
+<li>首页图片全部同步加载，没有懒加载，需要重写</li>
+</ol>
+<p>安知鱼中的<code>lazyload.enable: true</code> 但 <code>field: post</code>，只对文章页生效，首页 51 张图全部立即加载，一张都没懒加载。</p>
+<ol start="3">
+<li>12 个 CSS 和 23 个 JS，其中 16 个同步阻塞</li>
+</ol>
+<p><code>swiper、utils、main、fancybox、lazyload、qrcode、APlayer、Meting2、pjax</code> … 全是解析阻塞脚本。而且 <code>APlayer、Meting2（音乐播放器）、qrcode、waterfall</code> 在首页其实用不上，却<code>都加载</code>了。跨域方面只有 1 个 <code>preconnect</code> 指向 <code>cdn.cbd.int，npm.elemecdn.com（swiper/dark.js）</code>没预连接，白多一次 <code>DNS</code> 和 <code>TLS</code> 握手。</p>
+<p>等他跑完就验证一下结果进行测试，网站已大幅度提升加载，从原来你加载所有组件可能都要几分钟现在只需要1、2秒就能进去，用户体验大大提升。</p>
+<h2 id="优化内容2-CDN加速"><a href="#优化内容2-CDN加速" class="headerlink" title="优化内容2-CDN加速"></a>优化内容2-CDN加速</h2><p>我将本站生成的静态资源上传到了<code>github</code>上，然后使用<a href="https://cloud.tencent.com/document/product/1552">腾讯云边缘安全加速平台 EO</a>进行网站内容如<code>图片、字体、JS、CSS、html</code>等分发到各个节点，从而提升网站的加载速度。</p>
+<h2 id="优化内容3-图片上传至github图床"><a href="#优化内容3-图片上传至github图床" class="headerlink" title="优化内容3-图片上传至github图床"></a>优化内容3-图片上传至github图床</h2><p>将博客的大部分图片上传至github，然后使用了<a href="https://vercel.com/">vercel</a>进行部署，套个域名上去。这样减轻了网站加载图片负担。</p>
+<h2 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h2><p>优化网站绝不是一次性的，需要持续优化。</p>
+<p>还但愿的热爱还在，网站可以活得更久一些.</p>
+]]></content>
+  </entry>
+  <entry>
     <title>每日60s</title>
     <url>/posts/60s.html</url>
     <cover>https://cos.blogs.ink/wp-content/uploads/2024/11/f70df1b751568f65c7c214e0bcaaec7d.jpg</cover>
@@ -1229,8 +1271,8 @@
 ]]></content>
     <tags>
       <tag>开源</tag>
-      <tag>APP</tag>
       <tag>AI</tag>
+      <tag>APP</tag>
     </tags>
   </entry>
   <entry>
